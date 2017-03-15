@@ -69,7 +69,8 @@ def upload(s3, base_dir, bucket_name, branch_name):
                 mimetype = get_file_mimetype(local_file)
                 save_to_s3(s3, local_file, remote_file, bucket_name, mimetype)
     print('Project uploaded to S3')
-    print('Try opening https://mf-geoadmin3.int.bgdi.ch/%s/glmap.html' % s3_dir_path)
+    print('')
+    print('Try to open: https://mf-geoadmin3.int.bgdi.ch/%s/glmap.html' % s3_dir_path)
 
 
 def init_connection(bucket_name, profile_name):
