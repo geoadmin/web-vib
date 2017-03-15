@@ -15,6 +15,17 @@ CLONEDIR = /home/$(USER_NAME)/tmp/branches/${BRANCH_NAME}
 BRANCH_NAME ?=
 DEEP_CLEAN ?= "false"
 
+.PHONY: help
+help:
+	@echo "Usage make <target>"
+	@echo
+	@echo "Possible targets:"
+	@echo "- all           Install .venv and py deps in main project"
+	@echo "- serve         Serve local examples using localhost"
+	@echo "- deploybranch  Deploys a branch to S3"
+	@echo "- clean         Remove all generated templates"
+	@echo "- cleanall      Remove all untracked content"
+
 
 .PHONY: all
 all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html
