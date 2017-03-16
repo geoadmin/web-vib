@@ -75,6 +75,19 @@
       });
     });
 
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point);
+      if (features.length) {
+        for (var i=0; i < features.length; i++) {
+          var feature = features[i];
+          if (feature.layer.id) {
+            $('.vib-layerid').html(feature.properties.name + ' : ' + feature.layer.id);
+            break;
+          }
+        }
+      }
+    });
+
     map.addControl(new mapboxgl.Navigation({
       position: 'top-right'
     }));
