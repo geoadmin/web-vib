@@ -12,7 +12,7 @@
 
   function getParams() {
     var x = getParam('x');
-    var y = getParay('y');
+    var y = getParam('y');
     var zoom = getParam('zoom');
     return {
       x: x || dftX,
@@ -59,11 +59,12 @@
         url: 'https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg'
       })
     });
-    map.getLayers().setAt(0, wmtsLayer);
     var view = map.getView();
-    view.setCenter([dftX, dftY]);
-    view.setZoom(dftZoom);
+    var params = getParams();
+    view.setCenter([parseFloat(params.x), parseFloat(params.y)]);
+    view.setZoom(parseFloat(params.zoom));
     permalinkManager(map);
+    map.getLayers().setAt(0, wmtsLayer);
   }
 
   $(window).load(function() {
