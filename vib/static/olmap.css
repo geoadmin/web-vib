@@ -9,7 +9,7 @@
 }
 .vib-layerid {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   padding: 2px;
   background-color: rgba(14, 80, 114, 0.85);
