@@ -34,12 +34,12 @@ if [ ! -d web-vib ]; then
   cd web-vib
 else
   cd web-vib
+  update_and_reset_git_project
   if [ "$DEEP_CLEAN" = "true" ]; then
     make cleanall
   else
     make clean
   fi
-  update_and_reset_git_project
 fi
 
 BRANCH_NAME=$(get_s3_basepath $BRANCH_NAME)

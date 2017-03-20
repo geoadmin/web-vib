@@ -54,14 +54,19 @@ def get_file_mimetype(local_file):
 
 
 def upload(s3, base_dir, bucket_name, branch_name):
+    templates = []
     s3_dir_path = 'vib/%s' % branch_name
     print('Destionation folder is:')
     print('%s' % s3_dir_path)
-    upload_dirs = ['web-vib/vib/static', 'web-vib/vib/templates']
+    static_folder = 'web-vib/vib/static'
+    templates_folder = 'web-vib/vib/templates'
+    upload_dirs = (static_folder, templates_folder)
     for directory in upload_dirs:
         for file_path_list in os.walk(os.path.join(base_dir, directory)):
             file_names = [name for name in file_path_list[2] if '.mako.' not in name]
             for file_name in file_names:
+                if file_name.endswith('.html'):
+                    templates.append(file_name)
                 file_base_path = file_path_list[0]
                 relative_file_path = file_base_path.replace(base_dir + '/', '')
                 remote_file = s3_dir_path + relative_file_path.replace('web-vib/vib', '') + '/' + file_name
@@ -70,7 +75,8 @@ def upload(s3, base_dir, bucket_name, branch_name):
                 save_to_s3(s3, local_file, remote_file, bucket_name, mimetype)
     print('Project uploaded to S3')
     print('')
-    print('Try to open: https://mf-geoadmin3.int.bgdi.ch/%s/templates/glmap.html' % s3_dir_path)
+    for t in templates:
+        print('Try to open: https://mf-geoadmin3.int.bgdi.ch/%s/templates/%s' % (s3_dir_path, t))
 
 
 def init_connection(bucket_name, profile_name):
