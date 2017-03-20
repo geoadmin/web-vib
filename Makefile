@@ -28,7 +28,7 @@ help:
 
 
 .PHONY: all
-all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html
+all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html
 
 requirements.txt:
 ${INSTALL_DIRECTORY}/devlibs: requirements.txt
@@ -45,6 +45,10 @@ vib/templates/glmap.mako.html:
 vib/templates/glmap.html: vib/templates/glmap.mako.html
 	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
+vib/templates/olmap.mako.html:
+vib/templates/olmap.html: vib/templates/olmap.mako.html
+	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
+
 clonebuild:
 	$(eval BRANCH_NAME=$(shell git rev-parse --symbolic-full-name --abbrev-ref HEAD))
 	./scripts/clonebuild.sh ${CLONEDIR} ${BRANCH_NAME} ${DEEP_CLEAN};
@@ -59,6 +63,7 @@ deploybranch: clonebuild upload
 .PHONY: clean
 clean:
 	rm -f vib/templates/glmap.html
+	rm -f vib/templates/olmap.html
 	rm -f  ${INSTALL_DIRECTORY}/devlibs
 
 .PHONY: cleanall
