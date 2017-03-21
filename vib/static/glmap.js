@@ -1,8 +1,9 @@
 (function() {
-  var qString;
+  var qString, params;
   var dftLng = 8.25381975151518;
   var dftLat = 46.77713656930146;
   var dftZoom = 8;
+  var dftStyle = 'ciz8cl2sr006o2ss3yuhvnn1f';
 
   function getParam(name) {
     return decodeURIComponent(
@@ -14,10 +15,12 @@
     var lng = getParam('lng');
     var lat = getParam('lat');
     var zoom = getParam('zoom');
+    var style = getParam('style');
     return {
       lng: lng || dftLng,
       lat: lat || dftLat,
-      zoom: zoom || dftZoom
+      zoom: zoom || dftZoom,
+      style: style || dftStyle
     };
   }
 
@@ -29,6 +32,7 @@
     }
     qString = qString.set('lat', opts.lat);
     qString = qString.set('zoom', opts.zoom);
+    qString = qString.set('style', opts.style);
     history.pushState({}, '', window.location.pathname + qString.toString());
   }
 
@@ -36,11 +40,11 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
         'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
 
-    var params = getParams();
+    params = getParams();
     var map = new mapboxgl.Map({
       container: 'gl-map',
       center: centerLngLat = [params.lng, params.lat],
-      style: 'mapbox://styles/vib2d/ciz8cl2sr006o2ss3yuhvnn1f',
+      style: 'mapbox://styles/vib2d/' + params.style,
       // Mapbox zoom differs by one.
       zoom: params.zoom,
       interactive: true,
@@ -63,6 +67,8 @@
           source: 'swissimageWMTS',
           type: 'raster',
         }, 'mapbox-mapbox-satellite');
+
+      var styleSpec = map.getStyle(params.style);
     });
 
     map.on('moveend', function(e) {
@@ -71,7 +77,8 @@
       setParams({
         lng: center.lng,
         lat: center.lat,
-        zoom: zoom
+        zoom: zoom,
+        style: params.style
       });
     });
 
@@ -95,6 +102,6 @@
   }
 
   $(window).load(function() {
-    initMap();
+    var map = initMap();
   });
 })();
