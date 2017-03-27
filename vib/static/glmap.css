@@ -17,7 +17,7 @@ body {
   z-index: 1;
   float: left;
 }
-.vib-header .vib-layerid, .vib-header .vib-langselector {
+.vib-header .vib-layerid, .vib-header .vib-langselector, .vib-header .vib-layerselector {
   float: left;
 }
 .vib-header .vib-langselector {

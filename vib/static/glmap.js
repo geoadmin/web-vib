@@ -80,6 +80,33 @@
     }
   }
 
+  function changeMap(map, styleId) {
+    map.setStyle('mapbox://styles/vib2d/' + styleId);
+  }
+
+  function getMapFirstLayerId(map, styleId) {
+    var styleId =  map.getStyle(styleId);
+    styleId = styleId.layers[0].id;
+    return styleId;
+  }
+
+  function addSwissimage(map, styleId) {
+    var firstLyrId = getMapFirstLayerId(map, styleId);
+    map.addSource(
+      'swissimageWMTS', {
+        type: 'raster',
+        tiles: ['https://wmts10.geo.admin.ch/' +
+            '1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg'],
+        tileSize: 256
+      }
+    );
+    map.addLayer({
+        id: 'swissImage',
+        source: 'swissimageWMTS',
+        type: 'raster',
+      }, firstLyrId);
+  }
+
   function initMap() {
     mapboxgl.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
         'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
@@ -99,22 +126,14 @@
     // Add a Swissimage layer to the map style.
     map.on('load', function() {
       // Put layer in the background
-      var styleSpec = map.getStyle(params.style);
-      var firstLyrId = styleSpec.layers[0].id;
-      map.addSource(
-        'swissimageWMTS', {
-          type: 'raster',
-          tiles: ['https://wmts10.geo.admin.ch/' +
-              '1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg'],
-          tileSize: 256
-        }
-      );
-      map.addLayer({
-          id: 'swissImage',
-          source: 'swissimageWMTS',
-          type: 'raster',
-        }, firstLyrId);
       mainStyle = $.extend(true, {}, map.getStyle(params.style));
+    });
+
+    map.on('style.load', function(e) {
+      // Temp hack because we add our custom Swissimage source
+      if (e.style.stylesheet.id == dftStyle) {
+        addSwissimage(map, params.style);
+      }
     });
 
     map.on('moveend', function(e) {
@@ -156,6 +175,9 @@
     var map = initMap();
     $('.vib-langselector select').change(function() {
       changeMapLang(map, this.value);
+    });
+    $('.vib-layerselector select').change(function() {
+      changeMap(map, this.value);
     });
   });
 })();
