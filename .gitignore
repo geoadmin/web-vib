@@ -2,3 +2,4 @@
 *.pyc
 *.swp
 vib/templates/glmap.html
+vib/templates/olmap.html
