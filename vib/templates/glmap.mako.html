@@ -5,17 +5,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <link rel="stylesheet prefetch" href="https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet prefetch" href="${branch_name}static/glmap.css">
   </head>
   <body>
     <div class="vib-header">
       <div class="vib-langselector">
-        <select>
+        <select class="form-control">
           <option value="all">all</option>
           <option value="de">de</option>
           <option value="fr">fr</option>
           <option value="it">it</option>
           <option value="rm">rm</option>
+        </select>
+      </div>
+      <div class="vib-layerselector">
+        <select class="form-control">
+          <option value="ciz8cl2sr006o2ss3yuhvnn1f">Swissimage</option>
+          <option value="cj0c43s81007t2sqpqeagf8g8">Pixelkarte</option>
         </select>
       </div>
       <div class="vib-layerid"></div>
