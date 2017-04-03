@@ -76,7 +76,7 @@
     view.setZoom(parseFloat(params.zoom));
     permalinkManager(map);
     contextManager(map);
-    map.getLayers().setAt(0, wmtsLayer);
+    map.getLayers().insertAt(0, wmtsLayer);
   }
 
   $(window).load(function() {
