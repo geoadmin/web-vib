@@ -10,8 +10,8 @@
   </head>
   <body>
     <div class="vib-header">
-      <div class="vib-langselector">
-        <select class="form-control">
+      <div class="vib-langselector pull-left">
+        <select class="form-control input-sm">
           <option value="all">all</option>
           <option value="de">de</option>
           <option value="fr">fr</option>
@@ -19,13 +19,20 @@
           <option value="rm">rm</option>
         </select>
       </div>
-      <div class="vib-layerselector">
-        <select class="form-control">
-          <option value="ciz8cl2sr006o2ss3yuhvnn1f">Swissimage</option>
-          <option value="cj0c43s81007t2sqpqeagf8g8">Pixelkarte</option>
+      <div class="vib-backgroundselector pull-left">
+        <select class="form-control input-sm">
+          <option value="swissimage">Swissimage</option>
+          <option value="pixelkarte">Pixelkarte</option>
         </select>
       </div>
-      <div class="vib-layerid"></div>
+      <div class="vib-layerselector pull-left">
+        <select class="form-control input-sm">
+          <option value="cj12a02uq007z2rqu53z4en4o">White Labels</option>
+          <option value="cj12a1m35008g2ro9oq32r7f8">Black Labels</option>
+          <option value="cj12a312p008i2smzu8jjtk1f">Big Labels</option>
+        </select>
+      </div>
+      <div class="vib-layerid pull-left"></div>
     </div>
     <div id="gl-map" class="mapbox"></div>
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js"></script>

@@ -3,8 +3,9 @@
   var dftLng = 8.25381975151518;
   var dftLat = 46.77713656930146;
   var dftZoom = 8;
-  var dftStyle = 'ciz8cl2sr006o2ss3yuhvnn1f';
+  var dftStyle = 'cj12a02uq007z2rqu53z4en4o';
   var dftLang = 'all';
+  var dftBackground = 'swissimage';
 
   function getParam(name) {
     return decodeURIComponent(
@@ -18,13 +19,15 @@
     var zoom = getParam('zoom');
     var style = getParam('style');
     var lang = getParam('lang');
+    var background = getParam('background');
     return {
       lng: lng || dftLng,
       lat: lat || dftLat,
       zoom: zoom || dftZoom,
       lang: lang || dftLang,
       style: style || dftStyle,
-      lang: lang || dftLang
+      lang: lang || dftLang,
+      background: background || dftBackground
     };
   }
 
@@ -35,6 +38,7 @@
       qString = qString.set(key, value);
     }
     history.pushState({}, '', window.location.pathname + qString.toString());
+    params = getParams();
   }
 
   function setParams(opts) {
@@ -47,6 +51,7 @@
     qString = qString.set('zoom', opts.zoom);
     qString = qString.set('style', opts.style);
     qString = qString.set('lang', opts.lang);
+    qString = qString.set('background', opts.background);
     history.pushState({}, '', window.location.pathname + qString.toString());
   }
 
@@ -101,7 +106,28 @@
   }
 
   function getMapFirstLayerId(map, styleId) {
-    return map.getStyle(styleId).layers[0].id;
+    var s = map.getStyle(styleId);
+    return s.layers[0].id;
+  }
+
+  function getWMSUrl(layerId) {
+    return 'https://wms.geo.admin.ch?bbox={bbox-epsg-3857}&format=image/png&STYLES=&' +
+        '&service=WMS&version=1.3.0&request=GetMap&crs=EPSG:3857&width=256&height=256&layers=' + layerId;
+  }
+
+  function addBackground(map, stlyeId, layerId) {
+    var config = {
+      'swissimage': addSwissimage,
+      'pixelkarte': addPixelKarte
+    };
+    setParam(layerId, 'background');
+    return config[layerId](map, stlyeId);
+  }
+
+  function changeBackground(map, styleId, layerId) {
+    var firstLyrId = getMapFirstLayerId(map, styleId);
+    map.removeLayer(firstLyrId);
+    return addBackground(map, styleId, layerId);
   }
 
   function addSwissimage(map, styleId) {
@@ -115,8 +141,24 @@
       }
     );
     map.addLayer({
-        id: 'swissImage',
+        id: 'swissimage',
         source: 'swissimageWMTS',
+        type: 'raster',
+      }, firstLyrId);
+  }
+
+  function addPixelKarte(map, styleId) {
+    var firstLyrId = getMapFirstLayerId(map, styleId);
+    map.addSource(
+      'pixelkarte500WMS', {
+        type: 'raster',
+        tiles: [getWMSUrl('ch.swisstopo.vib2d.pk500')],
+        tileSize: 256
+      }
+    );
+    map.addLayer({
+        id: 'pixelkarte500',
+        source: 'pixelkarte500WMS',
         type: 'raster',
       }, firstLyrId);
   }
@@ -145,12 +187,12 @@
     });
 
     map.on('style.load', function(e) {
-      // Temp hack because we add our custom Swissimage source
-      if (e.style.stylesheet.id == dftStyle) {
-        addSwissimage(map, params.style);
-      }
       // Make a copy of the style when loaded
       mainStyle = $.extend(true, {}, map.getStyle(params.style));
+      addBackground(map, params.style, params.background);
+      if (params.lang && params.lang != 'all') {
+        changeMapLang(map, params.lang);
+      }
     });
 
     map.on('moveend', function(e) {
@@ -161,6 +203,7 @@
         lat: center.lat,
         zoom: zoom,
         lang : params.lang,
+        background: params.background,
         style: params.style
       });
     });
@@ -191,6 +234,8 @@
       alert('Your browser does not support Mapbox GL.  Please try Chrome or Firefox.');
     }
     var map = initMap();
+
+    // Handle languages
     var selectedLang = $('.vib-langselector option[value=' + params.lang + ']');
     if (selectedLang) {
       selectedLang.prop('selected', true);
@@ -198,6 +243,17 @@
     $('.vib-langselector select').change(function() {
       changeMapLang(map, this.value);
     });
+
+    // Handle background
+    var selectedBackground = $('.vib-backgroundselector option[value=' + params.background + ']');
+    if (selectedBackground) {
+      selectedBackground.prop('selected', true);
+    }
+    $('.vib-backgroundselector select').change(function() {
+      changeBackground(map, params.style, this.value);
+    });
+
+    // Handle labels
     var selectedLayer = $('.vib-layerselector option[value=' + params.style + ']');
     if (selectedLayer) {
       selectedLayer.prop('selected', true);
