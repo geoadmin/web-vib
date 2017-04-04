@@ -28,8 +28,7 @@ help:
 
 
 .PHONY: all
-all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html vib/templates/csmap.html
-
+all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html vib/templates/csmap.html vib/templates/tgmap.html
 
 requirements.txt:
 ${INSTALL_DIRECTORY}/devlibs: requirements.txt
@@ -49,6 +48,9 @@ vib/templates/olmap.html: vib/templates/olmap.mako.html
 	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
 vib/templates/csmap.html: vib/templates/csmap.mako.html
+	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
+
+vib/templates/tgmap.html: vib/templates/tgmap.mako.html
 	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
 clonebuild:
