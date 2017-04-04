@@ -12,7 +12,7 @@ FLASK_DEBUG ?= 1
 # Deploy variables
 USER_NAME ?= $(shell id -un)
 CLONEDIR = /home/$(USER_NAME)/tmp/branches/${BRANCH_NAME}
-BRANCH_NAME ?=
+BRANCH_NAME ?=../
 DEEP_CLEAN ?= "false"
 
 .PHONY: help
@@ -28,7 +28,7 @@ help:
 
 
 .PHONY: all
-all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html
+all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html vib/templates/csmap.html vib/templates/tgmap.html
 
 requirements.txt:
 ${INSTALL_DIRECTORY}/devlibs: requirements.txt
@@ -41,12 +41,16 @@ ${INSTALL_DIRECTORY}/devlibs: requirements.txt
 serve:
 	export FLASK_APP=$(FLASK_APP) && export FLASK_DEBUG=$(FLASK_DEBUG) && ${FLASK_CMD} run --port=$(SERVER_PORT);
 
-vib/templates/glmap.mako.html:
 vib/templates/glmap.html: vib/templates/glmap.mako.html
 	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
-vib/templates/olmap.mako.html:
 vib/templates/olmap.html: vib/templates/olmap.mako.html
+	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
+
+vib/templates/csmap.html: vib/templates/csmap.mako.html
+	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
+
+vib/templates/tgmap.html: vib/templates/tgmap.mako.html
 	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
 clonebuild:
@@ -62,8 +66,7 @@ deploybranch: clonebuild upload
 
 .PHONY: clean
 clean:
-	rm -f vib/templates/glmap.html
-	rm -f vib/templates/olmap.html
+	rm -f vib/templates/%map.html
 	rm -f  ${INSTALL_DIRECTORY}/devlibs
 
 .PHONY: cleanall

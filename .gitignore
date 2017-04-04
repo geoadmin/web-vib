@@ -1,5 +1,4 @@
 .venv
 *.pyc
 *.swp
-vib/templates/glmap.html
-vib/templates/olmap.html
+vib/templates/*map.html
