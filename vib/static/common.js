@@ -11,7 +11,7 @@ var dftLang = 'all';
 var dftStyle = 'cj12a02uq007z2rqu53z4en4o';
 
 // TangramJS
-var dfltScene = 'https://mapzen.com/api/scenes/46449/458/resources/basic.yaml'; 
+var dfltScene = 'https://mapzen.com/api/scenes/46449/465/resources/basic.yaml'; 
  
 function getParam(name) {
   return decodeURIComponent(
