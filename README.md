@@ -1,3 +1,5 @@
+[Demos](https://mf-geoadmin3.int.bgdi.ch/vib/master/templates/index.html)
+
 Setup
 -----
 
@@ -14,7 +16,11 @@ Deploy a branch
 ---------------
 
 Branches are deployed in geoadmin integration bucket.
-Use `make deploybranch` to upload templates and static files (js|css) to S3.
+Use:
+
+`make deploybranch`
+
+to upload templates and static files (js|css) to S3.
 Make sure you pushed your changes to Github before deploying the branch.
 
 When `DEEP_CLEAN` variable is set to `true`, the project is built from scratches.
