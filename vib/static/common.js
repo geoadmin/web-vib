@@ -8,11 +8,10 @@ var dftBackground = 'swissimage';
 var dftLang = 'all';
 
 // Mapboxgl
-var dftStyle = 'cj12a02uq007z2rqu53z4en4o';
+var dftStyle = 'cj168d2g500482rqm988ycycc';
 
 // TangramJS
 var dfltScene = 'https://mapzen.com/api/scenes/46449/465/resources/basic.yaml'; 
- 
 function getParam(name) {
   return decodeURIComponent(
       (new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) ||
