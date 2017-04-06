@@ -12,7 +12,7 @@ FLASK_DEBUG ?= 1
 # Deploy variables
 USER_NAME ?= $(shell id -un)
 CLONEDIR = /home/$(USER_NAME)/tmp/branches/${BRANCH_NAME}
-BRANCH_NAME ?=../
+BRANCH_NAME ?=
 DEEP_CLEAN ?= "false"
 
 .PHONY: help
