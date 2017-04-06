@@ -5,10 +5,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <link real="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="${branch_name}static/common.css">
     <link rel="stylesheet prefetch" href="${branch_name}static/olmap.css">
   </head>
   <body>
-    <div class="vib-layerid"></div>
+    <div class="vib-header">
+      <div class="vib-layerselector pull-left">
+        <select class="form-control input-sm">
+          <option value="cj168d2g500482rqm988ycycc">White Labels</option>
+          <option value="cj168hha1004c2smkuvmgwidr">Black Labels</option>
+          <option value="cj168dc9l005n2ro163uokk0p">Big Labels</option>
+        </select>
+      </div>
+      <div class="vib-layerid pull-left"></div>
+    </div>
     <div id="ol-map" class="openlayers"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol.js"></script>
