@@ -257,23 +257,41 @@ function processStyle(glStyle, map, baseUrl, path, accessToken) {
     view.setZoom(glStyle.zoom);
   }
   if (!('zoom' in glStyle || 'center' in glStyle)) {
-    view.fit(view.getProjection().getExtent(), map.getSize(), { nearest: true });
+    view.fit(view.getProjection().getExtent(), {
+      nearest: true,
+      size: map.getSize()
+    });
   }
   if (glStyle.sprite && glStyle.sprite.indexOf('mapbox://') == 0) {
     glStyle.sprite = baseUrl + '/sprite' + accessToken;
   }
+
   var glLayers = glStyle.layers;
   var layerIds = [];
+
+  function finalizeLayer(layer) {
+    if (layerIds.length > 0) {
+      map.addLayer(layer);
+      applyStyle(layer, glStyle, layerIds).then(function () {
+        layer.setVisible(true);
+      }, function (e) {
+        throw e;
+      });
+    }
+  }
+
   var glLayer, glSource, glSourceId, id, layer, mapid, url;
   for (var i = 0, ii = glLayers.length; i < ii; ++i) {
     glLayer = glLayers[i];
     if (glLayer.type == 'background') {
       setBackground(map, glLayer);
     } else {
-      layerIds.push(glLayer.id);
       id = glLayer.source || getSourceIdByRef(glLayers, glLayer.ref);
       if (id != glSourceId) {
+        finalizeLayer(layer);
+        layerIds = [];
         glSource = glStyle.sources[id];
+
         if (glSource.type == 'vector') {
           url = glSource.url;
           if (url.indexOf('mapbox://') == 0) {
@@ -306,27 +324,12 @@ function processStyle(glStyle, map, baseUrl, path, accessToken) {
             visible: false
           });
         }
-        if (glSourceId) {
-          map.addLayer(layer);
-          applyStyle(layer, glStyle, layerIds).then(function () {
-            layer.setVisible(true);
-          }, function (e) {
-            throw e;
-          });
-          layerIds = [];
-        }
         glSourceId = id;
       }
+      layerIds.push(glLayer.id);
     }
   }
-  if (layerIds.length > 0) {
-    map.addLayer(layer);
-    applyStyle(layer, glStyle, layerIds).then(function () {
-      layer.setVisible(true);
-    }, function (e) {
-      throw e;
-    });
-  }
+  finalizeLayer(layer);
 }
 
 /**
@@ -915,22 +918,24 @@ exports.default = function (glStyle, source, resolutions, spriteData, spriteImag
 
         var icon;
         if (type == 'Point' && 'icon-image' in paint) {
-          ++stylesLength;
           var iconImage = paint['icon-image'](zoom, properties);
           icon = fromTemplate(iconImage, properties);
           style = iconImageCache[icon];
           if (!style && spriteData && spriteImageUrl) {
             var spriteImageData = spriteData[icon];
-            style = iconImageCache[icon] = new _style2.default({
-              image: new _icon2.default({
-                src: spriteImageUrl,
-                size: [spriteImageData.width, spriteImageData.height],
-                offset: [spriteImageData.x, spriteImageData.y],
-                scale: paint['icon-size'](zoom, properties) / spriteImageData.pixelRatio
-              })
-            });
+            if (spriteImageData) {
+              style = iconImageCache[icon] = new _style2.default({
+                image: new _icon2.default({
+                  src: spriteImageUrl,
+                  size: [spriteImageData.width, spriteImageData.height],
+                  offset: [spriteImageData.x, spriteImageData.y],
+                  scale: paint['icon-size'](zoom, properties) / spriteImageData.pixelRatio
+                })
+              });
+            }
           }
           if (style) {
+            ++stylesLength;
             var iconImg = style.getImage();
             iconImg.setRotation(deg2rad(paint['icon-rotate'](zoom, properties)));
             iconImg.setOpacity(paint['icon-opacity'](zoom, properties));
@@ -979,12 +984,7 @@ exports.default = function (glStyle, source, resolutions, spriteData, spriteImag
           }
           text = style.getText();
           var textSize = paint['text-size'](zoom, properties);
-          // VIB patch
-          var olFont = fontMap[paint['text-font'](zoom, properties)];
-          if (!olFont) {
-            continue;
-          }
-          var font = (0, _mapboxToCssFont2.default)(olFont, textSize);
+          var font = (0, _mapboxToCssFont2.default)(fontMap[paint['text-font'](zoom, properties)], textSize);
           var textTransform = paint['text-transform'];
           if (textTransform == 'uppercase') {
             label = label.toUpperCase();
@@ -1180,7 +1180,7 @@ function resolveRef(layer, glStyleObj) {
 
 function evaluate(filterObj, properties) {
   var type = filterObj[0];
-  var i, ii;
+  var i, ii, result;
   if (type == '==') {
     return properties[filterObj[1]] === filterObj[2];
   } else if (type == '!=') {
@@ -1194,7 +1194,7 @@ function evaluate(filterObj, properties) {
   } else if (type == '<=') {
     return properties[filterObj[1]] <= filterObj[2];
   } else if (type == 'in' || type == '!in') {
-    var result = false;
+    result = false;
     var property = properties[filterObj[1]];
     for (i = 2, ii = filterObj.length; i < ii; ++i) {
       result = result || property == filterObj[i];
@@ -1221,6 +1221,9 @@ function evaluate(filterObj, properties) {
       }
     }
     return true;
+  } else if (type == 'has' || type == '!has') {
+    result = properties.hasOwnProperty(filterObj[1]);
+    return type == 'has' ? result : !result;
   }
 }
 
