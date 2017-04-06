@@ -54,10 +54,12 @@ window.onload = function() {
     baseLayerPicker: false,
     shadows: false,
     scene3DOnly: false,
+    sceneMode: Cesium.SceneMode.MORPHING,
     mapMode2D : Cesium.MapMode2D.ROTATE,
     animation: false,
     terrainProvider: terrain,
-    imageryProvider:  swissimage
+    imageryProvider:  swissimage,
+    mapProjection : new Cesium.WebMercatorProjection()
   });
   viewer.clock.currentTime = jDate;
   viewer.scene.globe.baseColor = Cesium.Color.BLUE;
@@ -65,15 +67,16 @@ window.onload = function() {
   viewer.scene.globe.depthTestAgainstTerrain = false;
   viewer.scene.primitives.add(buildings);
   viewer.scene.primitives.add(names);
-
+  
   // MORPHING
   var is3d = true;
   $('#morph').click(function() {
     if (is3d) {
-      viewer.scene.morphTo2D(1000);
+      viewer.scene.morphTo2D();
     } else {
-      viewer.scene.morphTo3D(1000);
+      viewer.scene.morphTo3D();
     }
+    viewer.scene.completeMorph();
     is3d = !is3d;
     zoomToSwiss();
   });
