@@ -95,6 +95,24 @@
   function addPixelKarte(map, styleId) {
     var firstLyrId = getMapFirstLayerId(map, styleId);
     map.addSource(
+      'pixelkarte1MWMS', {
+        type: 'raster',
+        tiles: [getWMSUrl('ch.swisstopo.vib2d.pk1000')],
+        tileSize: 256
+      }
+    );
+    map.addLayer({
+        id: 'pixelkarte1M',
+        source: 'pixelkarte1MWMS',
+        type: 'raster',
+        paint: {
+          "raster-opacity": {
+            base: 1,
+            stops: [[0,1],[8.99,1],[9.0,0],[22,0]]
+          }
+        }
+      }, firstLyrId);
+    map.addSource(
       'pixelkarte500WMS', {
         type: 'raster',
         tiles: [getWMSUrl('ch.swisstopo.vib2d.pk500')],
@@ -105,6 +123,12 @@
         id: 'pixelkarte500',
         source: 'pixelkarte500WMS',
         type: 'raster',
+        paint: {
+          "raster-opacity": {
+            base: 1,
+            stops: [[0,0],[8.99,0],[9.0,1],[22,1]]
+          }
+        }
       }, firstLyrId);
   }
 
