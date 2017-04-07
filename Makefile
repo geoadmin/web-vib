@@ -28,7 +28,7 @@ help:
 
 
 .PHONY: all
-all: ${INSTALL_DIRECTORY}/devlibs vib/templates/glmap.html vib/templates/olmap.html vib/templates/csmap.html vib/templates/tgmap.html
+all: ${INSTALL_DIRECTORY}/devlibs
 
 requirements.txt:
 ${INSTALL_DIRECTORY}/devlibs: requirements.txt
@@ -40,18 +40,6 @@ ${INSTALL_DIRECTORY}/devlibs: requirements.txt
 .PHONY: serve
 serve:
 	export FLASK_APP=$(FLASK_APP) && export FLASK_DEBUG=$(FLASK_DEBUG) && ${FLASK_CMD} run --port=$(SERVER_PORT);
-
-vib/templates/glmap.html: vib/templates/glmap.mako.html
-	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
-
-vib/templates/olmap.html: vib/templates/olmap.mako.html
-	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
-
-vib/templates/csmap.html: vib/templates/csmap.mako.html
-	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
-
-vib/templates/tgmap.html: vib/templates/tgmap.mako.html
-	${MAKO_CMD} --var "branch_name=${BRANCH_NAME}" $< > $@
 
 clonebuild:
 	$(eval BRANCH_NAME=$(shell git rev-parse --symbolic-full-name --abbrev-ref HEAD))
@@ -66,7 +54,6 @@ deploybranch: clonebuild upload
 
 .PHONY: clean
 clean:
-	rm -f vib/templates/%map.html
 	rm -f  ${INSTALL_DIRECTORY}/devlibs
 
 .PHONY: cleanall
