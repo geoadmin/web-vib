@@ -1,16 +1,15 @@
 (function() {
-  var map, params;
+  var map;
 
   function permalinkManager(map) {
     return map.on('moveend', function() {
-      params = getParams();
       var zoom = map.getView().getZoom();
       var center = map.getView().getCenter();
-      setParams({
+      app.setParams({
         x: center[0],
         y: center[1],
         zoom: zoom,
-        style: params.style
+        style: app.params.style
       });
     });
   }
@@ -43,13 +42,13 @@
     if (mvt) {
       $.get(getStyleUrl(style), function(data) {
         olms.applyStyle(mvt, data, 'composite');
-        setParam({'style': style});
+        app.setParam({'style': style});
       })
     }
   }
 
-  function initMap(params) {
-    var map = olms.apply('ol-map', getStyleUrl(params.style));
+  function initMap() {
+    var map = olms.apply('ol-map', getStyleUrl(app.params.style));
     var wmtsLayer = new ol.layer.Tile({
       source: new ol.source.XYZ({
         attributions: [
@@ -63,9 +62,8 @@
       })
     });
     var view = map.getView();
-    var params = getParams();
-    view.setCenter([parseFloat(params.x), parseFloat(params.y)]);
-    view.setZoom(parseFloat(params.zoom));
+    view.setCenter([parseFloat(app.params.x), parseFloat(app.params.y)]);
+    view.setZoom(parseFloat(app.params.zoom));
     permalinkManager(map);
     contextManager(map);
     map.getLayers().insertAt(0, wmtsLayer);
@@ -73,10 +71,10 @@
   }
 
   $(window).load(function() {
-    params = getParams();
-    map = initMap(params);
+    app.getParams();
+    map = initMap();
     // Handle labels
-    //var selectedLayer = $('.vib-layerselector option[value=' + params.style + ']');
+    //var selectedLayer = $('.vib-layerselector option[value=' + app.params.style + ']');
     //if (selectedLayer) {
     //  selectedLayer.prop('selected', true);
     //}

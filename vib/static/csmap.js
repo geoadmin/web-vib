@@ -6,7 +6,7 @@ var jD = new Cesium.JulianDate();
 var d = new Date();
 d.setUTCHours(8);
 var jDate = Cesium.JulianDate.fromDate(d);
-  
+
 // Terrain
 var terrain = new Cesium.CesiumTerrainProvider({
   url: '//3d.geo.admin.ch/1.0.0/ch.swisstopo.terrain.3d/default/20160115/4326/',
