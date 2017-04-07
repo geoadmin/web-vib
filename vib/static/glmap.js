@@ -1,58 +1,42 @@
 (function() {
-  var params, mainStyle;
-  function changeMapLang(map, lang) {
-    var styleSpec, layers, langFilter, fallbackFilter;
-    styleSpec = $.extend(true, {}, map.getStyle(params.style));
-    layers = styleSpec.layers.slice();
-    setParam(lang, 'lang');
-    // Always remove previous composite layers first
-    for (var i=0; i < layers.length; i++) {
-      var lyr = layers[i];
-      if (lyr.source == 'composite' && lyr.layout) {
-        map.removeLayer(lyr.id);
-      }
-    }
-    if (lang == 'all') {
-      styleSpec = $.extend(true, {}, mainStyle);
-      layers = styleSpec.layers.slice();
-      for (var i=0; i < layers.length; i++) {
-        var lyr = layers[i];
-        if (lyr.source == 'composite' && lyr.layout) {
-          map.addLayer(lyr);
-        }
-      }
-      return
-    }
-    styleSpec = $.extend(true, {}, mainStyle);
-    layers = styleSpec.layers.slice();
-    langFilter = ['!=', lang, ''];
-    fallbackFilter = ['==', lang, ''];
-    for (var i=0; i < layers.length; i++) {
-      var lyr = layers[i];
-      if (lyr.source == 'composite' && lyr.layout) {
-        var lyrLang = $.extend(true, {}, lyr);
-        var fltLang = ['all', lyrLang.filter, langFilter];
-        lyrLang.layout['text-field'] = '{' + lang + '}';
-        lyrLang.filter = fltLang;
-        lyrLang.id = lyrLang.id + '_lang';
+  function textField(txt) {
+    return '{' + txt + '}';
+  }
 
-        // Prepare fallback layer
-        lyr.filter = ['all', lyr.filter, fallbackFilter];
-        lyr.id = lyr.id + '_fallback';
-        map.addLayer(lyrLang);
-        map.addLayer(lyr);
+  function getMapFirstLayerId(map) {
+    var style = map.getStyle();
+    return style.layers[0].id;
+  }
+
+  function getLayersByTypes(map, types) {
+    var lyrs = [];
+    var style = map.getStyle();
+    for (var i = 0; i < style.layers.length; i++) {
+      if (types.indexOf(style.layers[i].type) > -1) {
+        lyrs.push(style.layers[i].id);
       }
     }
+    return lyrs;
+  }
+
+  function changeMapLang(map, lang) {
+    var style = map.getStyle();
+    var lyrs = getLayersByTypes(map, ['line', 'symbol']);
+    var layoutVal = textField(lang == 'all' ? 'name' : lang);
+    for (var i=0; i < lyrs.length; i++) {
+      var lyr = style.layers[i];
+      if (lyr.layout && lyr.layout['text-field'] != layoutVal) {
+        map.setLayoutProperty(lyr.id, 'text-field', layoutVal);
+      }
+    }
+    app.setParam(lang, 'lang');
   }
 
   function changeMap(map, styleId) {
-    map.setStyle('mapbox://styles/vib2d/' + styleId);
-    setParam(styleId, 'style');
-  }
-
-  function getMapFirstLayerId(map, styleId) {
-    var s = map.getStyle(styleId);
-    return s.layers[0].id;
+    if (map.getStyle().id != styleId) {
+      map.setStyle('mapbox://styles/vib2d/' + styleId);
+      app.setParam(styleId, 'style');
+    }
   }
 
   function getWMSUrl(layerId) {
@@ -60,23 +44,8 @@
         '&service=WMS&version=1.3.0&request=GetMap&crs=EPSG:3857&width=256&height=256&layers=' + layerId;
   }
 
-  function addBackground(map, stlyeId, layerId) {
-    var config = {
-      'swissimage': addSwissimage,
-      'pixelkarte': addPixelKarte
-    };
-    setParam(layerId, 'background');
-    return config[layerId](map, stlyeId);
-  }
-
-  function changeBackground(map, styleId, layerId) {
-    var firstLyrId = getMapFirstLayerId(map, styleId);
-    map.removeLayer(firstLyrId);
-    return addBackground(map, styleId, layerId);
-  }
-
-  function addSwissimage(map, styleId) {
-    var firstLyrId = getMapFirstLayerId(map, styleId);
+  function addSwissimage(map) {
+    var firstLyrId = getMapFirstLayerId(map);
     map.addSource(
       'swissimageWMTS', {
         type: 'raster',
@@ -92,8 +61,8 @@
       }, firstLyrId);
   }
 
-  function addPixelKarte(map, styleId) {
-    var firstLyrId = getMapFirstLayerId(map, styleId);
+  function addPixelKarte(map) {
+    var firstLyrId = getMapFirstLayerId(map);
     map.addSource(
       'pixelkarte1MWMS', {
         type: 'raster',
@@ -132,48 +101,57 @@
       }, firstLyrId);
   }
 
+  function addBackground(map, layerId) {
+    var config = {
+      'swissimage': addSwissimage,
+      'pixelkarte': addPixelKarte
+    };
+    app.setParam(layerId, 'background');
+    return config[layerId](map);
+  }
+
+  function changeBackground(map, layerId) {
+    var rasterMaps = getLayersByTypes(map, ['raster']);
+    for (var i = 0; i < rasterMaps.length; i++) {
+      map.removeLayer(rasterMaps[i]);
+    }
+    return addBackground(map, layerId);
+  }
+
   function initMap() {
     mapboxgl.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
         'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
 
-    params = getParams();
+    app.getParams();
     var map = new mapboxgl.Map({
       container: 'gl-map',
-      center: centerLngLat = [params.lng, params.lat],
-      style: 'mapbox://styles/vib2d/' + params.style,
+      center: centerLngLat = [app.params.lng, app.params.lat],
+      style: 'mapbox://styles/vib2d/' + app.params.style,
       // Mapbox zoom differs by one.
-      zoom: params.zoom,
+      zoom: app.params.zoom,
       interactive: true,
       minZoom: 6,
       maxZoom: 18
     });
 
-    // Add a Swissimage layer to the map style.
-    map.on('load', function() {
-      // Put layer in the background
-      mainStyle = $.extend(true, {}, map.getStyle(params.style));
-      setParams(params);
-    });
-
     map.on('style.load', function(e) {
       // Make a copy of the style when loaded
-      mainStyle = $.extend(true, {}, map.getStyle(params.style));
-      addBackground(map, params.style, params.background);
-      if (params.lang && params.lang != 'all') {
-        changeMapLang(map, params.lang);
+      addBackground(map, app.params.background);
+      if (app.params.lang && app.params.lang != 'all') {
+        changeMapLang(map, app.params.lang);
       }
     });
 
     map.on('moveend', function(e) {
       var center = map.getCenter();
       var zoom = map.getZoom();
-      setParams({
+      app.setParams({
         lng: center.lng,
         lat: center.lat,
         zoom: zoom,
-        lang : params.lang,
-        background: params.background,
-        style: params.style
+        lang : app.params.lang,
+        background: app.params.background,
+        style: app.params.style
       });
     });
 
@@ -205,7 +183,7 @@
     var map = initMap();
 
     // Handle languages
-    var selectedLang = $('.vib-langselector option[value=' + params.lang + ']');
+    var selectedLang = $('.vib-langselector option[value=' + app.params.lang + ']');
     if (selectedLang) {
       selectedLang.prop('selected', true);
     }
@@ -214,16 +192,16 @@
     });
 
     // Handle background
-    var selectedBackground = $('.vib-backgroundselector option[value=' + params.background + ']');
+    var selectedBackground = $('.vib-backgroundselector option[value=' + app.params.background + ']');
     if (selectedBackground) {
       selectedBackground.prop('selected', true);
     }
     $('.vib-backgroundselector select').change(function() {
-      changeBackground(map, params.style, this.value);
+      changeBackground(map, this.value);
     });
 
     // Handle labels
-    var selectedLayer = $('.vib-layerselector option[value=' + params.style + ']');
+    var selectedLayer = $('.vib-layerselector option[value=' + app.params.style + ']');
     if (selectedLayer) {
       selectedLayer.prop('selected', true);
     }

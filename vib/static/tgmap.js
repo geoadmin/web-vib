@@ -1,8 +1,8 @@
-var params = getParams();
+app.getParams();
 var info = $('#info');
 var map = L.map('map');
 var layer = Tangram.leafletLayer({
-  scene: params.scene,
+  scene: app.params.scene,
   events: {
     hover: function(sel) {
      map.getContainer().style.cursor = (sel && sel.feature)?
@@ -11,15 +11,15 @@ var layer = Tangram.leafletLayer({
   }
 });
 layer.addTo(map);
-map.setView([params.lat, params.lng], params.zoom);
+map.setView([app.params.lat, app.params.lng], app.params.zoom);
 map.on('moveend', function() {
   var center = map.getCenter();
   var zoom = map.getZoom();
   var scene = layer.scene.config_source;
-  setParam(center.lat, 'lat');
-  setParam(center.lng, 'lng');
-  setParam(zoom, 'zoom');
-  setParam(scene, 'scene');
+  app.setParam(center.lat, 'lat');
+  app.setParam(center.lng, 'lng');
+  app.setParam(zoom, 'zoom');
+  app.setParam(scene, 'scene');
   $('#mapzenLink')[0].href = 'https://mapzen.com/tangram/play/?scene=' + 
       encodeURIComponent(scene) +
       '#' + zoom + '/' + center.lat + '/' + center.lng;
