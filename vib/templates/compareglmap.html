@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>SxS Mapbox GL Styles</title>
+    <base href="../" target="_blank">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet prefetch" href="https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css">
+    <link rel="stylesheet prefetch" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="static/compareglmap.css">
+  </head>
+  <body>
+    <div class="vib-header">
+      <div class="vib-layerselector pull-left" id="styleSelector">
+        <select class="form-control input-sm">
+          <option value="test-dkm10-geometry">DKM10 geometry</option>
+          <option value="test-multi-dkm-geometry">MultiDKM geometry</option>
+        </select>
+      </div>
+      <div class="vib-layerselector pull-left" id="styleToCompareSelector">
+        <select class="form-control input-sm">
+          <option value="test-dkm10-geometry">DKM10 geometry</option>
+          <option value="test-multi-dkm-geometry">MultiDKM geometry</option>
+        </select>
+      </div>
+      <div class="vib-info pull-left" id="layerId"></div>
+    </div>
+    <div class="vib-footer">
+      <div class="vib-zoomslider pull-right">
+        <input type="range" id="zoomSlider" min="400" max="2000" value="1000"/>
+      </div>
+      <div class="vib-info pull-left" id="zoomValue">10.00</div>
+    </div>
+    <div id="map" class="mapbox"></div>
+    <div id="mapToCompare" class="mapbox"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="static/jquery.query-object.js"></script>
+    <script src="static/common.js"></script>
+    <script src="static/compareglmap.js"></script>
+  </body>
+</html>
