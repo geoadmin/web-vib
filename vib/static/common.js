@@ -14,6 +14,11 @@ var app = {};
   // TangramJS
   var dfltScene = 'https://mapzen.com/api/scenes/46449/465/resources/basic.yaml';
 
+  // TileserverGL instance
+  app.tileserverPort = '8135';
+  app.tileserverHost = 'sbitileserver.smm-admin.ch';
+  app.tileserverUrl = 'http://' + app.tileserverHost + ':' + app.tileserverPort;
+
   app.params = {};
 
   app.getParam = function(name) {
@@ -29,6 +34,7 @@ var app = {};
     var y = app.getParam('y');
     var zoom = app.getParam('zoom');
     var style = app.getParam('style');
+    var styleToCompare = app.getParam('styleToCompare');
     var lang = app.getParam('lang');
     var background = app.getParam('background');
     var scene = app.getParam('scene');
@@ -40,6 +46,7 @@ var app = {};
       x: x || dftX,
       y: y || dftY,
       style: style || dftStyle,
+      styleToCompare: styleToCompare || dftStyle,
       lang: lang || dftLang,
       background: background || dftBackground,
       scene: scene || dfltScene
@@ -69,6 +76,7 @@ var app = {};
     qString = qString.set('y', opts.y);
     qString = qString.set('zoom', opts.zoom);
     qString = qString.set('style', opts.style);
+    qString = qString.set('styleToCompare', opts.styleToCompare);
     qString = qString.set('lang', opts.lang);
     qString = qString.set('background', opts.background);
     $.extend(app.params, opts);

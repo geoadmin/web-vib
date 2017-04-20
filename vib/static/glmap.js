@@ -168,10 +168,8 @@
         }
       }
     });
-
-    map.addControl(new mapboxgl.Navigation({
-      position: 'top-right'
-    }));
+    map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.FullscreenControl());
     return map;
   }
 
