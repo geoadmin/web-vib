@@ -17,20 +17,7 @@
       container: containerId,
       center: centerLngLat = [app.params.lng, app.params.lat],
       style:  app.tileserverUrl + '/styles/' + styleId + '.json',
-      // Mapbox zoom differs by one.
       zoom: app.params.zoom,
-    });
-
-    map.on('moveend', function(e) {
-      var center = map.getCenter();
-      var zoom = map.getZoom();
-      app.setParams({
-        lng: center.lng,
-        lat: center.lat,
-        zoom: zoom,
-        style: app.params.style,
-        styleToCompare: app.params.styleToCompare
-      });
     });
 
     map.on('click', function(e) {
@@ -43,6 +30,8 @@
             break;
           }
         }
+      } else {
+        $('#layerId').html('');
       }
     });
 
@@ -52,6 +41,20 @@
       unit: 'metric'
     }));
 
+    if (containerId == 'map') {
+      // Handle zoom updates
+      map.on('zoomend', function() {
+        $('#zoomValue').html(map.getZoom().toFixed(2));
+        $('#zoomSlider').val(map.getZoom() * 100);
+        app.setParam(map.getZoom(), 'zoom');
+      });
+      map.on('moveend', function(e) {
+        console.log('moveend');
+        var center = map.getCenter();
+        app.setParam(center.lng, 'lng');
+        app.setParam(center.lat, 'lat');
+      });
+    }
     return map;
   }
 
@@ -64,10 +67,7 @@
     // Set default zoom, lat, long
     var map = initMap('map', 'style', app.params.style);
     var mapToCompare = initMap('mapToCompare', 'styleToCompare', app.params.styleToCompare);
-    var mapSxS = new mapboxgl.Compare(map, mapToCompare, {
-      // Set this to enable comparing two maps by mouse movement:
-      //mousemove: true
-    });
+    var mapSxS = new mapboxgl.Compare(map, mapToCompare);
     $('#zoomValue').html(map.getZoom().toFixed(2));
     $('#zoomSlider').val(map.getZoom() * 100);
  
@@ -89,10 +89,6 @@
     });
 
     // Handle zoom updates
-    map.on('zoomend', function() {
-      $('#zoomValue').html(map.getZoom().toFixed(2));
-      $('#zoomSlider').val(map.getZoom() * 100);
-    });
     $('#zoomSlider').on('input', function() {
       const currZoom = parseFloat($('#zoomSlider').val() / 100);
       $('#zoomValue').html(currZoom.toFixed(2));
