@@ -13,4 +13,6 @@ body {
 .vib-layerid {
   padding: 6px;
 }
-
+#gl-hover {
+  opacity: 0.5;
+}
