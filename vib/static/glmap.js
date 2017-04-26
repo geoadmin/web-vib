@@ -118,6 +118,56 @@
     return addBackground(map, layerId);
   }
 
+  function geojsonDragAndDrop(map) {
+    // Mapbox GL JS uses geojson-vt behind the scene
+    // https://www.mapbox.com/blog/introducing-geojson-vt/
+    // Only support Linestring for the demo
+    var canvas = map.getCanvas();
+    canvas.ondragover = function() {
+      this.id = 'gl-hover';
+      return false;
+    };
+    canvas.ondragend = function() {
+      this.id = '';
+      return false;
+    };
+    canvas.onmouseout = function() {
+      this.id = '';
+    };
+    canvas.ondrop = function(e) {
+      var that = this;
+      var reader = new FileReader();
+      var filename = e.dataTransfer.files[0].name;
+      reader.onload = function(event) {
+        var data = JSON.parse(event.target.result);
+        map.addLayer({
+          "id": filename,
+          "type": "line",
+          "source": {
+            "type": "geojson",
+            "data": data
+          },
+          "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+          },
+          "paint": {
+            "line-color": "aquamarine",
+            "line-width": 2
+          }
+        });
+        that.id = '';
+      };
+      reader.onerror = function() {
+        that.id = '';
+      };
+      reader.readAsText(e.dataTransfer.files[0]);
+
+      e.preventDefault();
+      return false;
+    };
+  }
+
   function initMap() {
     mapboxgl.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
         'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
@@ -140,6 +190,8 @@
       if (app.params.lang && app.params.lang != 'all') {
         changeMapLang(map, app.params.lang);
       }
+      // Attach drag and drop listener
+      geojsonDragAndDrop(map);
     });
 
     map.on('moveend', function(e) {
@@ -178,8 +230,8 @@
       //stop and alert user map is not supported
       alert('Your browser does not support Mapbox GL.  Please try Chrome or Firefox.');
     }
-    var map = initMap();
 
+    var map = initMap();
     // Handle languages
     var selectedLang = $('.vib-langselector option[value=' + app.params.lang + ']');
     if (selectedLang) {
