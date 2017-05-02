@@ -15,9 +15,8 @@ var app = {};
   var dfltScene = 'https://mapzen.com/api/scenes/46449/465/resources/basic.yaml';
 
   // TileserverGL instance
-  app.tileserverPort = '8135';
-  app.tileserverHost = 'sbitileserver.smm-admin.ch';
-  app.tileserverUrl = 'http://' + app.tileserverHost + ':' + app.tileserverPort;
+  app.tileserverHost = 'tileserver.dev.bgdi.ch';
+  app.tileserverUrl = 'https://' + app.tileserverHost;
 
   app.params = {};
 

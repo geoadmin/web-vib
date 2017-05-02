@@ -49,7 +49,6 @@
         app.setParam(map.getZoom(), 'zoom');
       });
       map.on('moveend', function(e) {
-        console.log('moveend');
         var center = map.getCenter();
         app.setParam(center.lng, 'lng');
         app.setParam(center.lat, 'lat');
