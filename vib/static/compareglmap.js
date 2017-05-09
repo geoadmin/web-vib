@@ -48,11 +48,12 @@
         $('#zoomSlider').val(map.getZoom() * 100);
         app.setParam(map.getZoom(), 'zoom');
       });
-      map.on('moveend', function(e) {
-        var center = map.getCenter();
-        app.setParam(center.lng, 'lng');
-        app.setParam(center.lat, 'lat');
-      });
+      // Disable panning updates as it slows down the movements.
+      //map.on('moveend', function(e) {
+      //  var center = map.getCenter();
+      //  app.setParam(center.lng, 'lng');
+      //  app.setParam(center.lat, 'lat');
+      //});
     }
     return map;
   }
@@ -65,7 +66,8 @@
     app.getParams();
     // Set default zoom, lat, long
     var map = initMap('map', 'style', app.params.style);
-    var mapToCompare = initMap('mapToCompare', 'styleToCompare', app.params.styleToCompare);
+    var mapToCompare = initMap('mapToCompare', 'styleToCompare',
+                               app.params.styleToCompare);
     var mapSxS = new mapboxgl.Compare(map, mapToCompare);
     $('#zoomValue').html(map.getZoom().toFixed(2));
     $('#zoomSlider').val(map.getZoom() * 100);
