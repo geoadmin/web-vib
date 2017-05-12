@@ -36,6 +36,7 @@ var app = {};
     var styleToCompare = app.getParam('styleToCompare');
     var lang = app.getParam('lang');
     var background = app.getParam('background');
+    var overlay = app.getParam('overlay');
     var scene = app.getParam('scene');
     var params = {
       lng: lng || dftLng,
@@ -48,6 +49,7 @@ var app = {};
       styleToCompare: styleToCompare || dftStyle,
       lang: lang || dftLang,
       background: background || dftBackground,
+      overlay: overlay,
       scene: scene || dfltScene
     };
     app.setParams(params);
@@ -78,6 +80,7 @@ var app = {};
     qString = qString.set('styleToCompare', opts.styleToCompare);
     qString = qString.set('lang', opts.lang);
     qString = qString.set('background', opts.background);
+    qString = qString.set('overlay', opts.overlay);
     $.extend(app.params, opts);
     history.pushState({}, '', window.location.pathname + qString.toString());
   };
