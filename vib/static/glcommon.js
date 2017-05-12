@@ -44,4 +44,24 @@ var glapi = {};
       type: 'raster'
     };
   };
+
+  glapi.attachMapClickListener = function(map) {
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point);
+      if (features.length) {
+        for (var i=0; i < features.length; i++) {
+          var feature = features[i];
+          if (feature.layer.id) {
+            if (feature.properties.name) {
+              $('.vib-layerid').html(
+                  feature.properties.name + ' : ' + feature.layer.id);
+            } else {
+              $('.vib-layerid').html(feature.layer.id);
+            }
+            break;
+          }
+        }
+      }
+    });
+  };
 })();
