@@ -2,6 +2,9 @@ var glapi = {};
 
 (function() {
 
+  glapi.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
+      'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
+
   glapi.getMapFirstLayerId = function(map) {
     var style = map.getStyle();
     return style.layers[0].id;
@@ -22,7 +25,6 @@ var glapi = {};
         '&service=WMS&version=1.3.0&request=GetMap&crs=EPSG:3857&width=256&height=256&layers=' + bodId;
   };
 
-
   glapi.formatSourceName = function(bodId) {
     return 'source_' + bodId;
   };
@@ -42,5 +44,4 @@ var glapi = {};
       type: 'raster'
     };
   };
-
 })();

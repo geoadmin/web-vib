@@ -3,11 +3,6 @@
     return '{' + txt + '}';
   }
 
-  function getMapFirstLayerId(map) {
-    var style = map.getStyle();
-    return style.layers[0].id;
-  }
-
   function getLayersByTypes(map, types) {
     var lyrs = [];
     var style = map.getStyle();
@@ -39,40 +34,28 @@
     }
   }
 
-  function getWMSUrl(layerId) {
-    return 'https://wms.geo.admin.ch?bbox={bbox-epsg-3857}&format=image/png&STYLES=&' +
-        '&service=WMS&version=1.3.0&request=GetMap&crs=EPSG:3857&width=256&height=256&layers=' + layerId;
-  }
-
   function addSwissimage(map) {
-    var firstLyrId = getMapFirstLayerId(map);
-    map.addSource(
-      'swissimageWMTS', {
-        type: 'raster',
-        tiles: ['https://wmts10.geo.admin.ch/' +
-            '1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg'],
-        tileSize: 256
-      }
+    var bodId = 'ch.swisstopo.swissimage';
+    var firstLyrId = glapi.getMapFirstLayerId(map);
+    map.addSource(glapi.formatSourceName(bodId),
+        glapi.getWMTSRasterSource(bodId, 'current', 'jpeg')
     );
-    map.addLayer({
-        id: 'swissimage',
-        source: 'swissimageWMTS',
-        type: 'raster',
-      }, firstLyrId);
+    map.addLayer(glapi.getWMTSRasterLayer(bodId), firstLyrId);
   }
 
   function addPixelKarte(map) {
-    var firstLyrId = getMapFirstLayerId(map);
+    var bodId = 'ch.swisstopo.vib2d.pk1000';
+    var firstLyrId = glapi.getMapFirstLayerId(map);
     map.addSource(
-      'pixelkarte1MWMS', {
+      glapi.formatSourceName(bodId), {
         type: 'raster',
-        tiles: [getWMSUrl('ch.swisstopo.vib2d.pk1000')],
+        tiles: [glapi.getWMSUrl(bodId)],
         tileSize: 256
       }
     );
     map.addLayer({
-        id: 'pixelkarte1M',
-        source: 'pixelkarte1MWMS',
+        id: bodId,
+        source: glapi.formatSourceName(bodId),
         type: 'raster',
         paint: {
           "raster-opacity": {
@@ -81,16 +64,17 @@
           }
         }
       }, firstLyrId);
+    bodId = 'ch.swisstopo.vib2d.pk500';
     map.addSource(
-      'pixelkarte500WMS', {
+      glapi.formatSourceName(bodId), {
         type: 'raster',
-        tiles: [getWMSUrl('ch.swisstopo.vib2d.pk500')],
+        tiles: [glapi.getWMSUrl(bodId)],
         tileSize: 256
       }
     );
     map.addLayer({
-        id: 'pixelkarte500',
-        source: 'pixelkarte500WMS',
+        id: bodId,
+        source: glapi.formatSourceName(bodId),
         type: 'raster',
         paint: {
           "raster-opacity": {
@@ -169,8 +153,7 @@
   }
 
   function initMap() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56' +
-        'emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw';
+    mapboxgl.accessToken = glapi.accessToken;
 
     app.getParams();
     var map = new mapboxgl.Map({

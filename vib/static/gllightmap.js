@@ -57,7 +57,8 @@
         overlay: app.params.overlay
       });
     });
-
+    map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.FullscreenControl());
     return map;
   }
 
