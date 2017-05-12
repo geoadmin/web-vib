@@ -57,6 +57,7 @@
         overlay: app.params.overlay
       });
     });
+    glapi.attachMapClickListener(map);
     map.addControl(new mapboxgl.NavigationControl());
     map.addControl(new mapboxgl.FullscreenControl());
     return map;

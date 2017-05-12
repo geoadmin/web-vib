@@ -189,20 +189,7 @@
         style: app.params.style
       });
     });
-
-    map.on('click', function(e) {
-      var features = map.queryRenderedFeatures(e.point);
-      if (features.length) {
-        for (var i=0; i < features.length; i++) {
-          var feature = features[i];
-          if (feature.layer.id) {
-            $('.vib-layerid').html(
-                feature.properties.name + ' : ' + feature.layer.id);
-            break;
-          }
-        }
-      }
-    });
+    glapi.attachMapClickListener(map);
     map.addControl(new mapboxgl.NavigationControl());
     map.addControl(new mapboxgl.FullscreenControl());
     return map;
