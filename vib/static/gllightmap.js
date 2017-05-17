@@ -43,7 +43,7 @@
       maxZoom: 18
     });
 
-    map.on('style.load', function(e) {
+    map.on('load', function(e) {
       localMapConfig(map);
     });
 

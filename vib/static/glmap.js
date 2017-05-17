@@ -167,7 +167,7 @@
       maxZoom: 18
     });
 
-    map.on('style.load', function(e) {
+    map.on('load', function(e) {
       // Make a copy of the style when loaded
       addBackground(map, app.params.background);
       if (app.params.lang && app.params.lang != 'all') {

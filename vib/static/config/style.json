@@ -1,0 +1,37 @@
+{
+  "version": 8,
+  "name": "All VIB Layers",
+  "metadata": {
+    "mapbox:type": "template",
+    "mapbox:groups": { },
+    "mapbox:autocomposite": false,
+    "mapbox:sdk-support": {
+      "js": "0.27.0"
+    }
+  },
+  "light": {
+    "intensity": 0.16
+  },
+  "owner": "vib2d",
+  "sources": {
+    "ch.swisstopo.swissimage-product": {
+      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
+      "type": "raster",
+      "tileSize": 256
+    },
+    "ch.bafu.gewaesserschutz-": {
+      "data": { "type": "Feature", "geometry": { "type": "Point", "coordinates": [0, 0] } },
+      "type": "geojson"
+    },
+    "ch.swisstopo.lightbasemap": {
+      "tiles": [
+        "https://a.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
+        "https://b.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
+      ],
+      "type": "vector"
+    }
+   },
+  "sprite": "mapbox://sprites/vib2d/cj168d2g500482rqm988ycycc",
+  "glyphs": "mapbox://fonts/vib2d/{fontstack}/{range}.pbf",
+  "layers": []
+}
