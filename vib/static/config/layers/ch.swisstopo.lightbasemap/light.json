@@ -1,0 +1,6049 @@
+{
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "background-color": "hsl(0, 0%, 95%)"
+      }
+    },
+    {
+      "minzoom": 8,
+      "layout": {
+        "visibility": "visible"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "1"
+      ],
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "Gemeinde",
+      "paint": {
+        "fill-color": "rgba(245, 230, 226,1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              15,
+              0.5
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "Flughafen",
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "filter": [
+        "==",
+        "layerid",
+        "2"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-opacity": 0.6
+      }
+    },
+    {
+      "id": "Wald",
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "filter": [
+        "==",
+        "layerid",
+        "3"
+      ],
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [
+              12,
+              "rgba(215, 230, 200, 1)"
+            ],
+            [
+              16,
+              "rgb(233,242,219)"
+            ]
+          ]
+        },
+        "fill-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "4"
+      ],
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "Park",
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [
+              12,
+              "rgba(215, 230, 200, 1)"
+            ],
+            [
+              16,
+              "rgb(233,242,219)"
+            ]
+          ]
+        },
+        "fill-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "5"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "GEWAESSER Fliessgewaesser LIN",
+      "paint": {
+        "line-color": "rgba(200, 210, 250, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        },
+        "line-width": 2
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "6.3"
+      ],
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "GEWAESSER Wasserbecken",
+      "paint": {
+        "fill-color": "rgba(200, 210, 250, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "GEWAESSER Fliessgewaesser PLY",
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "filter": [
+        "==",
+        "layerid",
+        "6.2"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(200, 210, 250, 1)"
+      }
+    },
+    {
+      "id": "GEWAESSER See",
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "filter": [
+        "==",
+        "layerid",
+        "6.1"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(200, 210, 250, 1)"
+      }
+    },
+    {
+      "id": "Grenze",
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "filter": [
+        "==",
+        "layerid",
+        "17"
+      ],
+      "paint": {
+        "line-color": "rgba(255, 153, 255, 1)",
+        "line-width": {
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              13,
+              10
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              10,
+              0.3
+            ],
+            [
+              13,
+              0.2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "minzoom": 8,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "7"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Tunnel",
+      "paint": {
+        "line-width": {
+          "stops": [
+            [
+              6,
+              0.5
+            ],
+            [
+              22,
+              4
+            ]
+          ]
+        },
+        "line-dasharray": [
+          3,
+          3
+        ],
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": 0.25
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 8,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-miter-limit": 2
+      },
+      "maxzoom": 24,
+      "filter": [
+        "==",
+        "layerid",
+        "7.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Tunnel AB",
+      "paint": {
+        "line-width": {
+          "stops": [
+            [
+              6,
+              0.5
+            ],
+            [
+              22,
+              4
+            ]
+          ]
+        },
+        "line-dasharray": [
+          3,
+          3
+        ],
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-opacity": 0.25
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "8.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Weg",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-dasharray": [
+          5,
+          3
+        ]
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "8.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "13.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "13.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "9.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "9.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "10"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Strasse",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "11"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 8,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "12"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "13.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "13.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "14.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Tunnel Anschluss",
+      "paint": {
+        "line-color": "rgba(128, 128, 128, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-dasharray": [
+          6,
+          3
+        ],
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0.15
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "14.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Tunnel Einspur",
+      "paint": {
+        "line-color": "rgba(128, 128, 128, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-dasharray": [
+          6,
+          3
+        ],
+        "line-opacity": 0.15
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 9,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "14.3"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Tunnel Mehrspur",
+      "paint": {
+        "line-color": "rgba(128, 128, 128, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-dasharray": [
+          6,
+          3
+        ],
+        "line-opacity": 0.15
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "15.1"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "15.2"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 9,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "15.3"
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "8.1"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Weg 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-dasharray": [
+          5,
+          3
+        ]
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "8.2"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 8,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 6,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn 0",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.1"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss 0",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.2"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur 0",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": 1
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.3"
+        ],
+        [
+          "==",
+          "stufe",
+          0
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur 0",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": 1
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "BAUTEN Gebaeude",
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "source-layer": "lightbasemap-layer",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        "layerid",
+        "16.1"
+      ],
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [
+              14,
+              "rgba(245, 230, 226, 1)"
+            ],
+            [
+              16,
+              "rgba(230, 230, 230, 1)"
+            ]
+          ]
+        },
+        "fill-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0.8
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "16.2"
+      ],
+      "type": "fill",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "BAUTEN besondere Gebaeude",
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [
+              16,
+              "rgba(220, 220, 220, 1)"
+            ],
+            [
+              16,
+              "rgba(225, 225, 225, 1)"
+            ]
+          ]
+        },
+        "fill-opacity": {
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.8
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "butt"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          1
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.22
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Strasse Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              13,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          1
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "STRASSE Verbindungsstrasse 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "ref": "STRASSE Verbindungsstrasse Cont 1"
+    },
+    {
+      "id": "STRASSE Durchgangsstrasse 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "ref": "STRASSE Durchgangsstrasse Cont 1"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn 1",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.1"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss 1",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.2"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur 1",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": 1
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.3"
+        ],
+        [
+          "==",
+          "stufe",
+          1
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur 1",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": 1
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "butt"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          2
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.22
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Strasse Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)"
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          2
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn 2",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.1"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss 2",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.2"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur 2",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.3"
+        ],
+        [
+          "==",
+          "stufe",
+          2
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur 2",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel",
+        "line-cap": "butt"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          4
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.22
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(95, 95, 95, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Strasse Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)"
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          3
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn 3",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.1"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss 3",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.2"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur 3",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.3"
+        ],
+        [
+          "==",
+          "stufe",
+          3
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur 3",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "STRASSE Fahrweg Cont 3-copy",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.22
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        }
+      },
+      "ref": "STRASSE Fahrweg Cont 3"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "id": "STRASSE Ein-Ausfahrt Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "ref": "STRASSE Ein-Ausfahrt Cont 3"
+    },
+    {
+      "minzoom": 13,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Strasse Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              500
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)"
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              4
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn Cont 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              22,
+              900
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.5
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          4
+        ],
+        [
+          "in",
+          "layerid",
+          "8.1",
+          "8.2"
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Fahrweg 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.12
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-round-limit": 1,
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.1"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindung 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-translate": [
+          0,
+          0
+        ],
+        "line-translate-anchor": "viewport",
+        "line-gap-width": 0,
+        "line-blur": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "9.2"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Ein-Ausfahrt 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "10"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "11"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Verbindungsstrasse 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "12"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Durchgangsstrasse 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              600
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.1"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autostrasse 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-offset": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "13.2"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "STRASSE Autobahn 4",
+      "paint": {
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              6,
+              3
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              22,
+              700
+            ]
+          ]
+        },
+        "line-offset": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              22,
+              400
+            ]
+          ]
+        },
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 15,
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.1"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Anschluss 4",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.1
+            ],
+            [
+              22,
+              75
+            ]
+          ]
+        },
+        "line-gap-width": 0,
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "bevel"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.2"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Einspur 4",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              0.5
+            ],
+            [
+              22,
+              200
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          "layerid",
+          "15.3"
+        ],
+        [
+          "==",
+          "stufe",
+          4
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.lightbasemap",
+      "id": "OEV Mehrspur 4",
+      "paint": {
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": {
+          "base": 1.99,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              22,
+              300
+            ]
+          ]
+        },
+        "line-gap-width": 0
+      },
+      "source-layer": "lightbasemap-layer"
+    }
+  ]
+}

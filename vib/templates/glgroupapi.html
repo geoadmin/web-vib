@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Light Map with Mapbox GL JS</title>
+    <base href="../" target="_blank">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet prefetch" href="https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="static/glmap.css">
+    <link rel="stylesheet prefetch" href="static/common.css">
+  </head>
+  <body>
+    <div class="vib-header">
+      <div class="vib-overlayselector pull-left">
+        <select class="form-control input-sm">
+          <option selected disabled>Choose a layer</option>
+          <option value="ch.bafu.moose">Red list bryophytes</option>
+          <option value="ch.bafu.auen-vegetationskarten">Floodplains vegetation map</option>
+          <option value="ch.swisstopo.swisstlm3d-wanderwege">Hiking trails</option>
+          <option value="ch.bafu.waldschadenflaechen-lothar">Lothar storm damage</option>
+          <option value="ch.bafu.fauna-steinbockkolonien">Ibex colonie</option>
+        </select>
+      </div>
+      <div class="vib-layerid pull-left"></div>
+    </div>
+    <div id="gl-map" class="mapbox"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="static/jquery.query-object.js"></script>
+    <script src="static/common.js"></script>
+    <script src="static/glcommon.js"></script>
+    <script src="static/glgroupapi.js"></script>
+  </body>
+</html>

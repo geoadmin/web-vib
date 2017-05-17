@@ -71,7 +71,7 @@
     var mapSxS = new mapboxgl.Compare(map, mapToCompare);
     $('#zoomValue').html(map.getZoom().toFixed(2));
     $('#zoomSlider').val(map.getZoom() * 100);
- 
+
     // Handle style updates
     var selectedStyle = $('#styleSelector option[value=' + app.params.style + ']');
     if (selectedStyle) {

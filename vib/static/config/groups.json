@@ -1,0 +1,92 @@
+{
+  "group-options": {
+    "ch.swisstopo.swissimage-product": {
+      "type": "raster",
+      "layerset": ["default"]
+    },
+    "ch.swisstopo.lightbasemap": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
+    "ch.swisstopo.labels": {
+      "type": "vector",
+      "layerset": ["white", "black", "white_big"]
+    },
+    "ch.bafu.gewaesserschutz-": {
+      "type": "geojson",
+      "layerset": [
+        "biologischer_zustand_makrozoobenthos",
+        "biologischer_zustand_fische",
+        "chemischer_zustand_ammonium",
+        "chemischer_zustand_doc",
+        "chemischer_zustand_nitrit",
+        "chemischer_zustand_phosphat",
+        "chemischer_zustand_phosphor_gesamt",
+        "biologischer_zustand_makrophyten",
+        "chemischr_zustand_nitrat"
+      ]
+    }
+  },
+  "groups.swisstopo": {
+    "ch.swisstopo.swissimage-product": {
+      "label": "Swissimages",
+      "sources": ["ch.swisstopo.swissimage-product"],
+      "layerset": ["default"]
+    },
+    "ch.swisstopo.lightbasemap": {
+      "label": "Light Base Map",
+      "sources": ["ch.swisstopo.lightbasemap"],
+      "layerset": ["light"]
+     },
+    "ch.swisstopo.hybridmap": {
+      "label": "Aerial hybrid map",
+      "sources": ["ch.swisstopo.swissimage-product", "ch.swisstopo.labels"],
+      "layerset": ["default", "white"]
+    },
+    "ch.bafu.gewaesserschutz-biologischer_zustand_makrozoobenthos": {
+      "label": "Macrozoobenthos",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["biologischer_zustand_makrozoobenthos"]
+    },
+    "ch.bafu.gewaesserschutz-biologischer_zustand_fische": {
+      "label": "Fish",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["biologischer_zustand_fische"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_ammonium": {
+      "label": "Ammonium",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_ammonium"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_doc": {
+      "label": "Dissolved Organic Carbon",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_doc"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_nitrit": {
+      "label": "Nitrite",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_nitrit"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_phosphat": {
+      "label": "Phosphate",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_phosphat"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_phosphor_gesamt": {
+      "label": "Total Phosphorus",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_phosphor_gesamt"]
+    },
+    "ch.bafu.gewaesserschutz-biologischer_zustand_makrophyten": {
+      "label": "Macrophytes",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["biologischer_zustand_makrophyten"]
+    },
+    "ch.bafu.gewaesserschutz-chemischer_zustand_nitrat": {
+      "label": "Nitrate",
+      "sources": ["ch.bafu.gewaesserschutz-"],
+      "layerset": ["chemischer_zustand_nitrat"]
+    }
+  }
+}
