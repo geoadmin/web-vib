@@ -1,3 +1,18 @@
+// http://stackoverflow.com/questions/5627284/pass-in-an-array-of-deferreds-to-when
+if (typeof jQuery.when.all === 'undefined') {
+  jQuery.when.all = function (deferreds) {
+    return $.Deferred(function (def) {
+      $.when.apply(jQuery, deferreds).then(
+        function () {
+          def.resolveWith(this, [Array.prototype.slice.call(arguments)]);
+        },
+        function () {
+          def.rejectWith(this, [Array.prototype.slice.call(arguments)]);
+        });
+    });
+  }
+}
+
 var app = {};
 
 (function() {

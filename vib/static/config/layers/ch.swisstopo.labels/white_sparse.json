@@ -1,0 +1,1067 @@
+{
+  "layers": [
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              15
+            ],
+            [
+              22,
+              19
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              22,
+              0.4
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.8"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 16,
+      "source-layer": "swissnames",
+      "type": "symbol",
+      "id": "LABELS 19.8"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": 0.2,
+        "text-ignore-placement": false,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              15
+            ],
+            [
+              15,
+              17
+            ],
+            [
+              22,
+              21
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.55,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              22,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.7"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 14,
+      "source-layer": "swissnames",
+      "type": "symbol",
+      "id": "LABELS 19.7"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              0.2
+            ],
+            [
+              15,
+              0.3
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              13
+            ],
+            [
+              15,
+              19
+            ],
+            [
+              20,
+              23
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.65,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              20,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.6"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 12,
+      "source-layer": "swissnames",
+      "maxzoom": 20,
+      "type": "symbol",
+      "id": "LABELS 19.6"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              14,
+              0.3
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              11,
+              12
+            ],
+            [
+              15,
+              19.5
+            ],
+            [
+              18,
+              25
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.65,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              18,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.5"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 11,
+      "source-layer": "swissnames",
+      "maxzoom": 18,
+      "type": "symbol",
+      "id": "LABELS 19.5"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.1
+            ],
+            [
+              12,
+              0.3
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              11
+            ],
+            [
+              15,
+              20
+            ],
+            [
+              18,
+              27
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.65,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              18,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.4"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 9,
+      "source-layer": "swissnames",
+      "maxzoom": 18,
+      "type": "symbol",
+      "id": "LABELS 19.4"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.1
+            ],
+            [
+              11,
+              0.3
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              8,
+              12.5
+            ],
+            [
+              15,
+              20.5
+            ],
+            [
+              16,
+              29
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.65,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              17,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.3"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 8,
+      "source-layer": "swissnames",
+      "maxzoom": 17,
+      "type": "symbol",
+      "id": "LABELS 19.3"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              6,
+              0.1
+            ],
+            [
+              9,
+              0.3
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              12
+            ],
+            [
+              14,
+              21
+            ],
+            [
+              15,
+              31
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "auto",
+        "icon-image": "ORT2",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.65,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              16,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.2"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 7,
+      "source-layer": "swissnames",
+      "maxzoom": 16,
+      "type": "symbol",
+      "id": "LABELS 19.2"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              6,
+              0.15
+            ],
+            [
+              9,
+              0.5
+            ]
+          ]
+        },
+        "icon-padding": 50,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              14
+            ],
+            [
+              14,
+              22
+            ],
+            [
+              15,
+              33
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "icon-image": "ORT",
+        "text-padding": 100,
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.8,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              16,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19.1"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 7,
+      "source-layer": "swissnames",
+      "maxzoom": 16,
+      "type": "symbol",
+      "id": "LABELS 19.1"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": {
+          "base": 1,
+          "stops": [
+            [
+              6,
+              0.25
+            ],
+            [
+              9,
+              0.5
+            ]
+          ]
+        },
+        "icon-padding": 0,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              6,
+              14
+            ],
+            [
+              14,
+              25
+            ],
+            [
+              15,
+              35
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "left",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "icon-image": "ORT",
+        "text-padding": {
+          "base": 1,
+          "stops": [
+            [
+              6,
+              20
+            ],
+            [
+              8,
+              100
+            ],
+            [
+              22,
+              100
+            ]
+          ]
+        },
+        "icon-rotation-alignment": "map",
+        "text-justify": "center",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0.75,
+          0
+        ],
+        "text-field": "{name}",
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              16,
+              0.4
+            ]
+          ]
+        },
+        "icon-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              0
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "19"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 6,
+      "source-layer": "swissnames",
+      "maxzoom": 16,
+      "type": "symbol",
+      "id": "LABELS 19.0"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-size": 0.15,
+        "icon-padding": 2,
+        "text-padding": 150,
+        "text-font": [
+          "Roboto Medium",
+          "Arial Unicode MS Regular"
+        ],
+        "text-anchor": "top",
+        "visibility": "visible",
+        "icon-image": "gipfel",
+        "text-field": {
+          "base": 0.1,
+          "stops": [
+            [
+              0,
+              "{name}"
+            ],
+            [
+              11,
+              "{name} ({hoehe})"
+            ]
+          ]
+        },
+        "icon-rotation-alignment": "map",
+        "text-offset": [
+          0,
+          0.5
+        ],
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              8,
+              12
+            ],
+            [
+              14,
+              17
+            ]
+          ]
+        },
+        "text-max-width": 10
+      },
+      "paint": {
+        "icon-opacity": 0.85,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "beige",
+        "text-halo-color": "rgba(170, 170, 170, 1)"
+      },
+      "filter": [
+        "==",
+        "layerid",
+        "4"
+      ],
+      "source": "ch.swisstopo.labels",
+      "minzoom": 7,
+      "source-layer": "swissnames",
+      "maxzoom": 16,
+      "type": "symbol",
+      "id": "LABELS 4.0"
+    }
+  ],
+  "bearing": 0,
+  "glyphs": "mapbox://fonts/vib2d/{fontstack}/{range}.pbf",
+  "center": [
+    8.363517341593024,
+    47.42926163322113
+  ],
+  "sprite": "mapbox://sprites/vib2d/cj2btdr0d00532ro5ix21uls4",
+  "created": "2017-05-05T12:26:00.840Z",
+  "light": {
+    "intensity": 0,
+    "anchor": "map"
+  },
+  "zoom": 15.248279784821946,
+  "visibility": "private",
+  "modified": "2017-05-11T07:53:33.069Z",
+  "sources": {
+    "swissnames": {
+      "url": "mapbox://vib2d.swissnames3d_canary",
+      "type": "vector"
+    }
+  },
+  "version": 8,
+  "draft": false,
+  "pitch": 0,
+  "owner": "vib2d",
+  "metadata": {
+    "mapbox:type": "template",
+    "mapbox:groups": {
+      "7a3f217304dc113930dacd3939234d1a": {
+        "collapsed": false,
+        "name": "EB 0"
+      },
+      "597e206361ecc33ea326d8a4aae6e248": {
+        "collapsed": true,
+        "name": "STRASSE 3"
+      },
+      "3553024f1758abde8a3e03f812d86b67": {
+        "collapsed": false,
+        "name": "EB 2"
+      },
+      "a5901d1bd6e864d2105ce3781a2ec322": {
+        "collapsed": true,
+        "name": "EB 1"
+      },
+      "c39f0fe260533293008cd280e23098c9": {
+        "collapsed": false,
+        "name": "STRASSE 2"
+      },
+      "836fec899208e8e4dad1da415a756f7e": {
+        "collapsed": true,
+        "name": "STRASSE 4"
+      },
+      "b275d1ba2ba9f1b9fef3e42285cf5d0c": {
+        "collapsed": false,
+        "name": "Basic STRASSE"
+      },
+      "1b10b6f8efa5b8bc9157a0cf733fb173": {
+        "collapsed": false,
+        "name": "STRASSE 0"
+      },
+      "d15bf937d4f5b9ed481dadaf2950b4aa": {
+        "collapsed": true,
+        "name": "EB 3"
+      },
+      "ca7d420dad8e0db0da710b6f2c5474db": {
+        "collapsed": false,
+        "name": "STRASSE 1"
+      },
+      "7afdb2d764f3133a55f8d5c8a22ca45c": {
+        "collapsed": false,
+        "name": "Basic EB"
+      }
+    },
+    "mapbox:autocomposite": true
+  },
+  "id": "cj2btdr0d00532ro5ix21uls4",
+  "name": "swissLBM"
+}
