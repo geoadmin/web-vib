@@ -2,11 +2,7 @@
   "layers": [
     {
       "layout": {},
-      "paint": {
-        "line-color": "hsl(0, 0%, 100%)",
-        "line-opacity": 0.25,
-        "line-width": 2
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "in",
         "layerid",
@@ -15,11 +11,16 @@
         "8.4",
         "8.5"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "line-color": "hsl(0, 0%, 100%)",
+        "line-opacity": 0.25,
+        "line-width": 2
+      },
       "minzoom": 7,
       "source-layer": "swissnames",
       "type": "line",
-      "id": "Tunnel, Seilbahn"
+      "id": "Tunnel, Seilbahn",
+      "interactive": true
     },
     {
       "layout": {
@@ -53,6 +54,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "23"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -62,16 +69,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "23"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "23.0"
+      "id": "23.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -106,6 +108,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "6.1"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "hsl(300, 100%, 80%)",
@@ -125,16 +133,11 @@
           ]
         }
       },
-      "filter": [
-        "==",
-        "layerid",
-        "6.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "6.1"
+      "id": "6.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -204,6 +207,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "6"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "white",
@@ -223,16 +232,11 @@
           ]
         }
       },
-      "filter": [
-        "==",
-        "layerid",
-        "6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "6.0"
+      "id": "6.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -269,25 +273,26 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "13.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 7,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "13.1"
+      "id": "13.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -299,7 +304,7 @@
           "Roboto Condensed",
           "Arial Unicode MS Regular"
         ],
-        "visibility": "visible",
+        "visibility": "none",
         "text-pitch-alignment": "viewport",
         "text-field": "{name}",
         "text-anchor": "bottom-left",
@@ -324,26 +329,27 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "13"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "13.0"
+      "id": "13.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -377,25 +383,26 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "11"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "11.0"
+      "id": "11.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -431,25 +438,26 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8.5"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "8.5"
+      "id": "8.5",
+      "interactive": true
     },
     {
       "layout": {
@@ -485,25 +493,26 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8.4"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "8.4"
+      "id": "8.4",
+      "interactive": true
     },
     {
       "layout": {
@@ -539,25 +548,26 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8.3"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "8.3"
+      "id": "8.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -591,26 +601,27 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8.2"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 15,
       "type": "symbol",
-      "id": "8.2"
+      "id": "8.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -644,26 +655,27 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 15,
       "type": "symbol",
-      "id": "8.1"
+      "id": "8.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -697,26 +709,27 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "8"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 15,
       "type": "symbol",
-      "id": "8.0"
+      "id": "8.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -753,25 +766,26 @@
         },
         "symbol-spacing": 500
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "10.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "10.1"
+      "id": "10.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -808,6 +822,12 @@
         },
         "symbol-spacing": 500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "10"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -817,17 +837,12 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "10"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "10.0"
+      "id": "10.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -864,6 +879,12 @@
         },
         "symbol-spacing": 500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "12.1"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -873,16 +894,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "12.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "12.1"
+      "id": "12.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -919,6 +935,12 @@
         },
         "symbol-spacing": 500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "12"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -928,17 +950,12 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "12"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "12.0"
+      "id": "12.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -986,6 +1003,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25.5"
+      ],
       "paint": {
         "icon-opacity": 0.95,
         "text-halo-blur": 2,
@@ -997,16 +1020,11 @@
         "text-color": "white",
         "text-halo-color": "#047646"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.5"
+      "id": "25.5",
+      "interactive": true
     },
     {
       "layout": {
@@ -1040,6 +1058,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25.4"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -1049,16 +1073,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.4"
+      "id": "25.4",
+      "interactive": true
     },
     {
       "layout": {
@@ -1106,27 +1125,28 @@
           ]
         }
       },
-      "paint": {
-        "icon-opacity": 0.95,
-        "text-halo-blur": 2,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "#047646"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "5.3"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.95,
+        "text-halo-blur": 2,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "#047646"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "5.3"
+      "id": "5.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -1174,27 +1194,28 @@
           ]
         }
       },
-      "paint": {
-        "icon-opacity": 0.95,
-        "text-halo-blur": 2,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "#047646"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "5.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.95,
+        "text-halo-blur": 2,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "#047646"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "5.1"
+      "id": "5.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -1242,6 +1263,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "5"
+      ],
       "paint": {
         "icon-opacity": 0.95,
         "text-halo-blur": 2,
@@ -1253,16 +1280,11 @@
         "text-color": "white",
         "text-halo-color": "#047646"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "5.0"
+      "id": "5.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1328,22 +1350,23 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "7.3"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "white",
         "text-halo-width": 1,
         "text-halo-color": "hsla(225, 65%, 36%,1)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "7.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "7.3"
+      "id": "7.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -1409,22 +1432,23 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "7.2"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "white",
         "text-halo-width": 1,
         "text-halo-color": "hsl(225, 65%, 36%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "7.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "7.2"
+      "id": "7.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -1490,22 +1514,23 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "7.1"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "white",
         "text-halo-width": 1,
         "text-halo-color": "hsla(225, 65%, 36%, 1)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "7.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 15,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "7.1"
+      "id": "7.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -1571,6 +1596,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "7"
+      ],
       "paint": {
         "text-halo-blur": 0,
         "text-color": "white",
@@ -1590,16 +1621,11 @@
           ]
         }
       },
-      "filter": [
-        "==",
-        "layerid",
-        "7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "7.0"
+      "id": "7.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1633,6 +1659,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25.3"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "white",
@@ -1643,16 +1675,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.3"
+      "id": "25.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -1686,6 +1713,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "2.1"
+      ],
       "paint": {
         "text-color": "LightSkyBlue",
         "text-translate": [
@@ -1695,16 +1728,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "2.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "2.1"
+      "id": "2.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -1738,25 +1766,26 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "2"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "2.0"
+      "id": "2.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1790,6 +1819,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "1"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -1799,16 +1834,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "1.0"
+      "id": "1.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1842,6 +1872,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "0.1"
+      ],
       "paint": {
         "text-color": "hsl(0, 0%, 100%)",
         "text-translate": [
@@ -1851,16 +1887,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "0.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "0.1"
+      "id": "0.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -1894,25 +1925,26 @@
           ]
         }
       },
-      "paint": {
-        "text-color": "white",
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "0"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-color": "white",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "0.0"
+      "id": "0.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1946,6 +1978,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "18"
+      ],
       "paint": {
         "text-color": "white",
         "text-translate": [
@@ -1955,16 +1993,11 @@
         "text-halo-width": 1.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "18"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "18.0"
+      "id": "18.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -1993,22 +2026,23 @@
           ]
         }
       },
-      "paint": {
-        "text-halo-blur": 2,
-        "text-color": "hsl(80, 62%, 73%)",
-        "text-halo-width": 1,
-        "text-halo-color": "black"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "14.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-halo-blur": 2,
+        "text-color": "hsl(80, 62%, 73%)",
+        "text-halo-width": 1,
+        "text-halo-color": "black"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "14.1"
+      "id": "14.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -2037,22 +2071,23 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "14"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "hsl(80, 62%, 73%)",
         "text-halo-width": 1,
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "14"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "14.0"
+      "id": "14.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -2100,6 +2135,12 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "3"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "white",
@@ -2110,34 +2151,23 @@
         "text-halo-width": 0.5,
         "text-halo-color": "hsla(0, 0%, 0%, 1)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 13,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "3.0"
+      "id": "3.0",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2150,77 +2180,20 @@
               13
             ]
           ]
-        }
-      },
-      "paint": {
-        "text-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              1
-            ],
-            [
-              15,
-              1
-            ],
-            [
-              22,
-              0.4
-            ]
-          ]
         },
-        "text-halo-blur": 0,
-        "text-translate": [
+        "text-field": "{name}",
+        "text-offset": [
           0,
           0
         ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "22.8"
       ],
-      "source": "ch.swisstopo.labels",
-      "minzoom": 16,
-      "source-layer": "swissnames",
-      "type": "symbol",
-      "id": "22.8"
-    },
-    {
-      "layout": {
-        "text-letter-spacing": 0.05,
-        "icon-padding": 10,
-        "text-line-height": 1.2,
-        "text-font": [
-          "Roboto Condensed Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-size": {
-          "base": 1,
-          "stops": [
-            [
-              16,
-              11
-            ],
-            [
-              22,
-              15
-            ]
-          ]
-        }
-      },
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2248,48 +2221,49 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
+      "minzoom": 16,
+      "source-layer": "swissnames",
+      "type": "symbol",
+      "id": "22.8",
+      "interactive": true
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Condensed Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              11
+            ],
+            [
+              22,
+              15
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
+      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "22.7"
       ],
-      "source": "ch.swisstopo.labels",
-      "minzoom": 16,
-      "source-layer": "swissnames",
-      "type": "symbol",
-      "id": "22.7"
-    },
-    {
-      "layout": {
-        "text-letter-spacing": 0.05,
-        "icon-padding": 10,
-        "text-line-height": 1.2,
-        "text-font": [
-          "Roboto Condensed Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-size": {
-          "base": 1,
-          "stops": [
-            [
-              16,
-              13
-            ],
-            [
-              22,
-              17
-            ]
-          ]
-        }
-      },
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2317,34 +2291,93 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
+      "minzoom": 16,
+      "source-layer": "swissnames",
+      "type": "symbol",
+      "id": "22.7",
+      "interactive": true
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.05,
+        "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Condensed Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              13
+            ],
+            [
+              22,
+              17
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
+      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "22.6"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              22,
+              0.4
+            ]
+          ]
+        },
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "22.6"
+      "id": "22.6",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2357,8 +2390,20 @@
               19
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22.5"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2386,34 +2431,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "22.5"
+      "id": "22.5",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2430,8 +2464,20 @@
               21
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22.4"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2459,34 +2505,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "22.4"
+      "id": "22.4",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2503,8 +2538,20 @@
               23
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22.3"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2532,35 +2579,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "22.3"
+      "id": "22.3",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2577,8 +2613,20 @@
               25
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22.2"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2606,35 +2654,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 11,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "22.2"
+      "id": "22.2",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2651,8 +2688,20 @@
               27
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22.1"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2680,35 +2729,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "22.1"
+      "id": "22.1",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Condensed Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2725,8 +2763,20 @@
               29
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "22"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2754,35 +2804,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "22"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "22.0"
+      "id": "22.0",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2795,8 +2834,20 @@
               15
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.8"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2824,34 +2875,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.8"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "21.8"
+      "id": "21.8",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2864,8 +2904,20 @@
               17
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.7"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2893,34 +2945,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "21.7"
+      "id": "21.7",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -2933,8 +2974,20 @@
               19
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.6"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -2962,34 +3015,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "21.6"
+      "id": "21.6",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3006,8 +3048,20 @@
               21
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.5"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3035,34 +3089,23 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "21.5"
+      "id": "21.5",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3079,8 +3122,20 @@
               23
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.4"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3108,35 +3163,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "21.4"
+      "id": "21.4",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3153,8 +3197,20 @@
               25
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.3"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3182,35 +3238,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 11,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "21.3"
+      "id": "21.3",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3227,8 +3272,20 @@
               27
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.2"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3256,35 +3313,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "21.2"
+      "id": "21.2",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Medium Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3301,8 +3347,20 @@
               29
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21.1"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3330,35 +3388,24 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "21.1"
+      "id": "21.1",
+      "interactive": true
     },
     {
       "layout": {
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
-        "text-line-height": 1.2,
+        "text-padding": 12,
         "text-font": [
           "Roboto Italic",
           "Arial Unicode MS Regular"
         ],
         "visibility": "visible",
         "text-pitch-alignment": "viewport",
-        "text-field": "{name}",
-        "text-padding": 12,
-        "text-offset": [
-          0,
-          0
-        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3375,8 +3422,20 @@
               31
             ]
           ]
-        }
+        },
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-line-height": 1.2
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "21"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3404,22 +3463,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "21"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "21.0"
+      "id": "21.0",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3432,22 +3500,14 @@
               17
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.8"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3475,21 +3535,30 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.8"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "20.8"
+      "id": "20.8",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3502,22 +3571,14 @@
               19
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.7"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3545,21 +3606,30 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "20.7"
+      "id": "20.7",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3576,22 +3646,14 @@
               21
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.6"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3619,21 +3681,30 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "20.6"
+      "id": "20.6",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3650,22 +3721,14 @@
               23
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.5"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3693,22 +3756,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "20.5"
+      "id": "20.5",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3725,22 +3797,14 @@
               25
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.4"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3768,22 +3832,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 11,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "20.4"
+      "id": "20.4",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3800,22 +3873,14 @@
               27
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.3"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3843,22 +3908,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "20.3"
+      "id": "20.3",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3875,22 +3949,14 @@
               29
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.2"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3918,22 +3984,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "20.2"
+      "id": "20.2",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -3950,22 +4025,14 @@
               31
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20.1"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -3993,22 +4060,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "20.1"
+      "id": "20.1",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Medium Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -4025,22 +4101,14 @@
               33
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Medium Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "20"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -4068,17 +4136,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "20"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "20.0"
+      "id": "20.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -4102,6 +4165,12 @@
         ],
         "text-size": 21
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25"
+      ],
       "paint": {
         "icon-opacity": 0.9,
         "text-halo-blur": 2,
@@ -4113,23 +4182,19 @@
         "text-color": "white",
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.0"
+      "id": "25.0",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-size": 1,
         "icon-padding": 10,
-        "text-size": 18,
+        "text-padding": 10,
         "text-font": [
           "Roboto Medium",
           "Arial Unicode MS Regular"
@@ -4140,13 +4205,18 @@
         "text-field": "{name}",
         "text-anchor": "left",
         "text-justify": "left",
-        "text-padding": 10,
         "text-offset": [
           1.1,
           0.15
         ],
-        "text-transform": "uppercase"
+        "text-size": 18
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25.2"
+      ],
       "paint": {
         "icon-opacity": 0.9,
         "text-halo-blur": 2,
@@ -4158,23 +4228,19 @@
         "text-color": "white",
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 10,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.2"
+      "id": "25.2",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-size": 1,
         "icon-padding": 10,
-        "text-size": 23,
+        "text-padding": 10,
         "text-font": [
           "Roboto Medium",
           "Arial Unicode MS Regular"
@@ -4185,13 +4251,18 @@
         "text-field": "{name}",
         "text-anchor": "left",
         "text-justify": "left",
-        "text-padding": 10,
         "text-offset": [
           0.9,
           0.2
         ],
-        "text-transform": "uppercase"
+        "text-size": 23
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "25.1"
+      ],
       "paint": {
         "icon-opacity": 0.9,
         "text-halo-blur": 2,
@@ -4203,16 +4274,11 @@
         "text-color": "white",
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "25.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "25.1"
+      "id": "25.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -4233,6 +4299,12 @@
         "text-size": 13,
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.7"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4244,17 +4316,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "4.7"
+      "id": "4.7",
+      "interactive": true
     },
     {
       "layout": {
@@ -4287,6 +4354,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.6"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4298,17 +4371,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.6"
+      "id": "4.6",
+      "interactive": true
     },
     {
       "layout": {
@@ -4331,6 +4399,12 @@
         "text-size": 12,
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.5"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4342,17 +4416,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.5"
+      "id": "4.5",
+      "interactive": true
     },
     {
       "layout": {
@@ -4375,6 +4444,12 @@
         "text-size": 13,
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.4"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4386,17 +4461,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 13,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.4"
+      "id": "4.4",
+      "interactive": true
     },
     {
       "layout": {
@@ -4431,6 +4501,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.1"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4442,17 +4518,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.1"
+      "id": "4.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -4487,6 +4558,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.2"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4498,17 +4575,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "4.2"
+      "id": "4.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -4541,6 +4613,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16.7"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 2,
@@ -4552,17 +4630,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.7"
+      "id": "16.7",
+      "interactive": true
     },
     {
       "layout": {
@@ -4585,6 +4658,12 @@
         "text-size": 17,
         "text-max-width": 50
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "17.7"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 2,
@@ -4596,17 +4675,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "17.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.7"
+      "id": "17.7",
+      "interactive": true
     },
     {
       "layout": {
@@ -4629,6 +4703,12 @@
         "text-size": 19,
         "text-max-width": 50
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "17"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 2,
@@ -4640,17 +4720,12 @@
         "text-color": "hsl(183, 57%, 81%)",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "17"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.0"
+      "id": "17.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -4683,6 +4758,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 2,
@@ -4694,17 +4775,12 @@
         "text-color": "hsl(183, 57%, 81%)",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.0"
+      "id": "16.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -4739,6 +4815,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4.3"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4750,17 +4832,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 10,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.3"
+      "id": "4.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -4807,6 +4884,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "4"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -4818,17 +4901,12 @@
         "text-color": "beige",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "4.0"
+      "id": "4.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -4883,23 +4961,24 @@
         },
         "text-max-width": 50
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "17.6"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "LightSkyBlue",
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "17.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "17.6"
+      "id": "17.6",
+      "interactive": true
     },
     {
       "layout": {
@@ -4939,23 +5018,24 @@
         ],
         "text-size": 14
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16.6"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "LightSkyBlue",
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.6"
+      "id": "16.6",
+      "interactive": true
     },
     {
       "layout": {
@@ -4990,28 +5070,29 @@
         },
         "text-max-width": 50
       },
-      "paint": {
-        "icon-opacity": 0.5,
-        "text-halo-blur": 0,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "17.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.5,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.1"
+      "id": "17.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -5032,28 +5113,29 @@
         "text-size": 12,
         "text-max-width": 10
       },
-      "paint": {
-        "icon-opacity": 0.5,
-        "text-halo-blur": 0,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "16.1"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.5,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.1"
+      "id": "16.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -5076,28 +5158,29 @@
         "text-size": 13,
         "text-max-width": 50
       },
-      "paint": {
-        "icon-opacity": 0.5,
-        "text-halo-blur": 0,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "17.4"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.5,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.4"
+      "id": "17.4",
+      "interactive": true
     },
     {
       "layout": {
@@ -5118,28 +5201,29 @@
         "text-size": 13,
         "text-max-width": 10
       },
-      "paint": {
-        "icon-opacity": 0.5,
-        "text-halo-blur": 0,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "16.4"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.5,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.4"
+      "id": "16.4",
+      "interactive": true
     },
     {
       "layout": {
@@ -5174,28 +5258,29 @@
         },
         "text-max-width": 50
       },
-      "paint": {
-        "icon-opacity": 0.5,
-        "text-halo-blur": 0,
-        "text-translate": [
-          0,
-          0
-        ],
-        "text-halo-width": 1.5,
-        "text-color": "white",
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "17.2"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "icon-opacity": 0.5,
+        "text-halo-blur": 0,
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 1.5,
+        "text-color": "white",
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "17.2"
+      "id": "17.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -5216,6 +5301,12 @@
         "text-size": 13,
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16.2"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -5227,17 +5318,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.2"
+      "id": "16.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -5272,6 +5358,12 @@
         },
         "text-max-width": 50
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "17.3"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -5283,17 +5375,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "17.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.3"
+      "id": "17.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -5314,6 +5401,12 @@
         "text-size": 13,
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16.3"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -5325,17 +5418,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 10,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.3"
+      "id": "16.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -5358,6 +5446,12 @@
         "text-size": 12,
         "text-max-width": 50
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "17.5"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -5369,17 +5463,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "17.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "17.5"
+      "id": "17.5",
+      "interactive": true
     },
     {
       "layout": {
@@ -5412,6 +5501,12 @@
         },
         "text-max-width": 10
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "16.5"
+      ],
       "paint": {
         "icon-opacity": 0.5,
         "text-halo-blur": 0,
@@ -5423,17 +5518,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "16.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "16.5"
+      "id": "16.5",
+      "interactive": true
     },
     {
       "layout": {
@@ -5489,6 +5579,12 @@
         },
         "symbol-spacing": 700
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "9"
+      ],
       "paint": {
         "text-opacity": 1,
         "text-halo-blur": 2,
@@ -5497,22 +5593,31 @@
         "text-color": "LightSkyBlue",
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "9"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "9.0"
+      "id": "9.0",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5525,22 +5630,14 @@
               19
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.8"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5568,21 +5665,30 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.8"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "19.8"
+      "id": "19.8",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5599,22 +5705,14 @@
               21
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.7"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5642,21 +5740,30 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.7"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
       "type": "symbol",
-      "id": "19.7"
+      "id": "19.7",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5673,22 +5780,14 @@
               23
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.6"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5716,22 +5815,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.6"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "19.6"
+      "id": "19.6",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5748,22 +5856,14 @@
               25
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.5"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5791,22 +5891,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.5"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 11,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "19.5"
+      "id": "19.5",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5823,22 +5932,14 @@
               27
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.4"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5866,22 +5967,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.4"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "19.4"
+      "id": "19.4",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 12,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -5898,22 +6008,14 @@
               29
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 12,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.3"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -5941,17 +6043,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.3"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "maxzoom": 17,
       "type": "symbol",
-      "id": "19.3"
+      "id": "19.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -6004,23 +6101,24 @@
           ]
         }
       },
-      "paint": {
-        "text-halo-blur": 2,
-        "text-color": "white",
-        "text-halo-width": 0.5,
-        "text-halo-color": "hsl(0, 0%, 0%)"
-      },
+      "source": "ch.swisstopo.labels",
       "filter": [
         "==",
         "layerid",
         "24.3"
       ],
-      "source": "ch.swisstopo.labels",
+      "paint": {
+        "text-halo-blur": 2,
+        "text-color": "white",
+        "text-halo-width": 0.5,
+        "text-halo-color": "hsl(0, 0%, 0%)"
+      },
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "24.3"
+      "id": "24.3",
+      "interactive": true
     },
     {
       "layout": {
@@ -6072,23 +6170,24 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "24.1"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "white",
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "24.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "24.1"
+      "id": "24.1",
+      "interactive": true
     },
     {
       "layout": {
@@ -6143,23 +6242,24 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "24.2"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "LightSkyBlue",
         "text-halo-width": 0.5,
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "24.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "24.2"
+      "id": "24.2",
+      "interactive": true
     },
     {
       "layout": {
@@ -6213,28 +6313,43 @@
           ]
         }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "24"
+      ],
       "paint": {
         "text-halo-blur": 2,
         "text-color": "LightSkyBlue",
         "text-halo-width": 0.5,
         "text-halo-color": "black"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "24"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 20,
       "type": "symbol",
-      "id": "24.0"
+      "id": "24.0",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 10,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -6251,22 +6366,14 @@
               31
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 10,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.2"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -6294,22 +6401,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "19.2"
+      "id": "19.2",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 15,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -6326,22 +6442,14 @@
               33
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 15,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19.1"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -6369,22 +6477,31 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "19.1"
+      "id": "19.1",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.05,
         "icon-padding": 10,
+        "text-padding": 15,
+        "text-font": [
+          "Roboto Bold",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-field": "{name}",
+        "text-line-height": 1.2,
+        "text-offset": [
+          0,
+          0
+        ],
         "text-size": {
           "base": 1,
           "stops": [
@@ -6401,22 +6518,14 @@
               35
             ]
           ]
-        },
-        "text-font": [
-          "Roboto Bold",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-pitch-alignment": "viewport",
-        "text-padding": 15,
-        "text-line-height": 1.2,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase"
+        }
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "19"
+      ],
       "paint": {
         "text-opacity": {
           "base": 1,
@@ -6444,17 +6553,12 @@
         "text-color": "white",
         "text-halo-color": "hsl(0, 0%, 0%)"
       },
-      "filter": [
-        "==",
-        "layerid",
-        "19"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 16,
       "type": "symbol",
-      "id": "19.0"
+      "id": "19.0",
+      "interactive": true
     },
     {
       "layout": {
@@ -6485,6 +6589,12 @@
         "text-max-width": 100,
         "symbol-spacing": 2500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "15"
+      ],
       "paint": {
         "text-halo-blur": 2.5,
         "text-color": "hsl(0, 0%, 100%)",
@@ -6492,23 +6602,27 @@
         "text-halo-color": "hsla(0, 0%, 0%, 0.8)",
         "text-opacity": 0.85
       },
-      "filter": [
-        "==",
-        "layerid",
-        "15"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
       "maxzoom": 18,
       "type": "symbol",
-      "id": "15.0"
+      "id": "15.0",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.4,
         "symbol-placement": "line",
         "icon-padding": 10,
+        "text-padding": 10,
+        "text-font": [
+          "Roboto Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-rotation-alignment": "map",
         "text-size": {
           "base": 1,
           "stops": [
@@ -6522,18 +6636,15 @@
             ]
           ]
         },
-        "text-font": [
-          "Roboto Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-padding": 10,
-        "text-rotation-alignment": "map",
-        "text-transform": "uppercase",
         "text-max-width": 100,
         "symbol-spacing": 2500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "15.2"
+      ],
       "paint": {
         "text-halo-blur": 2.5,
         "text-color": "hsl(0, 0%, 100%)",
@@ -6541,23 +6652,27 @@
         "text-halo-color": "hsla(0, 0%, 0%, 0.8)",
         "text-opacity": 0.85
       },
-      "filter": [
-        "==",
-        "layerid",
-        "15.2"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
       "maxzoom": 14,
       "type": "symbol",
-      "id": "15.2"
+      "id": "15.2",
+      "interactive": true
     },
     {
       "layout": {
+        "text-transform": "uppercase",
         "text-letter-spacing": 0.4,
         "symbol-placement": "line",
         "icon-padding": 10,
+        "text-padding": 10,
+        "text-font": [
+          "Roboto Italic",
+          "Arial Unicode MS Regular"
+        ],
+        "visibility": "none",
+        "text-field": "{name}",
+        "text-rotation-alignment": "map",
         "text-size": {
           "base": 1,
           "stops": [
@@ -6571,18 +6686,15 @@
             ]
           ]
         },
-        "text-font": [
-          "Roboto Italic",
-          "Arial Unicode MS Regular"
-        ],
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-padding": 10,
-        "text-rotation-alignment": "map",
-        "text-transform": "uppercase",
         "text-max-width": 100,
         "symbol-spacing": 2500
       },
+      "source": "ch.swisstopo.labels",
+      "filter": [
+        "==",
+        "layerid",
+        "15.1"
+      ],
       "paint": {
         "text-halo-blur": 2.5,
         "text-color": "hsl(0, 0%, 100%)",
@@ -6590,17 +6702,12 @@
         "text-halo-color": "hsla(0, 0%, 0%, 0.8)",
         "text-opacity": 0.85
       },
-      "filter": [
-        "==",
-        "layerid",
-        "15.1"
-      ],
-      "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
       "maxzoom": 9,
       "type": "symbol",
-      "id": "15.1"
+      "id": "15.1",
+      "interactive": true
     }
   ]
 }

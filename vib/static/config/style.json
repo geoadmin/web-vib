@@ -32,8 +32,8 @@
     },
     "ch.swisstopo.labels": {
       "tiles": [
-        "https://a.tiles.mapbox.com/v4/vib2d.swissnames3d_canary/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
-        "https://b.tiles.mapbox.com/v4/vib2d.swissnames3d_canary/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
+        "https://a.tiles.mapbox.com/v4/vib2d.swissnames3d_maplex/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
+        "https://b.tiles.mapbox.com/v4/vib2d.swissnames3d_maplex/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
       ],
       "type": "vector"
     }
