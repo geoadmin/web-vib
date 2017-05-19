@@ -38,7 +38,7 @@
       "type": "vector"
     }
    },
-  "sprite": "mapbox://sprites/vib2d/cj168d2g500482rqm988ycycc",
+  "sprite": "https://tileserver.dev.bgdi.ch/styles/lightbasemap/sprite",
   "glyphs": "mapbox://fonts/vib2d/{fontstack}/{range}.pbf",
   "layers": []
 }
