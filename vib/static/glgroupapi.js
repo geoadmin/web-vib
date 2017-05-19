@@ -1,18 +1,27 @@
 (function() {
 
   function initCarousel(groups) {
-    var layers, layer, i;
+    var layers, layer, i, previousLayerGroupId;
     i = 0;
     layers = groups.getAllLayerGroups();
     for(var key in layers) {
+      if (i == 0) {
+        previousLayerGroupId = key;
+      }
       layer = layers[key];
-      $('<div class="item">' + layer.label + '</div></div>').appendTo('.carousel-inner');
+      $('<div id="'+ key +'" class="item">' + layer.label + '</div></div>').appendTo('.carousel-inner');
       $('<li data-target="#layersCarousel" data-slide-to="'+ i +'"></li>')
           .appendTo('.carousel-indicators');
       i += 1;
     }
     $('.item').first().addClass('active');
     $('.carousel-indicators > li').first().addClass('active');
+    $('#layersCarousel').bind('slide.bs.carousel', function (e) {
+      var layerGroupId = e.relatedTarget.id;
+      groups.removeLayerGroup(previousLayerGroupId);
+      groups.addLayerGroup(layerGroupId);
+      previousLayerGroupId = layerGroupId;
+    });
   }
 
   function initMap() {
