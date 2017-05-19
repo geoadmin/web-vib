@@ -156,7 +156,13 @@ var glapi = {};
       }
       $.when.all(layerSets).then(function(layersets) {
         for (var k=0; k < layersets.length; k++) {
-          addLayerSet(layersets[k][0]);
+          if (layersets[k][0]) {
+            addLayerSet(layersets[k][0]);
+          } else {
+            // When we only have one source
+            addLayerSet(layersets[k]);
+            break;
+          }
         }
       });
     };
