@@ -1,7 +1,9 @@
 {
   "layers": [
-    "id": "ch.swisstopo.swissimage-product_layer",
-    "type": "raster",
-    "source": "ch.swisstopo.swissimage-product"
+    {
+      "id": "ch.swisstopo.swissimage-product_layer",
+      "type": "raster",
+      "source": "ch.swisstopo.swissimage-product"
+    }
   ]
 }

@@ -167,7 +167,7 @@ var glapi = {};
       style = this.map.getStyle();
       for (var i=0; i < style.layers.length; i++) {
         layer =  style.layers[i];
-        if (layer.metadata.groupId == groupdId) {
+        if (layer.metadata.groupId == groupId) {
           removing = true;
           this.map.removeLayer(layer.id);
         } else if (removing) {
