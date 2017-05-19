@@ -45,23 +45,6 @@ var glapi = {};
     };
   };
 
-  glapi.removeLayerGroup = function(map, groupId) {
-    var style, groupId, layer, removing, beforeLayerId;
-    removing = false;
-    style = map.getStyle();
-    for (var i=0; i < style.layers.length; i++) {
-      layer =  style.layers[i];
-      if (layer.id.indexOf(groupdId != -1)) {
-        removing = true;
-        map.removeLayer(layer.id);
-      } else if (removing) {
-        beforeLayerId = layer.id;
-        break;
-      }
-    }
-    return beforeLayerId;
-  };
-
   glapi.getMapStyle = function() {
     return $.getJSON('/static/config/style.json');
   };
@@ -123,14 +106,17 @@ var glapi = {};
     this.addLayerGroup = function(layerGroupId, beforeLayerId) {
       var that, group, groupOptions, sourceId, addLayerSet, updateGeoJSONSource;
       that = this;
-      const props = ['minzoom', 'maxzoom', 'layout', 'filter', 'type', 'source', 'paint', 'source-layer', 'sourceLayer'];
+      const props = ['minzoom', 'maxzoom', 'layout', 'filter', 'type',
+          'source', 'paint', 'metadata', 'source-layer', 'sourceLayer'];
       addLayerSet = function(sourceId, layersetId){
         glapi.getLayerset(sourceId, layersetId).then(function(data) {
           var ref, extended, layers, layer, prop;
           layers = data.layers;
           for (var i=0; i < layers.length; i++) {
-            //layers[i].id = layerGroupId + '-' + i;
             layer = layers[i];
+            // We use the metadata field to keep track of the groupId
+            layer.metadata = {groupId: layerGroupId};
+            // Ideally we should get rid of red alltogether
             if (layer.ref) {
               extended = {};
               ref = that.map.getLayer(layer.ref);
@@ -168,6 +154,23 @@ var glapi = {};
           updateGeoJSONSource(sourceId);
         }
       }
+    };
+
+    this.removeLayerGroup = function(groupId) {
+      var style, groupId, layer, removing, beforeLayerId;
+      removing = false;
+      style = this.map.getStyle();
+      for (var i=0; i < style.layers.length; i++) {
+        layer =  style.layers[i];
+        if (layer.metadata.groupId == groupdId) {
+          removing = true;
+          this.map.removeLayer(layer.id);
+        } else if (removing) {
+          beforeLayerId = layer.id;
+          break;
+        }
+      }
+      return beforeLayerId;
     };
   };
 
