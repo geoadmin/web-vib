@@ -10,7 +10,7 @@
     },
     "ch.swisstopo.labels": {
       "type": "vector",
-      "layerset": ["white", "black", "white_big"]
+      "layerset": ["white", "black", "white_big", "white_sparse"]
     },
     "ch.bafu.gewaesserschutz-": {
       "type": "geojson",
@@ -28,15 +28,10 @@
     }
   },
   "groups.swisstopo": {
-    "ch.swisstopo.swissimage-product": {
-      "label": "Swissimages",
-      "sources": ["ch.swisstopo.swissimage-product"],
-      "layerset": ["default"]
-    },
     "ch.swisstopo.lightbasemap": {
       "label": "Light Base Map",
-      "sources": ["ch.swisstopo.lightbasemap"],
-      "layerset": ["light"]
+      "sources": ["ch.swisstopo.lightbasemap", "ch.swisstopo.labels"],
+      "layerset": ["light", "white_sparse"]
      },
     "ch.swisstopo.hybridmap": {
       "label": "Aerial hybrid map",

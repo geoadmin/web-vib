@@ -104,39 +104,38 @@ var glapi = {};
     };
 
     this.addLayerGroup = function(layerGroupId, beforeLayerId) {
-      var that, group, groupOptions, sourceId, addLayerSet, updateGeoJSONSource;
+      var that, group, groupOptions, sourceId, addLayerSet, getLayerSet, updateGeoJSONSource;
       that = this;
       const props = ['minzoom', 'maxzoom', 'layout', 'filter', 'type',
           'source', 'paint', 'metadata', 'source-layer', 'sourceLayer'];
-      addLayerSet = function(sourceId, layersetId){
-        glapi.getLayerset(sourceId, layersetId).then(function(data) {
-          var ref, extended, layers, layer, prop;
-          layers = data.layers;
-          for (var i=0; i < layers.length; i++) {
-            layer = layers[i];
-            // We use the metadata field to keep track of the groupId
-            layer.metadata = {groupId: layerGroupId};
-            // Ideally we should get rid of red alltogether
-            if (layer.ref) {
-              extended = {};
-              ref = that.map.getLayer(layer.ref);
-              for (var j in props) {
-                prop = props[j];
-                // user defined ref are no longer supported
-                if (layer[prop]) {
-                  extended[prop] = layer[prop];
-                } else if (ref[prop]) {
-                  propExt = prop == 'sourceLayer' ? 'source-layer' : prop;
-                  extended[propExt] = ref[prop];
-                }
+
+      addLayerSet = function(data) {
+        var ref, extended, layers, layer, prop;
+        layers = data.layers;
+        for (var i=0; i < layers.length; i++) {
+          layer = layers[i];
+          // We use the metadata field to keep track of the groupId
+          layer.metadata = {groupId: layerGroupId};
+          // Ideally we should get rid of red alltogether
+          if (layer.ref) {
+            extended = {};
+            ref = that.map.getLayer(layer.ref);
+            for (var j in props) {
+              prop = props[j];
+              // user defined ref are no longer supported
+              if (layer[prop]) {
+                extended[prop] = layer[prop];
+              } else if (ref[prop]) {
+                propExt = prop == 'sourceLayer' ? 'source-layer' : prop;
+                extended[propExt] = ref[prop];
               }
-              extended.id = layer.id;
-              that.map.addLayer(extended, beforeLayerId);
-            } else {
-              that.map.addLayer(layers[i], beforeLayerId);
             }
+            extended.id = layer.id;
+            that.map.addLayer(extended, beforeLayerId);
+          } else {
+            that.map.addLayer(layers[i], beforeLayerId);
           }
-        });
+        }
       };
       updateGeoJSONSource = function(sourceId) {
         glapi.getGeoJSON(sourceId).then(function(data) {
@@ -144,16 +143,22 @@ var glapi = {};
         });
       };
 
+      var layerSets = [];
       group = this.getLayerGroupById(layerGroupId);
       for (var i=0; i < group.sources.length; i++) {
         sourceId = group.sources[i];
         layersetId = group.layerset[i];
         groupOptions = this.getLayerGroupOptionsBySourceId(sourceId);
-        addLayerSet(sourceId, layersetId);
+        layerSets.push(glapi.getLayerset(sourceId, layersetId));
         if (groupOptions.type == 'geojson') {
           updateGeoJSONSource(sourceId);
         }
       }
+      $.when.all(layerSets).then(function(layersets) {
+        for (var k=0; k < layersets.length; k++) {
+          addLayerSet(layersets[k][0]);
+        }
+      });
     };
 
     this.removeLayerGroup = function(groupId) {

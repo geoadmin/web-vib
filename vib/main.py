@@ -29,28 +29,30 @@ def update_style(source_id, style_id, new_source_id):
     base_url = 'https://api.mapbox.com/styles/v1/vib2d/'
     access_token = 'pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw'
     url = '%s%s?access_token=%s' % (base_url, style_id, access_token)
+    print url
     r = requests.get(url, verify=False)
     if not r.ok:
         abort(404, 'Style %s not Found' % style_id)
     style = json.loads(r.content)
     for k, s in style['sources'].iteritems():
-        if s['url'].endswith(source_id):
+        if 'url' in s and s['url'].endswith(source_id):
             layer_id = k
             if new_source_id:
                 s['url'] = 'mapbox://vib2d.' + new_source_id
             sources = { k: s }
             break
     if not layer_id:
+        print source_id, style_id
         abort(400, 'Source %s not in style %s' % (source_id, style_id))
 
     if new_source_id:
         layers = []
         for l in style['layers']:
-            if l['source'].endswith(layer_id):
+            if 'url' in l and l['source'].endswith(layer_id):
                 l['source'] = k
                 layers.append(l)
     else:
-        layers = [l for l in style['layers'] if l['source'].endswith(layer_id)]
+        layers = [l for l in style['layers'] if 'source' in l and l['source'].endswith(layer_id)]
     style['sources'] = sources
     style['layers'] = layers
     return json.dumps(style)
