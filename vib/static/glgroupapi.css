@@ -1,0 +1,19 @@
+#layersCarousel {
+  z-index: 2;
+}
+#layersCarousel .item {
+  text-align: center;
+}
+#layersCarousel .carousel-inner {
+  padding: 25px;
+  background-color: darkgray;
+  color: white;
+  font-size: 17px;
+  opacity: 0.8;
+}
+#layersCarousel .carousel-control span {
+  margin-top: -16px;
+}
+#layersCarousel .carousel-indicators {
+  bottom: -3px;
+}
