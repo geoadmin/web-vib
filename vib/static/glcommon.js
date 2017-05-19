@@ -116,7 +116,7 @@ var glapi = {};
           layer = layers[i];
           // We use the metadata field to keep track of the groupId
           layer.metadata = {groupId: layerGroupId};
-          // Ideally we should get rid of red alltogether
+          // Ideally we should get rid of ref alltogether
           if (layer.ref) {
             extended = {};
             ref = that.map.getLayer(layer.ref);
