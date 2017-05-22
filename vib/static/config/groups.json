@@ -16,7 +16,7 @@
         "white_big",
         "white_sparse"
       ],
-      "layersetLabel": [
+      "layersetLabels": [
         "White Labels",
         "Black Labels",
         "Big Labels",
@@ -38,6 +38,7 @@
       ],
       "layersetLabels": [
         "Macrozoobenthos",
+        "Fish",
         "Ammonium",
         "Dissolved Organic Carbon",
         "Nitrite",
