@@ -17,3 +17,15 @@
 #layersCarousel .carousel-indicators {
   bottom: -3px;
 }
+#layersCarousel .item button {
+  margin: 2px;
+  background-color: cornflowerblue;
+}
+#layersCarousel .item button:hover {
+  background-color: white;
+  color: black;
+}
+#layersCarousel .item button.btn.btn-sm.active {
+  background-color: white;
+  color: black;
+}
