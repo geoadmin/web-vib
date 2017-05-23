@@ -1,0 +1,54 @@
+{
+  "layers": [
+    {
+      "layout": {
+        "visibility": "visible"
+      },
+      "maxzoom": 24,
+      "filter": [
+        "any",
+        [
+          "==",
+          "SG",
+          "100"
+        ],
+        [
+          "==",
+          "SG",
+          200
+        ]
+      ],
+      "type": "line",
+      "source": "ch.swisstopo.dkm10.gewaesser-lin",
+      "id": "GEWAESSER Fliessgewaesser DKM10",
+      "paint": {
+        "line-color": "rgba(200, 210, 250, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              6,
+              1.2
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        }
+      },
+      "source-layer": "tmpgeojson"
+    }
+  ]
+}
