@@ -46,19 +46,19 @@ var glapi = {};
   };
 
   glapi.getMapStyle = function() {
-    return $.getJSON('/static/config/style.json');
+    return $.getJSON('static/config/style.json');
   };
 
   glapi.getMapGroups = function() {
-    return $.getJSON('/static/config/groups.json');
+    return $.getJSON('static/config/groups.json');
   };
 
   glapi.getGeoJSON = function(sourceId) {
-    return $.getJSON('/static/config/geojsons/' + sourceId + '.geojson');
+    return $.getJSON('static/config/geojsons/' + sourceId + '.geojson');
   };
 
   glapi.getLayerset = function(sourceId, layersetId) {
-    return $.getJSON('/static/config/layers/' + sourceId + '/' + layersetId + '.json');
+    return $.getJSON('static/config/layers/' + sourceId + '/' + layersetId + '.json');
   };
 
   glapi.MapLayerGroups = function(map) {
