@@ -15,7 +15,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         -1
       ]
     },
@@ -34,7 +34,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         1
       ]
     },
@@ -53,7 +53,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         2
       ]
     },
@@ -72,7 +72,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         3
       ]
     },
@@ -91,7 +91,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         4
       ]
     },
@@ -110,7 +110,7 @@
       },
       "filter": [
         "==",
-        "klasse_makrozoobenthos",
+        "klasse_nitrat",
         5
       ]
     }
