@@ -1,0 +1,15 @@
+{
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "background-color": "hsl(0, 0%, 95%)"
+      }
+    }
+  ]
+}

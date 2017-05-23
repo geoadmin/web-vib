@@ -1,0 +1,12 @@
+{
+  "layers": [
+    {
+      "id": "ch.swisstopo.swissalti3d-reliefschattierung_layer",
+      "type": "raster",
+      "source": "ch.swisstopo.swissalti3d-reliefschattierung",
+      "paint": {
+        "raster-opacity": 0.1
+      }
+    }
+  ]
+}

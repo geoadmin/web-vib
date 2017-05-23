@@ -1,17 +1,6 @@
 {
   "layers": [
     {
-      "id": "background",
-      "type": "background",
-      "maxzoom": 24,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "background-color": "hsl(0, 0%, 95%)"
-      }
-    },
-    {
       "minzoom": 8,
       "layout": {
         "visibility": "visible"

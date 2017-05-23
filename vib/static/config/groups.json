@@ -1,8 +1,16 @@
 {
   "group-options": {
+    "ch.swisstopo.backgrounds": {
+      "type": "background",
+      "layerset": ["light"]
+    },
     "ch.swisstopo.swissimage-product": {
       "type": "raster",
       "layerset": ["default"]
+    },
+    "ch.swisstopo.swissalti3d-reliefschattierung": {
+      "type": "raster",
+      "layerset": ["transparent"]
     },
     "ch.swisstopo.lightbasemap": {
       "type": "vector",
@@ -52,9 +60,9 @@
   "groups.swisstopo": {
     "ch.swisstopo.lightbasemap": {
       "label": "Light Base Map",
-      "sources": ["ch.swisstopo.lightbasemap", "ch.swisstopo.labels"],
-      "layerset": ["light", "white_sparse"],
-      "alternatives": [false, true]
+      "sources": ["ch.swisstopo.backgrounds", "ch.swisstopo.swissalti3d-reliefschattierung", "ch.swisstopo.lightbasemap", "ch.swisstopo.labels"],
+      "layerset": ["light", "transparent", "light", "white_sparse"],
+      "alternatives": [false, false, true]
      },
     "ch.swisstopo.hybridmap": {
       "label": "Aerial hybrid map",

@@ -19,6 +19,11 @@
       "type": "raster",
       "tileSize": 256
     },
+    "ch.swisstopo.swissalti3d-reliefschattierung": {
+      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissalti3d-reliefschattierung/default/current/3857/{z}/{x}/{y}.png"],
+      "type": "raster",
+      "tileSize": 256
+    },
     "ch.bafu.gewaesserschutz-": {
       "data": { "type": "Feature", "geometry": { "type": "Point", "coordinates": [0, 0] } },
       "type": "geojson"
