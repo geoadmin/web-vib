@@ -14,6 +14,13 @@
   },
   "owner": "vib2d",
   "sources": {
+    "ch.swisstopo.dkm10.gewaesser-lin": {
+      "tiles": [
+        "https://a.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
+        "https://b.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
+      ],
+      "type": "vector"
+    },
     "ch.swisstopo.swissimage-product": {
       "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
       "type": "raster",
