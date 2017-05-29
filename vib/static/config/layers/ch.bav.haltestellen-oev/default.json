@@ -1,0 +1,85 @@
+{
+  "layers": [
+    {
+      "id": "BAV-Haltestellen",
+      "type": "symbol",
+      "source": "ch.bav.haltestellen-oev",
+      "source-layer": "oev_haltestellen-layer",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "layout": {
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              16,
+              12
+            ],
+            [
+              21,
+              14
+            ]
+          ]
+        },
+        "icon-image": {
+          "stops": [
+            [
+              13,
+              "halt-40"
+            ],
+            [
+              15,
+              "{icon}"
+            ]
+          ]
+        },
+        "text-font": [
+          "Roboto Regular",
+          "Arial Unicode MS Regular"
+        ],
+        "text-padding": 20,
+        "text-offset": [
+          0,
+          1.2
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.1
+            ],
+            [
+              12,
+              0.2
+            ],
+            [
+              16,
+              0.5
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "text-field": {
+          "stops": [
+            [
+              0,
+              ""
+            ],
+            [
+              16,
+              "{name}"
+            ]
+          ]
+        },
+        "text-letter-spacing": 0.01,
+        "icon-padding": 20
+      },
+      "paint": {
+        "text-halo-blur": 0,
+        "text-color": "white",
+        "text-halo-width": 1,
+        "text-halo-color": "hsla(225, 65%, 36%, 1)"
+      }
+    }
+  ]
+}

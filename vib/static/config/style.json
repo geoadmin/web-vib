@@ -14,31 +14,22 @@
   },
   "owner": "vib2d",
   "sources": {
-    "ch.swisstopo.dkm10.gewaesser-lin": {
-      "tiles": [
-        "https://a.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
-        "https://b.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
-      ],
-      "type": "vector"
-    },
-    "ch.swisstopo.swissimage-product": {
-      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
-      "type": "raster",
-      "tileSize": 256
-    },
-    "ch.swisstopo.swissalti3d-reliefschattierung": {
-      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissalti3d-reliefschattierung/default/current/3857/{z}/{x}/{y}.png"],
-      "type": "raster",
-      "tileSize": 256
-    },
     "ch.bafu.gewaesserschutz-": {
       "data": { "type": "Feature", "geometry": { "type": "Point", "coordinates": [0, 0] } },
       "type": "geojson"
     },
-    "ch.swisstopo.lightbasemap": {
+    "ch.bag.zecken-fsme-faelle": {
+      "url": "https://tileserver.dev.bgdi.ch/data/FSME-mbtiles.json",
+      "type": "vector"
+    },
+    "ch.bav.haltestellen-oev": {
+      "url": "https://tileserver.dev.bgdi.ch/data/OEV_HALTESTELLEN-mbtiles.json",
+      "type": "vector"
+    },
+    "ch.swisstopo.dkm10.gewaesser-lin": {
       "tiles": [
-        "https://a.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
-        "https://b.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
+        "https://a.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
+        "https://b.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
       ],
       "type": "vector"
     },
@@ -48,9 +39,30 @@
         "https://b.tiles.mapbox.com/v4/vib2d.swissnames3d_maplex/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
       ],
       "type": "vector"
+    },
+    "ch.swisstopo.lightbasemap": {
+      "tiles": [
+        "https://a.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
+        "https://b.tiles.mapbox.com/v4/vib2d.lightbasemap/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw"
+      ],
+      "type": "vector"
+    },
+    "ch.swisstopo.swissalti3d-reliefschattierung": {
+      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissalti3d-reliefschattierung/default/current/3857/{z}/{x}/{y}.png"],
+      "type": "raster",
+      "tileSize": 256
+    },
+    "ch.swisstopo.swissimage-product": {
+      "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
+      "type": "raster",
+      "tileSize": 256
+    },
+    "ch.swisstopo.swisstlm3d-wanderwege": {
+      "url": "https://tileserver.dev.bgdi.ch/data/WANDERWEGE-mbtiles.json",
+      "type": "vector"
     }
    },
   "sprite": "https://tileserver.dev.bgdi.ch/styles/lightbasemap/sprite",
-  "glyphs": "mapbox://fonts/vib2d/{fontstack}/{range}.pbf",
+  "glyphs": "https://tileserver.dev.bgdi.ch/fonts/{fontstack}/{range}.pbf",
   "layers": []
 }
