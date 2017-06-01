@@ -2,3 +2,5 @@
 *.pyc
 *.swp
 node_modules
+web*.json
+zappa_settings.json

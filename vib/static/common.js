@@ -48,6 +48,7 @@ var app = {};
     var y = app.getParam('y');
     var zoom = app.getParam('zoom');
     var style = app.getParam('style');
+    var styleId = app.getParam('styleId');
     var styleToCompare = app.getParam('styleToCompare');
     var lang = app.getParam('lang');
     var background = app.getParam('background');
@@ -61,6 +62,7 @@ var app = {};
       x: x || dftX,
       y: y || dftY,
       style: style || dftStyle,
+      styleId: styleId,
       styleToCompare: styleToCompare || dftStyle,
       lang: lang || dftLang,
       background: background || dftBackground,
@@ -92,6 +94,7 @@ var app = {};
     qString = qString.set('y', opts.y);
     qString = qString.set('zoom', opts.zoom);
     qString = qString.set('style', opts.style);
+    qString = qString.set('styleId', opts.styleId);
     qString = qString.set('styleToCompare', opts.styleToCompare);
     qString = qString.set('lang', opts.lang);
     qString = qString.set('background', opts.background);

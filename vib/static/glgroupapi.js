@@ -78,16 +78,6 @@ var ga = {
       maxZoom: 18
     });
 
-    map.on('moveend', function(e) {
-      var center = map.getCenter();
-      var zoom = map.getZoom();
-      app.setParams({
-        lng: center.lng,
-        lat: center.lat,
-        zoom: zoom,
-        overlay: app.params.overlay
-      });
-    });
     map.addControl(new mapboxgl.NavigationControl());
     map.addControl(new mapboxgl.FullscreenControl());
     return map;
@@ -162,7 +152,7 @@ var ga = {
   function displayProps(map, point, layersIds) {
     var props = $('#vib-properties');
     var features = map.queryRenderedFeatures(point, {layers: layersIds});
-    if (features.length) {
+    if (features && features.length) {
       props.show();
       for (var i=0; i < features.length; i++) {
         var keys = Object.keys(features[i].properties);;
@@ -196,13 +186,30 @@ var ga = {
     var inputs = filter.find('input');
     var props = $('#vib-properties');
     var map = initMap();
+    var mapStyle = new glapi.MapStyleExporter(map);
 
     map.on('load', function(e) {
       groups = new glapi.MapLayerGroups(map);
       groups.onReady(function() {
         initCarousel(groups);
-        groups.addLayerGroup(ga.backgroundLayerId);
+        // TODO handle that better
+        if (!app.params.styleId) {
+          groups.addLayerGroup(ga.backgroundLayerId);
+        }
       });
+    });
+
+    // Save style sheet on movend
+    map.on('moveend', function(e) {
+      var center = map.getCenter();
+      var zoom = map.getZoom();
+      app.setParams({
+        lng: center.lng,
+        lat: center.lat,
+        zoom: zoom
+      });
+      // We need to configure the state of the app according to the style sheet...
+      //mapStyle.export();
     });
 
     // UI controllers
@@ -217,9 +224,18 @@ var ga = {
       });
     };
 
-    glapi.getMapStyle().then(function(data) {
-      map.setStyle(data);
-    });
+    // Load style from S3 when available
+    if (app.params.styleId) {
+      mapStyle.import(app.params.styleId).complete(function(jqXHR, textStatus) {
+        if (textStatus === 'success') {
+          map.setStyle(mapStyle.data);
+        }
+      });
+    } else {
+      glapi.getMapStyle().then(function(data) {
+        map.setStyle(data);
+      });
+    }
 
     // Add map mouse events
     map.on('click', function(e) {
@@ -251,6 +267,9 @@ var ga = {
     });
     filter.find('#vib-filter-reset').click(function() {
       reset(map, inputs, ga.layersIds);
+    });
+    filter.find('#vib-filter-save').click(function() {
+      mapStyle.export();
     });
 
     // Add events on properties box

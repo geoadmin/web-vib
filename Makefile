@@ -28,7 +28,7 @@ help:
 
 
 .PHONY: all
-all: ${INSTALL_DIRECTORY}/devlibs
+all: ${INSTALL_DIRECTORY}/devlibs zappa_settings.json
 
 requirements.txt:
 ${INSTALL_DIRECTORY}/devlibs: requirements.txt
@@ -49,12 +49,16 @@ upload:
 	$(eval BRANCH_NAME=$(shell git rev-parse --symbolic-full-name --abbrev-ref HEAD))
 	${PYTHON_CMD} scripts/upload.py ${CLONEDIR} ${BRANCH_NAME};
 
+zappa_settings.json: zappa_settings.json.in
+	envsubst < zappa_settings.json.in > zappa_settings.json
+
 .PHONY: deploybranch
 deploybranch: clonebuild upload
 
 .PHONY: clean
 clean:
 	rm -f  ${INSTALL_DIRECTORY}/devlibs
+	rm -f zappa_settings.json
 
 .PHONY: cleanall
 cleanall: clean
