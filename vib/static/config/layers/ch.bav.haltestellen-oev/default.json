@@ -3,6 +3,9 @@
     {
       "id": "BAV-Haltestellen",
       "type": "symbol",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
       "source": "ch.bav.haltestellen-oev",
       "source-layer": "oev_haltestellen-layer",
       "minzoom": 10,

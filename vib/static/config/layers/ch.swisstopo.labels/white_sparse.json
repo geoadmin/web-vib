@@ -67,6 +67,9 @@
         "layerid",
         "19.8"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 16,
       "source-layer": "swissnames",
@@ -160,6 +163,9 @@
         "layerid",
         "19.7"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 14,
       "source-layer": "swissnames",
@@ -264,6 +270,9 @@
         "layerid",
         "19.6"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 12,
       "source-layer": "swissnames",
@@ -369,6 +378,9 @@
         "layerid",
         "19.5"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 11,
       "source-layer": "swissnames",
@@ -474,6 +486,9 @@
         "layerid",
         "19.4"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 9,
       "source-layer": "swissnames",
@@ -579,6 +594,9 @@
         "layerid",
         "19.3"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 8,
       "source-layer": "swissnames",
@@ -684,6 +702,9 @@
         "layerid",
         "19.2"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
@@ -789,6 +810,9 @@
         "layerid",
         "19.1"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",
@@ -910,6 +934,9 @@
         "layerid",
         "19"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 6,
       "source-layer": "swissnames",
@@ -979,6 +1006,9 @@
         "layerid",
         "4"
       ],
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "minzoom": 7,
       "source-layer": "swissnames",

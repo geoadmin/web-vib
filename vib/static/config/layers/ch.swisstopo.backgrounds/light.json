@@ -3,6 +3,9 @@
     {
       "id": "background",
       "type": "background",
+      "metadata": {
+        "swisstopo:levelcategory": "background"
+      },
       "maxzoom": 24,
       "layout": {
         "visibility": "visible"
