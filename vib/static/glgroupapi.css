@@ -29,3 +29,38 @@
   background-color: white;
   color: black;
 }
+
+#vib-properties {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+}
+
+#vib-properties table {
+  color: white;
+  margin: 10px;
+}
+
+#vib-properties td {
+  padding: 0 5px;
+}
+
+#vib-properties tr:hover {
+  border: 1px solid orange;
+}
+
+#vib-filter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+}
+
+#vib-filter input, 
+#vib-filter button {
+  color: black;
+}

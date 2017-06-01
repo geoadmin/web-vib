@@ -1,7 +1,7 @@
 {
   "layers": [
     {
-      "id": "class -1",
+      "id": "gewaesser",
       "type": "circle",
       "source": "ch.bafu.gewaesserschutz-",
       "layout": {
@@ -9,110 +9,20 @@
       },
       "paint": {
         "circle-radius": 5,
-        "circle-color": "rgb(255, 255, 255)",
+        "circle-color": {
+          "property": "klasse_doc",
+          "stops": [
+            [-1, "rgb(255,255,255)"],
+            [1, "rgb(0,92,230)"],
+            [2, "rgb(76,230,0)"],
+            [3, "rgb(255,255,0)"],
+            [4, "rgb(255,170,0)"],
+            [5, "rgb(255,0,0)"]
+          ]
+        },
         "circle-stroke-color": "rgb(0, 0, 0)",
         "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        -1
-      ]
-    },
-    {
-      "id": "class 1",
-      "type": "circle",
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(0, 92, 230)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        1
-      ]
-    },
-    {
-      "id": "class 2",
-      "type": "circle",
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(76, 230, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        2
-      ]
-    },
-    {
-      "id": "class 3",
-      "type": "circle",
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 255, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        3
-      ]
-    },
-    {
-      "id": "class 4",
-      "type": "circle",
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 170, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        4
-      ]
-    },
-    {
-      "id": "class 5",
-      "type": "circle",
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 170, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_doc",
-        5
-      ]
+      }
     }
   ]
 }

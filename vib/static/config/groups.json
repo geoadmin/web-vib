@@ -76,9 +76,23 @@
     },
     "ch.bafu.gewaesserschutz-all": {
       "label": "Water Quality",
-      "sources": ["ch.bafu.gewaesserschutz-"],
-      "layerset": ["biologischer_zustand_makrozoobenthos"],
-      "alternatives": [true]
+      "sources": [
+        "ch.swisstopo.backgrounds",
+        "ch.swisstopo.swissalti3d-reliefschattierung",
+        "ch.swisstopo.dkm10.gewaesser-lin",
+        "ch.swisstopo.lightbasemap",
+        "ch.swisstopo.labels",
+        "ch.bafu.gewaesserschutz-"
+      ],
+      "layerset": [
+        "light",
+        "transparent",
+        "light",
+        "light",
+        "white_sparse",
+        "biologischer_zustand_makrozoobenthos"
+      ],
+      "alternatives": [false, false, false, false, false, true]
     }
   }
 }
