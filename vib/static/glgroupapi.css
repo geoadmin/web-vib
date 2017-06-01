@@ -10,6 +10,7 @@
   color: white;
   font-size: 17px;
   opacity: 0.8;
+  height: 120px;
 }
 #layersCarousel .carousel-control span {
   margin-top: -16px;
@@ -32,8 +33,8 @@
 
 #vib-properties {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 5px;
+  left: 5px;
   background: rgba(0, 0, 0, 0.6);
   color: rgb(255, 255, 255);
 }
@@ -53,14 +54,14 @@
 
 #vib-filter {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5px;
+  right: 5px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
   color: rgb(255, 255, 255);
 }
 
-#vib-filter input, 
+#vib-filter input,
 #vib-filter button {
   color: black;
 }

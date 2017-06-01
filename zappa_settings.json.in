@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "app_function": "vib.main.app",
+        "aws_region": "eu-west-1",
+        "s3_bucket": "dummy-lambda-test",
+        "binary_support": false,
+        "cors": true,
+        "debug": true,
+        "timeout_seconds": 30,
+        "memory_size": 128,
+        "manage_roles": true,
+        "profile_name": "vib",
+        "environment_variables": {
+            "ALLOWED_HOSTS": "*",
+            "VIB_ACCESS_KEY": "${VIB_ACCESS_KEY}",
+            "VIB_SECRET_KEY": "${VIB_SECRET_KEY}",
+            "VIB_BUCKET_NAME": "${VIB_BUCKET_NAME}"
+        }
+    }
+}

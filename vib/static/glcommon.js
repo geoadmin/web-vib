@@ -61,6 +61,66 @@ var glapi = {};
     return $.getJSON('static/config/layers/' + sourceId + '/' + layersetId + '.json');
   };
 
+
+  glapi.MapStyleExporter = function(map) {
+    this.map = map;
+    this.data = null;
+    this.styleId = null;
+
+    this._setStyleId = function(styleId) {
+      if (styleId) {
+        this.styleId = styleId;
+        app.setParam(styleId, 'styleId');
+      }
+    };
+
+    this._getJSONStyle = function() {
+      return JSON.stringify(this.map.getStyle());
+    };
+
+    this._getUrl = function() {
+      var baseUrl = 'https://4e89mn6059.execute-api.eu-west-1.amazonaws.com/dev/';
+      var path = this.styleId ? 'glstyles/' + this.styleId : 'glstyles';
+      console.log(baseUrl + path);
+      return baseUrl + path;
+    };
+
+    this.export = function(styleId) {
+      var that = this;
+      var httpMethod = this.styleId ? 'PUT' : 'POST';
+      return $.ajax({
+        url: this._getUrl(),
+        type: httpMethod,
+        dataType: 'json',
+        contentType: 'application/json',
+        data: this._getJSONStyle(),
+        error: function(jqXHR, textStatus) {
+          alert(jqXHR.status + ' Error');
+        },
+        success: function(response) {
+          that._setStyleId(response.styleId);
+        }
+      });
+    };
+
+    this.import = function(styleId) {
+      var that = this;
+      this._setStyleId(styleId);
+      return $.ajax({
+        url: this._getUrl(),
+        type: 'GET',
+        dataType: 'json',
+        error: function(jqXHR, textStatus) {
+          alert(jqXHR.status + ' Error');
+        },
+        success: function(response) {
+          that._setStyleId(response.styleId);
+          that.data = response;
+        }
+      });
+    };
+  };
+
   glapi.MapLayerGroups = function(map) {
     this.map = map;
     this.data = null;
