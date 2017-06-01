@@ -1,7 +1,7 @@
 {
   "layers": [
     {
-      "id": "class -1",
+      "id": "gewaesser",
       "type": "circle",
       "metadata": {
         "swisstopo:levelcategory": "overlay"
@@ -12,125 +12,20 @@
       },
       "paint": {
         "circle-radius": 5,
-        "circle-color": "rgb(255, 255, 255)",
+        "circle-color": {
+          "property": "klasse_nitrit",
+          "stops": [
+            [-1, "rgb(255,255,255)"],
+            [1, "rgb(0,92,230)"],
+            [2, "rgb(76,230,0)"],
+            [3, "rgb(255,255,0)"],
+            [4, "rgb(255,170,0)"],
+            [5, "rgb(255,0,0)"]
+          ]
+        },
         "circle-stroke-color": "rgb(0, 0, 0)",
         "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        -1
-      ]
-    },
-    {
-      "id": "class 1",
-      "type": "circle",
-      "metadata": {
-        "swisstopo:levelcategory": "overlay"
-      },
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(0, 92, 230)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        1
-      ]
-    },
-    {
-      "id": "class 2",
-      "type": "circle",
-      "metadata": {
-        "swisstopo:levelcategory": "overlay"
-      },
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(76, 230, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        2
-      ]
-    },
-    {
-      "id": "class 3",
-      "type": "circle",
-      "metadata": {
-        "swisstopo:levelcategory": "overlay"
-      },
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 255, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        3
-      ]
-    },
-    {
-      "id": "class 4",
-      "type": "circle",
-      "metadata": {
-        "swisstopo:levelcategory": "overlay"
-      },
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 170, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        4
-      ]
-    },
-    {
-      "id": "class 5",
-      "type": "circle",
-      "metadata": {
-        "swisstopo:levelcategory": "overlay"
-      },
-      "source": "ch.bafu.gewaesserschutz-",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": 5,
-        "circle-color": "rgb(255, 170, 0)",
-        "circle-stroke-color": "rgb(0, 0, 0)",
-        "circle-stroke-width": 1
-      },
-      "filter": [
-        "==",
-        "klasse_nitrit",
-        5
-      ]
+      }
     }
   ]
 }

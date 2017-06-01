@@ -70,6 +70,7 @@ var ga = {};
       groups.updateLayerset(layerGroupId, layersetId);
       $('#' + layerGroupId.replace(/\./g, '_') + ' button.active').removeClass('active');
       $(event.target).addClass('active');
+      reset(map,$('#vib-filter').find('input'));
     };
 
     map.on('load', function(e) {
@@ -93,16 +94,128 @@ var ga = {};
         overlay: app.params.overlay
       });
     });
-    glapi.attachMapClickListener(map);
     map.addControl(new mapboxgl.NavigationControl());
     map.addControl(new mapboxgl.FullscreenControl());
     return map;
   }
+   
+  var apply = function(map, inputs) {
+    var key = inputs[0].value;
+    var val = inputs[1].value;
+    applyFilter(map, key, val);
+  };
 
+  var applyFilter = function(map, key, value) {
+    var filter = ['any', [
+      '==', key, value
+    ]];
+    // If value could be an integer
+    var num = parseFloat(value);
+    if (/^-?\d+.?\d*$/.test(value) && !isNaN(num)) {
+      filter.push(['==', key, num]);
+    }
+    var style = map.getStyle();
+    style.layers.forEach(function(layer) {
+      if (!layer.filter) {
+        layer.metadata.noFilter = true;
+      }
+      if (!layer.metadata.noFilter && !layer.metadata.oldFilter) {
+        layer.metadata.oldFilter = layer.filter;
+      } else {
+        layer.filter = layer.metadata.oldFilter;
+      }
+      var finalFilter = layer.filter;
+      if (layer.filter) {
+        finalFilter = ['all',
+          layer.filter,
+          filter
+        ];
+      } else {
+        finalFilter = filter;
+      }
+      map.setFilter(layer.id, finalFilter); 
+    });
+  };
+  
+  var reset = function(map, inputs) {
+    inputs[0].value = '';
+    inputs[1].value = ''; 
+    var style = map.getStyle();
+    style.layers.forEach(function(layer) {
+      map.setFilter(layer.id, layer.metadata.oldFilter); 
+      layer.metadata.oldFilter = undefined;
+    });
+  };
+ 
+  var displayProps = function(map, point) {
+    var props = $('#vib-properties');
+    var features = map.queryRenderedFeatures(point);
+    if (features.length) {
+      props.show();
+      for (var i=0; i < features.length; i++) {
+        var keys = Object.keys(features[i].properties);;
+        if (keys.length) {
+          var html = '<table>';
+          keys.forEach(function(key) {
+            html += '<tr>';
+            html += '<td>' + key + '</td>';
+            html += '<td>' + features[i].properties[key] + '</td';
+            html += '</tr>';
+          });
+          html += '</table>';
+          props.html(html);
+          return features[i];
+        }
+      }
+    } else {
+      props.hide();
+    }
+  };
+ 
   $(window).load(function() {
     if (!mapboxgl.supported()) {
       alert('Your browser does not support Mapbox GL.  Please try Chrome or Firefox.');
     }
     var map = initMap();
+    
+    // Add map mouse events
+    var featSelected;;
+    map.on('click', function(e) {
+      var feat = displayProps(map, e.point);
+      if (JSON.stringify(feat) !== JSON.stringify(featSelected)) {
+        featSelected = feat;
+        return;
+      }
+      featSelected = undefined;
+    });
+    map.on('mousemove', function(e) {
+      if (featSelected) {
+        return;
+      }
+      displayProps(map, e.point);
+    });
+
+    // Add events on filter box
+    var filter = $('#vib-filter');
+    var inputs = filter.find('input');
+    filter.find('#vib-filter-apply').click(function() {
+      apply(map, inputs);
+    });
+    filter.find('#vib-filter-reset').click(function() {
+      reset(map, inputs); 
+    });
+    
+    // Add events on properties box
+    var props = $('#vib-properties');
+    props.on('click', 'tr', function(evt,a,b,c) {
+      var tds = $(evt.currentTarget).find('td');
+      if (inputs[0].value == tds[0].innerText && inputs[1].value == tds[1].innerText) {
+        reset(map, inputs);
+        return;
+      }
+      inputs[0].value = tds[0].innerText;
+      inputs[1].value = tds[1].innerText;
+      apply(map, inputs);
+    });
   });
 })();
