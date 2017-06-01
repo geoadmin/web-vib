@@ -3,6 +3,9 @@
     {
       "id": "gewaesser",
       "type": "circle",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
       "source": "ch.bafu.gewaesserschutz-",
       "layout": {
         "visibility": "visible"

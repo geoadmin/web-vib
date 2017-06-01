@@ -5,6 +5,9 @@
       "type": "fill",
       "source": "ch.bag.zecken-fsme-faelle",
       "source-layer": "fsme-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
       "layout": {
         "visibility": "visible"
       },

@@ -32,6 +32,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -85,6 +88,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -185,6 +191,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -251,6 +260,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -308,6 +320,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -362,6 +377,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -419,6 +437,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -474,6 +495,9 @@
           ]
         },
         "symbol-spacing": 500
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -531,6 +555,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -584,6 +611,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -640,6 +670,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -694,6 +727,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -753,6 +789,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -809,6 +848,9 @@
           ]
         },
         "symbol-spacing": 500
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -868,6 +910,9 @@
         },
         "symbol-spacing": 500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -924,6 +969,9 @@
           ]
         },
         "symbol-spacing": 500
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -993,6 +1041,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1047,6 +1098,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1114,6 +1168,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1183,6 +1240,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1250,6 +1310,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1338,6 +1401,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1419,6 +1485,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1502,6 +1571,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1584,6 +1656,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1647,6 +1722,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1700,6 +1778,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1755,6 +1836,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1808,6 +1892,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1863,6 +1950,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -1916,6 +2006,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -1971,6 +2064,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2020,6 +2116,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2064,6 +2163,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -2129,6 +2231,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2183,6 +2288,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -2256,6 +2364,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2328,6 +2439,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2399,6 +2513,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -2476,6 +2593,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2551,6 +2671,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -2629,6 +2752,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2705,6 +2831,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -2783,6 +2912,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2856,6 +2988,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2928,6 +3063,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -2999,6 +3137,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3076,6 +3217,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3151,6 +3295,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3229,6 +3376,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3305,6 +3455,9 @@
           0
         ],
         "text-line-height": 1.2
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3383,6 +3536,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3460,6 +3616,9 @@
         ],
         "text-line-height": 1.2
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3534,6 +3693,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3606,6 +3768,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3684,6 +3849,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3760,6 +3928,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3839,6 +4010,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -3916,6 +4090,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -3995,6 +4172,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4072,6 +4252,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4151,6 +4334,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4213,6 +4399,9 @@
         ],
         "text-size": 21
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4258,6 +4447,9 @@
         ],
         "text-size": 25
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4302,6 +4494,9 @@
         ],
         "text-size": 20
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4344,6 +4539,9 @@
         ],
         "text-size": 13,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4401,6 +4599,9 @@
         },
         "text-max-width": 10
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4446,6 +4647,9 @@
         "text-size": 12,
         "text-max-width": 10
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4490,6 +4694,9 @@
         ],
         "text-size": 13,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4548,6 +4755,9 @@
         },
         "text-max-width": 10
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4605,6 +4815,9 @@
         },
         "text-max-width": 10
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4660,6 +4873,9 @@
         },
         "text-max-width": 10
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4705,6 +4921,9 @@
         "text-size": 17,
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -4749,6 +4968,9 @@
         "text-rotation-alignment": "map",
         "text-size": 19,
         "text-max-width": 50
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4804,6 +5026,9 @@
           ]
         },
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4861,6 +5086,9 @@
           ]
         },
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -4930,6 +5158,9 @@
           ]
         },
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5008,6 +5239,9 @@
         },
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5065,6 +5299,9 @@
         ],
         "text-size": 14
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5117,6 +5354,9 @@
         },
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5159,6 +5399,9 @@
         ],
         "text-size": 12,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5205,6 +5448,9 @@
         "text-size": 13,
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5247,6 +5493,9 @@
         ],
         "text-size": 13,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5305,6 +5554,9 @@
         },
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5347,6 +5599,9 @@
         ],
         "text-size": 13,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5405,6 +5660,9 @@
         },
         "text-max-width": 50
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5447,6 +5705,9 @@
         ],
         "text-size": 13,
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5492,6 +5753,9 @@
         "text-rotation-alignment": "map",
         "text-size": 12,
         "text-max-width": 50
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5547,6 +5811,9 @@
           ]
         },
         "text-max-width": 10
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5626,6 +5893,9 @@
         },
         "symbol-spacing": 700
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5680,6 +5950,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5758,6 +6031,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5834,6 +6110,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -5913,6 +6192,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -5991,6 +6273,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6068,6 +6353,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -6160,6 +6448,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6228,6 +6519,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -6301,6 +6595,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6372,6 +6669,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6428,6 +6728,9 @@
             ]
           ]
         }
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
@@ -6507,6 +6810,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6585,6 +6891,9 @@
           ]
         }
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6654,6 +6963,9 @@
         "text-max-width": 100,
         "symbol-spacing": 2500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6704,6 +7016,9 @@
         "text-max-width": 100,
         "symbol-spacing": 2500
       },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
+      },
       "source": "ch.swisstopo.labels",
       "filter": [
         "==",
@@ -6753,6 +7068,9 @@
         },
         "text-max-width": 100,
         "symbol-spacing": 2500
+      },
+      "metadata": {
+        "swisstopo:levelcategory": "label"
       },
       "source": "ch.swisstopo.labels",
       "filter": [
