@@ -5,6 +5,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "-1"
+      },
       "filter": [
         "all",
         [
@@ -48,6 +52,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "-1"
+      },
       "filter": [
         "all",
         [
@@ -91,6 +99,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "0"
+      },
       "filter": [
         "all",
         [
@@ -144,6 +156,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "0"
+      },
       "filter": [
         "all",
         [
@@ -193,6 +209,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "0"
+      },
       "filter": [
         "all",
         [
@@ -237,6 +257,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "0"
+      },
       "filter": [
         "all",
         [
@@ -281,6 +305,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "0"
+      },
       "filter": [
         "all",
         [
@@ -325,6 +353,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "1"
+      },
       "filter": [
         "all",
         [
@@ -369,6 +401,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "1"
+      },
       "filter": [
         "all",
         [
@@ -412,6 +448,10 @@
       "type": "line",
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "1"
+      },
       "filter": [
         "all",
         [
@@ -456,6 +496,10 @@
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
       "maxzoom": 24,
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "2"
+      },
       "filter": [
         "all",
         [
@@ -500,6 +544,10 @@
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
       "maxzoom": 24,
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "2"
+      },
       "filter": [
         "all",
         [
@@ -544,6 +592,10 @@
       "source": "ch.swisstopo.swisstlm3d-wanderwege",
       "source-layer": "wanderwege-layer",
       "maxzoom": 24,
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "2"
+      },
       "filter": [
         "all",
         [
@@ -589,6 +641,10 @@
       "source-layer": "wanderwege-layer",
       "minzoom": 13,
       "maxzoom": 24,
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "3"
+      },
       "filter": [
         "all",
         [
@@ -634,6 +690,10 @@
       "source-layer": "wanderwege-layer",
       "minzoom": 13,
       "maxzoom": 24,
+      "metadata": {
+        "swisstopo:levelcategory": "network",
+        "swisstopo:level": "3"
+      },
       "filter": [
         "all",
         [
