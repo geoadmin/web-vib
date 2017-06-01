@@ -1,40 +1,5 @@
 {
   "group-options": {
-    "ch.swisstopo.dkm10.gewaesser-lin": {
-      "type": "vector",
-      "layerset": ["light"]
-    },
-    "ch.swisstopo.backgrounds": {
-      "type": "background",
-      "layerset": ["light"]
-    },
-    "ch.swisstopo.swissimage-product": {
-      "type": "raster",
-      "layerset": ["default"]
-    },
-    "ch.swisstopo.swissalti3d-reliefschattierung": {
-      "type": "raster",
-      "layerset": ["transparent"]
-    },
-    "ch.swisstopo.lightbasemap": {
-      "type": "vector",
-      "layerset": ["light"]
-    },
-    "ch.swisstopo.labels": {
-      "type": "vector",
-      "layerset": [
-        "white",
-        "black",
-        "white_big",
-        "white_sparse"
-      ],
-      "layersetLabels": [
-        "White Labels",
-        "Black Labels",
-        "Big Labels",
-        "Sparse White Lables"
-      ]
-    },
     "ch.bafu.gewaesserschutz-": {
       "type": "geojson",
       "layerset": [
@@ -59,6 +24,53 @@
         "Macrophytes",
         "Nitrate"
       ]
+    },
+    "ch.bag.zecken-fsme-faelle": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
+    "ch.bav.haltestellen-oev": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
+    "ch.swisstopo.backgrounds": {
+      "type": "background",
+      "layerset": ["light"]
+    },
+    "ch.swisstopo.dkm10.gewaesser-lin": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
+    "ch.swisstopo.labels": {
+      "type": "vector",
+      "layerset": [
+        "white",
+        "black",
+        "white_big",
+        "white_sparse"
+      ],
+      "layersetLabels": [
+        "White Labels",
+        "Black Labels",
+        "Big Labels",
+        "Sparse White Lables"
+      ]
+    },
+    "ch.swisstopo.lightbasemap": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
+    "ch.swisstopo.swissalti3d-reliefschattierung": {
+      "type": "raster",
+      "layerset": ["transparent"]
+    },
+    "ch.swisstopo.swissimage-product": {
+      "type": "raster",
+      "layerset": ["default"]
+    },
+     "ch.swisstopo.swisstlm3d-wanderwege": {
+      "type": "vector",
+      "layerset": ["light"]
     }
   },
   "groups.swisstopo": {
@@ -93,6 +105,12 @@
         "biologischer_zustand_makrozoobenthos"
       ],
       "alternatives": [false, false, false, false, false, true]
+    },
+    "ch.swisstopo.hiking": {
+      "label": "Hiking",
+      "sources": ["ch.bag.zecken-fsme-faelle", "ch.swisstopo.swisstlm3d-wanderwege", "ch.bav.haltestellen-oev"],
+      "layerset": ["default", "default", "default"],
+      "alternatives": [false, false, false]
     }
   }
 }

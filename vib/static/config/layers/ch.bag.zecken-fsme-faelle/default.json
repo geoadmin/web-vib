@@ -1,0 +1,17 @@
+{
+  "layers": [
+    {
+      "id": "FSME Lokale Häufungen",
+      "type": "fill",
+      "source": "ch.bag.zecken-fsme-faelle",
+      "source-layer": "fsme-layer",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(199, 157, 76, 0.22)"
+      }
+    }
+  ]
+}
+ 

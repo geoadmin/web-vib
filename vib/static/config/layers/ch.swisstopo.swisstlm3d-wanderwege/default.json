@@ -1,0 +1,676 @@
+{
+  "layers": [
+    {
+      "id": "wanderweg berg unterirdisch",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "<",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "1"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(187, 30, 16, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg unterirdisch",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "<",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "0"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(232, 140, 0, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg andere spur",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          ">=",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "3"
+        ],
+        [
+          "==",
+          "objektart",
+          "19"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(183, 183, 183, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1,
+        "line-dasharray": [
+          0.2,
+          5
+        ]
+      }
+    },
+    {
+      "id": "wanderweg andere",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          ">=",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "3"
+        ],
+        [
+          "!=",
+          "objektart",
+          "19"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(183, 183, 183, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg alpin 0",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "2"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(0, 124, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg berg 0",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "1"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(187, 30, 16, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg 0",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          0
+        ],
+        [
+          "==",
+          "wanderwege",
+          "0"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(232, 140, 0, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg alpin 1",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          1
+        ],
+        [
+          "==",
+          "wanderwege",
+          "2"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(0, 124, 176, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg berg 1",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          1
+        ],
+        [
+          "==",
+          "wanderwege",
+          "1"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(187, 30, 16, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg 1",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          1
+        ],
+        [
+          "==",
+          "wanderwege",
+          "0"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(232, 140, 0, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg alpin 2",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          2
+        ],
+        [
+          "==",
+          "wanderwege",
+          "2"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(0, 124, 176, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg berg 2",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          2
+        ],
+        [
+          "==",
+          "wanderwege",
+          "1"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(187, 30, 16, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg 2",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          2
+        ],
+        [
+          "==",
+          "wanderwege",
+          "0"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(232, 140, 0, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg berg 3",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          3
+        ],
+        [
+          "==",
+          "wanderwege",
+          "1"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(187, 30, 16, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    },
+    {
+      "id": "wanderweg 3",
+      "type": "line",
+      "source": "ch.swisstopo.swisstlm3d-wanderwege",
+      "source-layer": "wanderwege-layer",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "stufe",
+          3
+        ],
+        [
+          "==",
+          "wanderwege",
+          "0"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(232, 140, 0, 1.0)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-opacity": 1
+      }
+    }
+  ]
+}
