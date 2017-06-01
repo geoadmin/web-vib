@@ -1,13 +1,19 @@
-var ga = {};
+var ga = {
+  backgroundLayerId: 'ch.swisstopo.lightbasemap',
+  layerGroupId: undefined,
+  previousLayerGroupId: undefined,
+  layersetId: undefined,
+  layersIds: []
+};
 
 (function() {
   function initCarousel(groups) {
-    var layers, layer, alts, altBtns, i, previousLayerGroupId;
+    var layers, layer, alts, altBtns, i;
     i = 0;
     layers = groups.getAllLayerGroups();
     for(var key in layers) {
       if (i == 0) {
-        previousLayerGroupId = key;
+        ga.previousLayerGroupId = key;
       }
       layer = layers[key];
       altsBtn = '';
@@ -41,21 +47,23 @@ var ga = {};
     $('.item').first().addClass('active');
     $('.carousel-indicators > li').first().addClass('active');
     $('#layersCarousel').bind('slide.bs.carousel', function (e) {
-      var layerGroupId = $(e.relatedTarget).attr('group');
-      var layersetId = $(e.relatedTarget).find('button.active').attr('layerset');
-      groups.removeLayerGroup(previousLayerGroupId);
-      groups.addLayerGroup(layerGroupId, layersetId);
-      previousLayerGroupId = layerGroupId;
+      ga.layerGroupId = $(e.relatedTarget).attr('group');
+      ga.layersetId = $(e.relatedTarget).find('button.active').attr('layerset');
+      groups.removeLayerGroup(ga.previousLayerGroupId);
+      groups.addLayerGroup(ga.layerGroupId, ga.layersetId).then(function() {
+        groups.getLayersIds(ga.layerGroupId, ga.layersetId).then(function(layersIds) {
+          ga.layersIds = layersIds;
+        });
+      });
+      ga.previousLayerGroupId = ga.layerGroupId;
     });
   }
 
   function initMap() {
-    var map, backgroundLayerId, groups;
-    backgroundLayerId = 'ch.swisstopo.lightbasemap';
     mapboxgl.accessToken = glapi.accessToken;
     app.getParams();
 
-    map = new mapboxgl.Map({
+    var map = new mapboxgl.Map({
       container: 'gl-map',
       center: centerLngLat = [app.params.lng, app.params.lat],
       // Mapbox zoom differs by one.
@@ -63,25 +71,6 @@ var ga = {};
       interactive: true,
       minZoom: 6,
       maxZoom: 18
-    });
-    groups = new glapi.MapLayerGroups(map);
-    // Ui controllers
-    ga.toggleLayerset = function(layerGroupId, layersetId) {
-      groups.updateLayerset(layerGroupId, layersetId);
-      $('#' + layerGroupId.replace(/\./g, '_') + ' button.active').removeClass('active');
-      $(event.target).addClass('active');
-      reset(map,$('#vib-filter').find('input'));
-    };
-
-    map.on('load', function(e) {
-      groups.onReady(function() {
-        initCarousel(groups);
-        groups.addLayerGroup(backgroundLayerId);
-      });
-    });
-
-    glapi.getMapStyle().then(function(data) {
-      map.setStyle(data);
     });
 
     map.on('moveend', function(e) {
@@ -98,14 +87,16 @@ var ga = {};
     map.addControl(new mapboxgl.FullscreenControl());
     return map;
   }
-   
-  var apply = function(map, inputs) {
-    var key = inputs[0].value;
-    var val = inputs[1].value;
-    applyFilter(map, key, val);
-  };
 
-  var applyFilter = function(map, key, value) {
+  /**
+   * Apply the filter for the layersIds specified.
+   */
+  function apply(map, inputs, layersIds) {
+    if (!layersIds || !layersIds.length) {
+      return;
+    }
+    var key = inputs[0].value;
+    var value = inputs[1].value;
     var filter = ['any', [
       '==', key, value
     ]];
@@ -116,6 +107,9 @@ var ga = {};
     }
     var style = map.getStyle();
     style.layers.forEach(function(layer) {
+      if (!layersIds.includes(layer.id)) {
+        return;
+      }
       if (!layer.filter) {
         layer.metadata.noFilter = true;
       }
@@ -136,20 +130,33 @@ var ga = {};
       map.setFilter(layer.id, finalFilter); 
     });
   };
-  
-  var reset = function(map, inputs) {
+
+  /**
+   * Reset the filter.
+   */
+  function reset(map, inputs, layersIds) {
+    if (!layersIds || !layersIds.length) {
+      return;
+    }
     inputs[0].value = '';
     inputs[1].value = ''; 
     var style = map.getStyle();
     style.layers.forEach(function(layer) {
+      if (!layersIds.includes(layer.id)) {
+        return;
+      }
       map.setFilter(layer.id, layer.metadata.oldFilter); 
       layer.metadata.oldFilter = undefined;
     });
   };
  
-  var displayProps = function(map, point) {
+  /**
+   * Query the features of the layersIds specified and display its properties
+   * in the panel.
+   */
+  function displayProps(map, point, layersIds) {
     var props = $('#vib-properties');
-    var features = map.queryRenderedFeatures(point);
+    var features = map.queryRenderedFeatures(point, {layers: layersIds});
     if (features.length) {
       props.show();
       for (var i=0; i < features.length; i++) {
@@ -175,39 +182,74 @@ var ga = {};
   $(window).load(function() {
     if (!mapboxgl.supported()) {
       alert('Your browser does not support Mapbox GL.  Please try Chrome or Firefox.');
+      return;
     }
-    var map = initMap();
     
+    var groups;
+    var featSelected;
+    var filter = $('#vib-filter');
+    var inputs = filter.find('input');
+    var props = $('#vib-properties');
+    var map = initMap();
+
+    map.on('load', function(e) {
+      groups = new glapi.MapLayerGroups(map);
+      groups.onReady(function() {
+        initCarousel(groups);
+        groups.addLayerGroup(ga.backgroundLayerId);
+      });
+    });
+
+    // UI controllers
+    ga.toggleLayerset = function(layerGroupId, layersetId) {
+      ga.layerGroupId = layerGroupId;
+      ga.layersetId = layersetId;
+      groups.getLayersIds(ga.layerGroupId, ga.layersetId).then(function(layersIds) {
+        ga.layersIds = layersIds;
+        groups.updateLayerset(layerGroupId, layersetId);
+        $('#' + layerGroupId.replace(/\./g, '_') + ' button.active').removeClass('active');
+        $(event.target).addClass('active');
+      });
+    };
+
+    glapi.getMapStyle().then(function(data) {
+      map.setStyle(data);
+    });
+
     // Add map mouse events
-    var featSelected;;
     map.on('click', function(e) {
-      var feat = displayProps(map, e.point);
+      if (!ga.layersIds.length) {
+        return;
+      }
+      var feat = displayProps(map, e.point, ga.layersIds);
       if (JSON.stringify(feat) !== JSON.stringify(featSelected)) {
         featSelected = feat;
         return;
       }
       featSelected = undefined;
     });
+
     map.on('mousemove', function(e) {
+      if (!ga.layersIds.length) {
+        props.hide();
+        return;
+      }
       if (featSelected) {
         return;
       }
-      displayProps(map, e.point);
+      displayProps(map, e.point, ga.layersIds);
     });
 
     // Add events on filter box
-    var filter = $('#vib-filter');
-    var inputs = filter.find('input');
     filter.find('#vib-filter-apply').click(function() {
-      apply(map, inputs);
+      apply(map, inputs, ga.layersIds);
     });
     filter.find('#vib-filter-reset').click(function() {
-      reset(map, inputs); 
+      reset(map, inputs, ga.layersIds);
     });
     
     // Add events on properties box
-    var props = $('#vib-properties');
-    props.on('click', 'tr', function(evt,a,b,c) {
+    props.on('click', 'tr', function(evt) {
       var tds = $(evt.currentTarget).find('td');
       if (inputs[0].value == tds[0].innerText && inputs[1].value == tds[1].innerText) {
         reset(map, inputs);
@@ -215,7 +257,7 @@ var ga = {};
       }
       inputs[0].value = tds[0].innerText;
       inputs[1].value = tds[1].innerText;
-      apply(map, inputs);
+      apply(map, inputs, ga.layersIds);
     });
   });
 })();

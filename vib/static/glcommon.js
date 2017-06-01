@@ -183,7 +183,7 @@ var glapi = {};
           updateGeoJSONSource(sourceId);
         }
       }
-      $.when.all(layerSets).then(function(layersets) {
+      return $.when.all(layerSets).then(function(layersets) {
         for (var k=0; k < layersets.length; k++) {
           if (layersets[k][0]) {
             that.addLayerset(layersets[k][0].layers, layerGroupId, beforeLayerId);
@@ -218,6 +218,25 @@ var glapi = {};
           }
         }
         that.addLayerset(data.layers, layerGroupId, beforeLayerId);
+      });
+    };
+
+    this.getLayersIds = function(layerGroupId, layersetId) {
+      var style = this.map.getStyle();
+      var group = this.getLayerGroupById(layerGroupId);
+      var sourceId = group.sources[(group.interactions || []).indexOf(true)];
+      if (!sourceId) {
+        return $.when([]);
+      }
+      return glapi.getLayerset(sourceId, layersetId).then(function(data) {
+        var layersIds = [];
+        style.layers.forEach(function(layer) {
+          if (layerGroupId == layer.metadata.groupId &&
+              sourceId == layer.source) {
+            layersIds.push(layer.id);
+          }
+        });
+        return layersIds;
       });
     };
 

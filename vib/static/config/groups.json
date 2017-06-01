@@ -104,7 +104,8 @@
         "white_sparse",
         "biologischer_zustand_makrozoobenthos"
       ],
-      "alternatives": [false, false, false, false, false, true]
+      "alternatives": [false, false, false, false, false, true],
+      "interactions": [false, false, false, false, false, true]
     },
     "ch.swisstopo.hiking": {
       "label": "Hiking",
