@@ -8,6 +8,12 @@ app = Flask(__name__)
 pages = Blueprint('pages', __name__, template_folder='templates', static_folder='static')
 
 
+@app.after_request
+def after_request(response):
+    response.headers.add('Cache-Control', 'no-cache')
+    return response
+
+
 @pages.route('/', defaults={'page': 'index'})
 @pages.route('/<page>')
 def show(page):

@@ -221,6 +221,13 @@ var glapi = {};
       });
     };
 
+    this.getLayersetIdByProperty = function(layerGroupId, propertyName) {
+      var that, group;
+      that = this;
+      group = this.getLayerGroupById(layerGroupId);
+      return group.layerset[group[propertyName].indexOf(true)];
+    };
+
     this.getLayersIds = function(layerGroupId, layersetId) {
       var style = this.map.getStyle();
       var group = this.getLayerGroupById(layerGroupId);

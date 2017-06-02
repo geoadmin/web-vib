@@ -48,7 +48,12 @@ var ga = {
     $('.carousel-indicators > li').first().addClass('active');
     $('#layersCarousel').bind('slide.bs.carousel', function (e) {
       ga.layerGroupId = $(e.relatedTarget).attr('group');
-      ga.layersetId = $(e.relatedTarget).find('button.active').attr('layerset');
+      var layersetId = $(e.relatedTarget).find('button.active').attr('layerset');
+      if (layersetId) {
+        ga.layersetId = layersetId;
+      } else {
+        ga.layersetId = groups.getLayersetIdByProperty(ga.layerGroupId, 'interactions');
+      }
       groups.removeLayerGroup(ga.previousLayerGroupId);
       groups.addLayerGroup(ga.layerGroupId, ga.layersetId).then(function() {
         groups.getLayersIds(ga.layerGroupId, ga.layersetId).then(function(layersIds) {
@@ -127,7 +132,7 @@ var ga = {
       } else {
         finalFilter = filter;
       }
-      map.setFilter(layer.id, finalFilter); 
+      map.setFilter(layer.id, finalFilter);
     });
   };
 
@@ -139,17 +144,17 @@ var ga = {
       return;
     }
     inputs[0].value = '';
-    inputs[1].value = ''; 
+    inputs[1].value = '';
     var style = map.getStyle();
     style.layers.forEach(function(layer) {
       if (!layersIds.includes(layer.id)) {
         return;
       }
-      map.setFilter(layer.id, layer.metadata.oldFilter); 
+      map.setFilter(layer.id, layer.metadata.oldFilter);
       layer.metadata.oldFilter = undefined;
     });
   };
- 
+
   /**
    * Query the features of the layersIds specified and display its properties
    * in the panel.
@@ -178,13 +183,13 @@ var ga = {
       props.hide();
     }
   };
- 
+
   $(window).load(function() {
     if (!mapboxgl.supported()) {
       alert('Your browser does not support Mapbox GL.  Please try Chrome or Firefox.');
       return;
     }
-    
+
     var groups;
     var featSelected;
     var filter = $('#vib-filter');
@@ -247,7 +252,7 @@ var ga = {
     filter.find('#vib-filter-reset').click(function() {
       reset(map, inputs, ga.layersIds);
     });
-    
+
     // Add events on properties box
     props.on('click', 'tr', function(evt) {
       var tds = $(evt.currentTarget).find('td');
