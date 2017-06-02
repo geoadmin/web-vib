@@ -109,9 +109,10 @@
     },
     "ch.swisstopo.hiking": {
       "label": "Hiking",
-      "sources": ["ch.bag.zecken-fsme-faelle", "ch.swisstopo.swisstlm3d-wanderwege", "ch.bav.haltestellen-oev"],
-      "layerset": ["default", "default", "default"],
-      "alternatives": [false, false, false]
+      "sources": ["ch.swisstopo.swissimage-product", "ch.bag.zecken-fsme-faelle", "ch.swisstopo.swisstlm3d-wanderwege", "ch.bav.haltestellen-oev"],
+      "layerset": ["default", "default", "default", "default"],
+      "alternatives": [false, false, false, false],
+      "interactions": [false, false, true, false]
     }
   }
 }
