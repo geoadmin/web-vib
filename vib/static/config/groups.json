@@ -33,6 +33,11 @@
       "type": "vector",
       "layerset": ["light"]
     },
+    "ch.bav.haltestellen-oev-cluster": {
+      "type": "geojson",
+      "layerset": ["cluster_label"],
+      "layersetLabels": ["OEV Stations"]
+    },
     "ch.swisstopo.backgrounds": {
       "type": "background",
       "layerset": ["light"]
@@ -109,10 +114,45 @@
     },
     "ch.swisstopo.hiking": {
       "label": "Hiking",
-      "sources": ["ch.swisstopo.swissimage-product", "ch.bag.zecken-fsme-faelle", "ch.swisstopo.swisstlm3d-wanderwege", "ch.bav.haltestellen-oev"],
-      "layerset": ["default", "default", "default", "default"],
+      "sources": [
+        "ch.swisstopo.swissimage-product",
+        "ch.bag.zecken-fsme-faelle",
+        "ch.swisstopo.swisstlm3d-wanderwege",
+        "ch.bav.haltestellen-oev"
+      ],
+      "layerset": [
+        "default",
+        "default",
+        "default",
+        "default"
+      ],
       "alternatives": [false, false, false, false],
       "interactions": [false, false, true, false]
+    },
+    "ch.swisstopo.hiking-oev-clusters": {
+      "label": "Hiking with OEV clusters",
+      "sources": [
+        "ch.swisstopo.backgrounds",
+        "ch.swisstopo.swissalti3d-reliefschattierung",
+        "ch.swisstopo.dkm10.gewaesser-lin",
+        "ch.swisstopo.lightbasemap",
+        "ch.bag.zecken-fsme-faelle",
+        "ch.swisstopo.swisstlm3d-wanderwege",
+        "ch.bav.haltestellen-oev-cluster",
+        "ch.swisstopo.labels"
+      ],
+      "layerset": [
+        "light",
+        "transparent",
+        "light",
+        "light",
+        "light",
+        "default",
+        "cluster_label",
+        "white_sparse"
+      ],
+      "alternatives": [false, false, false, false, false, false, false, false],
+      "interactions": [false, false, false, false, false, true, false, false]
     }
   }
 }
