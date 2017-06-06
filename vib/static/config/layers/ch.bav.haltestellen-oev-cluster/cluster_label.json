@@ -1,0 +1,66 @@
+{
+  "layers": [
+    {
+      "id": "clusters",
+      "type": "circle",
+      "source": "ch.bav.haltestellen-oev-cluster",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
+      "filter": ["has", "point_count"],
+      "minzoom": 7,
+      "maxzoom": 16,
+      "paint": {
+        "circle-color": {
+          "property": "point_count",
+          "type": "interval",
+          "stops": [[0, "rgb(33,64,154)"], [100, "rgb(148, 66, 202)"], [800, "rgb(200, 68, 218)"]]
+        },
+        "circle-stroke-color": "rgb(255,255,255)",
+        "circle-stroke-width": 2,
+        "circle-radius": {
+          "property": "point_count",
+          "type": "interval",
+          "stops": [[0, 13], [100, 17], [800, 25]]
+        }
+      }
+    },
+    {
+      "id": "cluster-count",
+      "type": "symbol",
+      "source": "ch.bav.haltestellen-oev-cluster",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": ["has", "point_count"],
+      "layout": {
+        "text-field": "{point_count_abbreviated}",
+        "text-font": ["Roboto Bold", "Arial Unicode MS Bold"],
+        "text-size": 12,
+        "text-offset": [0,0.15]
+      },
+      "paint": {
+        "text-color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "id": "unclustered-point",
+      "type": "circle",
+      "source": "ch.bav.haltestellen-oev-cluster",
+      "metadata": {
+        "swisstopo:levelcategory": "overlay"
+      },
+      "minzoom": 12,
+      "maxzoom": 18,
+      "filter": ["!has", "point_count"],
+      "paint": {
+        "circle-color": "rgb(33,64,154)",
+        "circle-radius": 4,
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "rgb(255,255,255)"
+      }
+    }
+  ]
+}

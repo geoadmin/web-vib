@@ -12,9 +12,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(199, 157, 76, 0.5)"
+        "fill-color": "rgba(199, 157, 76, 0.22)"
       }
     }
   ]
 }
- 

@@ -26,6 +26,13 @@
       "url": "https://tileserver.dev.bgdi.ch/data/OEV_HALTESTELLEN-mbtiles.json",
       "type": "vector"
     },
+    "ch.bav.haltestellen-oev-cluster": {
+      "data": "https://tileserver.dev.bgdi.ch/tilejson/oev_haltestellen_wgs84.geojson",
+      "type": "geojson",
+      "cluster": true,
+      "clusterMaxZoom": 16,
+      "clusterRadius": 64
+    },
     "ch.swisstopo.dkm10.gewaesser-lin": {
       "tiles": [
         "https://a.tiles.mapbox.com/v4/vib2d.dkm10-gewaesser-lin/{z}/{x}/{y}.vector.pbf?access_token=pk.eyJ1IjoidmliMmQiLCJhIjoiY2l5eTlqcGtoMDAwZzJ3cG56emF6YmRoOCJ9.lP3KfJVHrUHp7DXIQrZYMw",
