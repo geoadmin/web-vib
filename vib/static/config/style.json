@@ -54,6 +54,10 @@
       ],
       "type": "vector"
     },
+    "ch.swisstopo.superlightbasemap": {
+      "url": "https://tileserver.dev.bgdi.ch/data/SLBM-mbtiles.json",
+      "type": "vector"
+    },
     "ch.swisstopo.swissalti3d-reliefschattierung": {
       "tiles": ["https://wmts10.geo.admin.ch/1.0.0/ch.swisstopo.swissalti3d-reliefschattierung/default/current/3857/{z}/{x}/{y}.png"],
       "type": "raster",

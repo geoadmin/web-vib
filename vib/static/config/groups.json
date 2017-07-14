@@ -65,6 +65,10 @@
       "type": "vector",
       "layerset": ["light"]
     },
+    "ch.swisstopo.superlightbasemap": {
+      "type": "vector",
+      "layerset": ["light"]
+    },
     "ch.swisstopo.swissalti3d-reliefschattierung": {
       "type": "raster",
       "layerset": ["transparent"]
@@ -84,7 +88,13 @@
       "sources": ["ch.swisstopo.backgrounds", "ch.swisstopo.swissalti3d-reliefschattierung", "ch.swisstopo.dkm10.gewaesser-lin", "ch.swisstopo.lightbasemap", "ch.swisstopo.labels"],
       "layerset": ["light", "transparent", "light", "light", "white_sparse"],
       "alternatives": [false, false, false, false, true]
-     },
+    },
+    "ch.swisstopo.superlightbasemap": {
+      "label": "Light Base Map",
+      "sources": ["ch.swisstopo.backgrounds", "ch.swisstopo.swissalti3d-reliefschattierung", "ch.swisstopo.dkm10.gewaesser-lin", "ch.swisstopo.superlightbasemap", "ch.swisstopo.labels"],
+      "layerset": ["light", "transparent", "light", "light", "white_sparse"],
+      "alternatives": [false, false, false, false, true]
+    },
     "ch.swisstopo.hybridmap": {
       "label": "Aerial hybrid map",
       "sources": ["ch.swisstopo.swissimage-product", "ch.swisstopo.labels"],
@@ -97,7 +107,7 @@
         "ch.swisstopo.backgrounds",
         "ch.swisstopo.swissalti3d-reliefschattierung",
         "ch.swisstopo.dkm10.gewaesser-lin",
-        "ch.swisstopo.lightbasemap",
+        "ch.swisstopo.superlightbasemap",
         "ch.swisstopo.labels",
         "ch.bafu.gewaesserschutz-"
       ],
@@ -135,7 +145,7 @@
         "ch.swisstopo.backgrounds",
         "ch.swisstopo.swissalti3d-reliefschattierung",
         "ch.swisstopo.dkm10.gewaesser-lin",
-        "ch.swisstopo.lightbasemap",
+        "ch.swisstopo.superlightbasemap",
         "ch.bag.zecken-fsme-faelle",
         "ch.swisstopo.swisstlm3d-wanderwege",
         "ch.bav.haltestellen-oev-cluster",
