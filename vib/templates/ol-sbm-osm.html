@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SBM-OSM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://openlayers.org/en/master/css/ol.css">
+    <base href=".." target="_blank">
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+      .zoom-control {
+        top: .3em;
+        left: 4em;
+        width: 30px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map" class="map"></div>
+    <div id="zoom"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://openlayers.org/en/master/build/ol-debug.js"></script>
+    <script src="static/mb2olstyle.js"></script>
+    <script src="static/ol-sbm-osm.js"></script>
+  </body>
+</html>
