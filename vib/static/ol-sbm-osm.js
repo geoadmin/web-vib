@@ -88,10 +88,10 @@ map.on('moveend', function() {
   history.pushState({}, '', window.location.pathname + hash);
 });
 
-fetch('../static/data/swissbasemap-osm-integrated.json').then(function(style) {
+fetch('static/data/swissbasemap-osm-integrated.json').then(function(style) {
   var ft = ['Helvetica'];
   style.json().then(function(glStyle) {
-    fetch('../static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
+    fetch('static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
       spriteData.json().then(function(glSpriteData) {
         mb2olstyle(layers[2], glStyle, 'osm', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
         mb2olstyle(layers[3], glStyle, 'swissbasemap', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
