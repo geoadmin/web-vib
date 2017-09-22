@@ -1,10 +1,11 @@
+
 var params = (window.location.hash || window.location.search  || ' ').replace('?ts_hash=', '#').slice(1).split('/');
-var x = parseFloat(params[2]) || 0;
-var y = parseFloat(params[1]) || 0;
-var z = parseFloat(params[0]) || 1;
+var x = parseFloat(params[2]) || 7.75;
+var y = parseFloat(params[1]) || 46.7;
+var z = parseFloat(params[0]) || 7;
 var center = (-180 <= x && x <= 180 && -90 <= y && y <= 90) ?
     ol.proj.fromLonLat([x, y]) :
-    [x, y];
+[x, y];
 
 
 // https://tileserver.dev.bgdi.ch/styles/swissbasemap-osm-integrated.json
@@ -51,25 +52,19 @@ var map = new ol.Map({
         })
       })
     }),
-    new ol.layer.VectorTile({
+    /*new ol.layer.VectorTile({
       source: new ol.source.VectorTile({
         format: new ol.format.MVT(),
         url: 'https://tileserver.dev.bgdi.ch/data/osm-europe-cut-mbtiles/{z}/{x}/{y}.pbf',
         //tileGrid: tileGridMvt,
         maxZoom: 14
       })
-    }),
-    new ol.layer.VectorTile({
-      visible: true,
-      source: new ol.source.VectorTile({
-        format: new ol.format.MVT(),
-        url: 'https://tileserver.dev.bgdi.ch/data/swissbasemap-mbtiles/{z}/{x}/{y}.pbf',
-        //tileGrid: tileGridMvt,
-        maxZoom: 15
-      })
-    })
+    }),*/
   ],
-  target: "map"
+  target: "map",
+  controls: [
+    new ol.control.Zoom({delta: 0.55})
+  ]
 });
 var layers = map.getLayers().getArray();
 
@@ -78,32 +73,16 @@ map.on('moveend', function() {
   $('.zoom-control input').val(z);
   var op =((z >= 17) ? 0.1 : 0.3);
   layers[1].setOpacity(op);
-  
+
   op = ((z >= 9) ? ((z >= 17) ? 0.1 : 0.2) : 0.3);
   layers[0].setOpacity(op);
-  
+
   var center = map.getView().getCenter();
   var centerLonLat = ol.proj.toLonLat(center);
   var hash = '?ts_hash=' + z + '/' + centerLonLat[1] + '/' + centerLonLat[0];
   history.pushState({}, '', window.location.pathname + hash);
 });
 
-fetch('static/data/swissbasemap-osm-integrated.json').then(function(style) {
-  var ft = ['Helvetica'];
-  style.json().then(function(glStyle) {
-    fetch('static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
-      spriteData.json().then(function(glSpriteData) {
-        mb2olstyle(layers[2], glStyle, 'osm', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
-        mb2olstyle(layers[3], glStyle, 'swissbasemap', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
-        map.setView(new ol.View({
-          center: center,
-          zoom: z,
-          resolutions: resolutionsView
-        }));
-      });
-    });
-  });
-});
 
 var ZoomControl = function(opt_options) {
 
@@ -131,3 +110,33 @@ var ZoomControl = function(opt_options) {
 };
 ol.inherits(ZoomControl, ol.control.Control);
 map.addControl(new ZoomControl());
+
+
+var load = function(mbConfig, mbTilesUrl, mbTilesLayer) {
+  var vt = new ol.layer.VectorTile({
+    visible: true,
+    source: new ol.source.VectorTile({
+      format: new ol.format.MVT(),
+      url: mbTilesUrl,
+      maxZoom: 15
+    })
+  })
+  map.addLayer(vt);
+
+  fetch(mbConfig).then(function(style) {
+    var ft = ['Helvetica'];
+    style.json().then(function(glStyle) {
+      fetch('../static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
+        spriteData.json().then(function(glSpriteData) {
+          //mb2olstyle(layers[2], glStyle, 'osm', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
+          mb2olstyle(layers[2], glStyle, mbTilesLayer, undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
+          map.setView(new ol.View({
+            center: center,
+            zoom: z,
+            resolutions: resolutionsView
+          }));
+        });
+      });
+    });
+  });
+};

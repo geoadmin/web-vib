@@ -735,7 +735,7 @@
         colorElement.style.color = color;
         document.body.appendChild(colorElement);
         var colorString = getComputedStyle(colorElement).getPropertyValue('color');
-        document.body.removeChild(colorElement);
+        //document.body.removeChild(colorElement);
         var colorArray = colorString.match(colorRegEx)[1].split(',').map(Number);
         if (colorArray.length == 3) {
           colorArray.push(1);
