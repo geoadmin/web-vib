@@ -64,7 +64,7 @@
   },
   "sources": {
     "relief-osm": {
-      "url": "https://tileserver.dev.bgdi.ch/data/hillshade-europe-mbtiles.json",
+      "url": "https://tileserver.dev.bgdi.ch/data/hillshade-europe-cut-mbtiles.json",
       "type": "raster",
       "tileSize": 256
     },
