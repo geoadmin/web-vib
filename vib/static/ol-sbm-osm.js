@@ -36,7 +36,7 @@ var map = new ol.Map({
     new ol.layer.Tile({
       opacity: 0.3,
       source: new ol.source.XYZ({
-        url: 'https://tileserver.dev.bgdi.ch/data/hillshade-europe-mbtiles/{z}/{x}/{y}.png',
+        url: 'https://tileserver.dev.bgdi.ch/data/hillshade-europe-cut-mbtiles/{z}/{x}/{y}.png',
         tileGrid: tileGridMvt,
         maxZoom: 14
       })
