@@ -10,9 +10,9 @@ var glapi = {};
   };
 
   glapi.getWMTSUrl = function(bodId, timestamp, format) {
-    format = format ? format : 'png';
     timestamp = timestamp ? timestamp : 'current';
-    var templateUrl = 'https://wmts10.geo.admin.ch/1.0.0/{bodId}/default/'
+    format = format ? format : 'png';
+    var templateUrl = 'https://wmts10.geo.admin.ch/1.0.0/{bodId}/default/' +
         '{timestamp}/3857/{z}/{x}/{y}.{format}'
     return templateUrl.replace('{bodId}', bodId)
           .replace('{timestamp}', timestamp)
@@ -29,10 +29,10 @@ var glapi = {};
     return 'source_' + bodId;
   };
 
-  glapi.getWMTSRasterSource = function(bodId, format, timestamp) {
+  glapi.getWMTSRasterSource = function(bodId, timestamp, format) {
     return {
       type: 'raster',
-      tiles: [this.getWMTSUrl(bodId, format, timestamp)],
+      tiles: [this.getWMTSUrl(bodId, timestamp, format)],
       tileSize: 256
     };
   };
