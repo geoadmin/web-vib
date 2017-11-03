@@ -28,25 +28,97 @@ var swissimage = new Cesium.UrlTemplateImageryProvider({
 
 // Swissbuildings 2.0
 var buildings = new Cesium.Cesium3DTileset({
-  url : 'https://vectortiles0.dev.bgdi.ch/ch.swisstopo.swisstlm3d.3d/20161217'
+  url : 'https://vectortiles0.dev.bgdi.ch/ch.swisstopo.swisstlm3d.3d/20170425'
 });
 
 // Swissnames
 var names = new Cesium.Cesium3DTileset({
-  url: 'https://vectortiles1.dev.bgdi.ch/ch.swisstopo.swissnames3d.3d/20170223'
+  url: 'https://vectortiles1.dev.bgdi.ch/ch.swisstopo.swissnames3d.3d/20170814'
 });
 names.style = new Cesium.Cesium3DTileStyle({
-  show: true,
-  color: 'rgb(255, 255, 255)',
-  outlineColor: 'rgb(0, 0, 0)',
-  outlineWidth: 3,
-  labelStyle: 2,
-  font: "'24px arial'",
-  scaleByDistanceNearRange: 1000.0,
-  scaleByDistanceNearValue: 2.0,
-  scaleByDistanceFarRange: 10000.0,
-  scaleByDistanceFarValue: 0.4
-});
+    labelStyle: 2,
+    labelText: '${DISPLAY_TEXT}',
+    heightOffset:  {
+      conditions : [
+        ['${LOD} === "7"', 20],
+        ['${LOD} === "6"', 40],
+        ['${LOD} === "5"', 60],
+        ['${LOD} === "4"', 80],
+        ['${LOD} === "3"', 100],
+        ['${LOD} === "2"', 120],
+        ['${LOD} === "1"', 150],
+        ['${LOD} === "0"', 200],
+        ['true', '200']
+      ]
+    },
+    disableDepthTestDistance: 5000,
+    anchorLineEnabled: true,
+    anchorLineColor: "color('white')",
+    show: true,
+    labelColor: {
+      conditions : [
+        //["${OBJEKTART} === 'See'", "color('blue')"],
+        /*["${LOD} === '7'", "color('red')"],
+            ["${LOD} === '6'", "color('green')"],
+            ["${LOD} === '5'", "color('brown')"],
+            ["${LOD} === '4'", "color('purple')"],
+            ["${LOD} === '3'", "color('blue')"],
+            ["${LOD} === '2'", "color('aqua')"],
+            ["${LOD} === '1'", "color('orange')"],
+            ["${LOD} === '0'", "color('black')"],*/
+        ['${OBJEKTART} === "See"', 'color("blue")'],
+        ['true', 'color("black")']
+      ]
+    },
+    labelOutlineColor: 'color("white", 1)',
+    labelOutlineWidth: 5,
+    font:  {
+      conditions : [
+        ['${OBJEKTART} === "See"', '"bold 32px arial"'],
+        ['${OBJEKTART} === "Alpiner Gipfel"', '"italic 32px arial"'],
+        ['true', '" 32px arial"']
+      ]
+    },
+    scaleByDistance: {
+      conditions: [
+        ['${LOD} === "7"', 'vec4(1000, 1, 5000, 0.4)'],
+        ['${LOD} === "6"', 'vec4(1000, 1, 5000, 0.4)'],
+        ['${LOD} === "5"', 'vec4(1000, 1, 8000, 0.4)'],
+        ['${LOD} === "4"', 'vec4(1000, 1, 10000, 0.4)'],
+        ['${LOD} === "3"', 'vec4(1000, 1, 20000, 0.4)'],
+        ['${LOD} === "2"', 'vec4(1000, 1, 30000, 0.4)'],
+        ['${LOD} === "1"', 'vec4(1000, 1, 50000, 0.4)'],
+        ['${LOD} === "0"', 'vec4(1000, 1, 500000, 0.4)'],
+        ['true', 'vec4(1000, 1, 10000, 0.4)']
+      ]
+    },
+    translucencyByDistance: {
+      conditions: [
+        ['${LOD} === "7"', 'vec4(5000, 1, 5001, 1)'],
+        ['${LOD} === "6"', 'vec4(5000, 1, 5001, 1)'],
+        ['${LOD} === "5"', 'vec4(5000, 1, 8000, 0.4)'],
+        ['${LOD} === "4"', 'vec4(5000, 1, 10000, 0.4)'],
+        ['${LOD} === "3"', 'vec4(5000, 1, 20000, 0.4)'],
+        ['${LOD} === "2"', 'vec4(5000, 1, 30000, 0.4)'],
+        ['${LOD} === "1"', 'vec4(5000, 1, 50000, 0.4)'],
+        ['${LOD} === "0"', 'vec4(5000, 1, 500000, 1)'],
+        ['true', 'vec4(5000, 1, 10000, 0.5)']
+      ]
+    },
+    distanceDisplayCondition: {
+      "conditions" : [
+        ['${LOD} === "7"', 'vec2(0, 5000)'],
+        ['${LOD} === "6"', 'vec2(0, 5000)'],
+        ['${LOD} === "5"', 'vec2(0, 8000)'],
+        ['${LOD} === "4"', 'vec2(0, 10000)'],
+        ['${LOD} === "3"', 'vec2(0, 20000)'],
+        ['${LOD} === "2"', 'vec2(0, 30000)'],
+        ['${LOD} === "1"', 'vec2(0, 50000)'],
+        ['${LOD} === "0"', 'vec2(0, 500000)'],
+        ['${OBJEKTART} === "Alpiner Gipfel"', 'vec2(0, 100000)']
+      ]
+    }
+  });
 
 window.onload = function() {
   // Viewer
@@ -64,7 +136,7 @@ window.onload = function() {
   viewer.clock.currentTime = jDate;
   viewer.scene.globe.baseColor = Cesium.Color.BLUE;
   viewer.scene.backgroundColor = Cesium.Color.WHITE;
-  viewer.scene.globe.depthTestAgainstTerrain = false;
+  viewer.scene.globe.depthTestAgainstTerrain = true;
   viewer.scene.primitives.add(buildings);
   viewer.scene.primitives.add(names);
   
