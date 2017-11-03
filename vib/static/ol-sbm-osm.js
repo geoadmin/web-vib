@@ -1,8 +1,16 @@
 
-var params = (window.location.hash || window.location.search  || ' ').replace('?ts_hash=', '#').slice(1).split('/');
-var x = parseFloat(params[2]) || 7.75;
-var y = parseFloat(params[1]) || 46.7;
-var z = parseFloat(params[0]) || 7;
+var params = window.location.search.replace('?','').split('&');
+var tsHash = [], styled = true;
+params.forEach(function(param) {
+  if (param.indexOf('ts_hash=') > -1) {
+    tsHash = param.replace('ts_hash=', '').split('/');
+  } else if (param.indexOf('styled=') > -1 && param.replace('styled=', '') === 'false') {
+    styled = false;
+  }
+})
+var x = parseFloat(tsHash[2]) || 7.75;
+var y = parseFloat(tsHash[1]) || 46.7;
+var z = parseFloat(tsHash[0]) || 7;
 var center = (-180 <= x && x <= 180 && -90 <= y && y <= 90) ?
     ol.proj.fromLonLat([x, y]) :
 [x, y];
@@ -33,7 +41,7 @@ var tileGridMvt = new ol.tilegrid.TileGrid({
 
 var map = new ol.Map({
   layers: [
-    new ol.layer.Tile({
+    /*new ol.layer.Tile({
       opacity: 0.3,
       source: new ol.source.XYZ({
         url: 'https://tileserver.dev.bgdi.ch/data/hillshade-europe-cut-mbtiles/{z}/{x}/{y}.png',
@@ -51,7 +59,7 @@ var map = new ol.Map({
           tileSize: 256
         })
       })
-    }),
+    }),*/
     /*new ol.layer.VectorTile({
       source: new ol.source.VectorTile({
         format: new ol.format.MVT(),
@@ -72,15 +80,15 @@ map.on('moveend', function() {
   var z = map.getView().getZoom();
   $('.zoom-control input').val(z);
   var op =((z >= 17) ? 0.1 : 0.3);
-  layers[1].setOpacity(op);
+  //layers[1].setOpacity(op);
 
   op = ((z >= 9) ? ((z >= 17) ? 0.1 : 0.2) : 0.3);
-  layers[0].setOpacity(op);
+  //layers[0].setOpacity(op);
 
   var center = map.getView().getCenter();
   var centerLonLat = ol.proj.toLonLat(center);
   var hash = '?ts_hash=' + z + '/' + centerLonLat[1] + '/' + centerLonLat[0];
-  history.pushState({}, '', window.location.pathname + hash);
+  history.pushState({}, '', window.location.pathname + hash + '&styled=' + styled.toString());
 });
 
 
@@ -118,7 +126,7 @@ var load = function(mbConfig, mbTilesUrl, mbTilesLayer) {
     source: new ol.source.VectorTile({
       format: new ol.format.MVT(),
       url: mbTilesUrl,
-      maxZoom: 15
+      maxZoom: 16
     })
   })
   map.addLayer(vt);
@@ -126,10 +134,12 @@ var load = function(mbConfig, mbTilesUrl, mbTilesLayer) {
   fetch(mbConfig).then(function(style) {
     var ft = ['Helvetica'];
     style.json().then(function(glStyle) {
-      fetch('../static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
+      fetch('static/data/ol-sbm-osm-sprite.json').then(function(spriteData) {
         spriteData.json().then(function(glSpriteData) {
-          //mb2olstyle(layers[2], glStyle, 'osm', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
-          mb2olstyle(layers[2], glStyle, mbTilesLayer, undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
+          if (styled) {
+            //mb2olstyle(layers[2], glStyle, 'osm', undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
+            mb2olstyle(layers[0], glStyle, mbTilesLayer, undefined, glSpriteData, 'https://vtiles.geops.ch/styles/inspirationskarte/sprite.png', ft);
+          }
           map.setView(new ol.View({
             center: center,
             zoom: z,

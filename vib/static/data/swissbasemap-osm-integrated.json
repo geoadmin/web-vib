@@ -6360,95 +6360,6 @@
       }
     },
     {
-      "id": "LABELS Country L OSM",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "48410d99bcba1f71acb0ca46b57794c8"
-      },
-      "source": "osm",
-      "source-layer": "place",
-      "minzoom": 1,
-      "maxzoom": 7,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          "in",
-          "rank",
-          1
-        ]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "text-field": "{name_de}",
-        "text-transform": "uppercase",
-        "text-font": [
-          "Helvetica Neue LT Std 65 Medium",
-          "Arial"
-        ],
-        "text-size": {
-          "base": 1,
-          "stops": [
-            [
-              4,
-              12.5
-            ],
-            [
-              7,
-              24
-            ]
-          ]
-        },
-        "text-letter-spacing": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0
-            ],
-            [
-              7,
-              0.85
-            ]
-          ]
-        },
-        "text-max-width": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              5
-            ],
-            [
-              3,
-              6
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "text-color": "hsl(0, 0%, 0%)",
-        "text-halo-color": {
-          "base": 1,
-          "stops": [
-            [
-              2,
-              "rgba(255,255,255,0.75)"
-            ],
-            [
-              3,
-              "hsl(0, 0%, 100%)"
-            ]
-          ]
-        },
-        "text-halo-width": 1.75,
-        "text-halo-blur": 1
-      }
-    },{
       "id": "Schweiz",
       "type": "fill",
       "source": "swissbasemap",
@@ -6463,52 +6374,11 @@
         ]
       ],
       "layout": {
-        "visibility": "hidden"
-      },
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-opacity": 0.6
-      }
-    },{
-      "id": "Relief",
-      "type": "raster",
-      "source": "relief",
-      "minzoom": 0,
-      "maxzoom": 24,
-      "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "raster-opacity": {
-          "stops": [
-            [
-              5.5,
-              0
-            ],
-            [
-              6,
-              0.3
-            ],
-            [
-              8,
-              0.3
-            ],
-            [
-              10,
-              0.3
-            ],
-            [
-              16,
-              0.1
-            ]
-          ]
-        },
-        "raster-brightness-max": 1,
-        "raster-brightness-min": 0.5,
-        "raster-saturation": 0,
-        "raster-contrast": 0.5,
-        "raster-fade-duration": 100,
-        "raster-hue-rotate": 1
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-opacity": 1
       }
     },
     {
@@ -14105,13 +13975,13 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 16,
+      "minzoom": 0,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORTu20_LBP"
+          "SDL_ORT_HAMLET2_LBP"
         ]
       ],
       "layout": {
@@ -14148,13 +14018,13 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 15,
+      "minzoom": 0,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT20_LBP"
+          "SDL_ORT_HAMLET1_LBP"
         ]
       ],
       "layout": {
@@ -14191,14 +14061,14 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 13,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT50_LBP"
+          "SDL_ORT_VILLAGE4_LBP"
         ]
       ],
       "layout": {
@@ -14236,14 +14106,14 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 12,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT100_LBP"
+          "SDL_ORT_VILLAGE3_LBP"
         ]
       ],
       "layout": {
@@ -14281,14 +14151,14 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 11,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT1T_LBP"
+          "SDL_ORT_VILLAGE2_LBP"
         ]
       ],
       "layout": {
@@ -14326,14 +14196,14 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 10,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "==",
           "layerid",
-          "SDL_ORT2T_LBP"
+          "SDL_ORT_VILLAGE1_LBP"
         ]
       ],
       "layout": {
@@ -14371,12 +14241,12 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 8,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT10T_LBP"
+        "SDL_ORT_TOWN2_LBP"
       ],
       "layout": {
         "text-size": {
@@ -14476,12 +14346,12 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 8,
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT50T_LBP"
+        "SDL_ORT_TOWN1_LBP"
       ],
       "layout": {
         "text-size": {
@@ -14566,12 +14436,12 @@
       "type": "symbol",
       "source": "swissbasemap",
       "source-layer": "swissbasemap-layer",
-      "minzoom": 5.5,
+      "minzoom": 0,
       "maxzoom": 19,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT100T_LBP"
+        "SDL_ORT_CITY_LBP"
       ],
       "layout": {
         "text-size": {

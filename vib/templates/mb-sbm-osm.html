@@ -28,8 +28,9 @@
         mapboxgl.setRTLTextPlugin('/mapbox-gl-rtl-text.js');
         var map = new mapboxgl.Map({
           container: 'map',
-          style: '/styles/swissbasemap-osm-integrated.json',
-          hash: true
+          style: 'https://mf-geoadmin3.dev.bgdi.ch/teo_vib/vib/static/data/swissbasemap-osm-integrated.json',
+          //style: 'https://64ffb69a311f43f28d0368e3f0f884fb.production.codepen.plumbing/static/data/swissbasemap-osm-integrated.json',
+          hash: (!window.parent)
         });
         map.addControl(new mapboxgl.NavigationControl());
       } else {
