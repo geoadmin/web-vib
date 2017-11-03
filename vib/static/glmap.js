@@ -99,6 +99,17 @@
     for (var i = 0; i < rasterMaps.length; i++) {
       map.removeLayer(rasterMaps[i]);
     }
+    var bgIdToLayerId = {
+      'swissimage': ['ch.swisstopo.swissimage'],
+      'pixelkarte': ['ch.swisstopo.vib2d.pk500', 'ch.swisstopo.vib2d.pk1000']
+    }
+    for (var i = 0; i < bgIdToLayerId[app.params.background].length; i++) {
+      var sourceId = glapi.formatSourceName(
+          bgIdToLayerId[app.params.background][i]);
+      if (map.getSource(sourceId)) {
+        map.removeSource(sourceId);
+      }
+    }
     return addBackground(map, layerId);
   }
 
