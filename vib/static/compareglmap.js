@@ -6,8 +6,9 @@
   function changeMap(mapToChange, styleType, styleId) {
     if (mapToChange.getStyle().id != styleId) {
       var tileserverUrl = styleId == 'inspirationskarte' ?
-         'https://vtiles.geops.ch' : app.tileserverUrl;
-      mapToChange.setStyle(tileserverUrl + '/styles/' + styleId + '.json');
+          'https://vtiles.geops.ch' : app.tileserverUrl;
+      mapToChange.setStyle(
+          tileserverUrl + '/styles/' + styleId + '/style.json');
       app.setParam(styleId, styleType);
     }
   }
@@ -20,7 +21,7 @@
     var map = new mapboxgl.Map({
       container: containerId,
       center: centerLngLat = [app.params.lng, app.params.lat],
-      style:  tileserverUrl + '/styles/' + styleId + '.json',
+      style:  tileserverUrl + '/styles/' + styleId + '/style.json',
       zoom: app.params.zoom,
     });
 
