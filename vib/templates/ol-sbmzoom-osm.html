@@ -22,14 +22,14 @@
     <div id="map" class="map"></div>
     <div id="zoom"></div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://openlayers.org/en/master/build/ol-debug.js"></script>
+    <script src="https://openlayers.org/en/master/build/ol.js"></script>
     <script src="static/mb2olstyle.js"></script>
     <script src="static/ol-sbm-osm.js"></script>
     <script>
       $(document).ready(function() {
         load(
-          '../static/data/swissbasemapzoom-osm-integrated.json', 
-          'https://tileserver.dev.bgdi.ch/data/swissbasemapzoom-mbtiles/{z}/{x}/{y}.pbf',
+          'static/data/swissbasemapzoom-osm-integrated.json', 
+          'https://tileserver.dev.bgdi.ch/data/swissbasemapzoom-1-mbtiles/{z}/{x}/{y}.pbf',
           'swissbasemap'
         );
       });

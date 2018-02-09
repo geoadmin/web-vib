@@ -6360,99 +6360,10 @@
       }
     },
     {
-      "id": "LABELS Country L OSM",
-      "type": "symbol",
-      "metadata": {
-        "mapbox:group": "48410d99bcba1f71acb0ca46b57794c8"
-      },
-      "source": "osm",
-      "source-layer": "place",
-      "minzoom": 1,
-      "maxzoom": 7,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          "in",
-          "rank",
-          1
-        ]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "text-field": "{name_de}",
-        "text-transform": "uppercase",
-        "text-font": [
-          "Helvetica Neue LT Std 65 Medium",
-          "Arial"
-        ],
-        "text-size": {
-          "base": 1,
-          "stops": [
-            [
-              4,
-              12.5
-            ],
-            [
-              7,
-              24
-            ]
-          ]
-        },
-        "text-letter-spacing": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0
-            ],
-            [
-              7,
-              0.85
-            ]
-          ]
-        },
-        "text-max-width": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              5
-            ],
-            [
-              3,
-              6
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "text-color": "hsl(0, 0%, 0%)",
-        "text-halo-color": {
-          "base": 1,
-          "stops": [
-            [
-              2,
-              "rgba(255,255,255,0.75)"
-            ],
-            [
-              3,
-              "hsl(0, 0%, 100%)"
-            ]
-          ]
-        },
-        "text-halo-width": 1.75,
-        "text-halo-blur": 1
-      }
-    },{
       "id": "Schweiz",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 0,
       "filter": [
         "all",
@@ -6463,59 +6374,18 @@
         ]
       ],
       "layout": {
-        "visibility": "hidden"
-      },
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-opacity": 0.6
-      }
-    },{
-      "id": "Relief",
-      "type": "raster",
-      "source": "relief",
-      "minzoom": 0,
-      "maxzoom": 24,
-      "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "raster-opacity": {
-          "stops": [
-            [
-              5.5,
-              0
-            ],
-            [
-              6,
-              0.3
-            ],
-            [
-              8,
-              0.3
-            ],
-            [
-              10,
-              0.3
-            ],
-            [
-              16,
-              0.1
-            ]
-          ]
-        },
-        "raster-brightness-max": 1,
-        "raster-brightness-min": 0.5,
-        "raster-saturation": 0,
-        "raster-contrast": 0.5,
-        "raster-fade-duration": 100,
-        "raster-hue-rotate": 1
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-opacity": 1
       }
     },
     {
       "id": "Park",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "in",
@@ -6547,7 +6417,7 @@
       "id": "Wald",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "filter": [
         "in",
         "layerid",
@@ -6575,7 +6445,7 @@
       "id": "NationalPark",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8.5,
       "filter": [
         "==",
@@ -6618,7 +6488,7 @@
       "id": "Flughafen",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "filter": [
         "==",
         "layerid",
@@ -6648,7 +6518,7 @@
       "id": "Friedhof",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "maxzoom": 24,
       "filter": [
@@ -6680,7 +6550,7 @@
       "id": "Hospital",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "maxzoom": 16,
       "filter": [
         "==",
@@ -6698,7 +6568,7 @@
       "id": "Sportplatz Bound LIN",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "in",
@@ -6719,7 +6589,7 @@
       "id": "Sportplatz LIN",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -6761,7 +6631,7 @@
       "id": "Sportplatz PLY",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -6804,7 +6674,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "maxzoom": 24,
       "filter": [
@@ -6838,7 +6708,7 @@
       "id": "GEWAESSER Fliessgewaesser DKM10",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 0,
       "maxzoom": 13.5,
       "filter": [
@@ -6886,7 +6756,7 @@
       "id": "GEWAESSER Fliessgewaesser LIN",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "filter": [
         "==",
@@ -6932,7 +6802,7 @@
       "id": "GEWAESSER Wasserbecken",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -6950,7 +6820,7 @@
       "id": "GEWAESSER Fliessgewaesser PLY",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 0,
       "filter": [
         "==",
@@ -6968,7 +6838,7 @@
       "id": "GEWAESSER See",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 0,
       "filter": [
         "==",
@@ -6989,7 +6859,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "all",
@@ -7025,7 +6895,7 @@
       "id": "LABELS Waterway",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "maxzoom": 24,
       "filter": [
@@ -7081,7 +6951,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -7174,7 +7044,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -7266,7 +7136,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -7319,7 +7189,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -7359,7 +7229,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -7412,7 +7282,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -7449,7 +7319,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "in",
@@ -7507,7 +7377,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "in",
@@ -7548,7 +7418,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -7601,7 +7471,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "==",
@@ -7653,7 +7523,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -7706,7 +7576,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "filter": [
         "==",
@@ -7754,7 +7624,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -7807,7 +7677,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "filter": [
         "==",
@@ -7859,7 +7729,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "maxzoom": 24,
       "filter": [
@@ -7940,7 +7810,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "maxzoom": 24,
       "filter": [
@@ -8025,7 +7895,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "all",
@@ -8051,7 +7921,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -8117,7 +7987,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -8202,7 +8072,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -8283,7 +8153,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "==",
@@ -8319,7 +8189,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -8358,7 +8228,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -8422,7 +8292,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -8476,7 +8346,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "==",
@@ -8529,7 +8399,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -8587,7 +8457,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "==",
@@ -8640,7 +8510,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "filter": [
         "==",
@@ -8677,7 +8547,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "filter": [
         "==",
@@ -8717,7 +8587,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "filter": [
         "all",
@@ -8785,7 +8655,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "in",
@@ -8827,7 +8697,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "maxzoom": 24,
       "filter": [
@@ -8887,7 +8757,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "maxzoom": 13,
       "filter": [
@@ -8944,7 +8814,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "maxzoom": 24,
       "filter": [
@@ -9001,7 +8871,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "maxzoom": 13,
       "filter": [
@@ -9055,7 +8925,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "in",
@@ -9093,7 +8963,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "filter": [
         "==",
@@ -9146,7 +9016,7 @@
         "mapbox:group": "7afdb2d764f3133a55f8d5c8a22ca45c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "filter": [
         "==",
@@ -9199,7 +9069,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -9264,7 +9134,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -9353,7 +9223,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -9446,7 +9316,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -9490,7 +9360,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9533,7 +9403,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9601,7 +9471,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -9664,7 +9534,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9725,7 +9595,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9770,7 +9640,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9818,7 +9688,7 @@
         "mapbox:group": "1b10b6f8efa5b8bc9157a0cf733fb173"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -9891,7 +9761,7 @@
         "mapbox:group": "7a3f217304dc113930dacd3939234d1a"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -9938,7 +9808,7 @@
         "mapbox:group": "7a3f217304dc113930dacd3939234d1a"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "filter": [
         "all",
@@ -9998,7 +9868,7 @@
         "mapbox:group": "7a3f217304dc113930dacd3939234d1a"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "filter": [
         "all",
@@ -10055,7 +9925,7 @@
       "id": "BAUTEN Gebaeude-copy",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "==",
@@ -10099,7 +9969,7 @@
       "id": "BAUTEN Gebaeude",
       "type": "fill",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "==",
@@ -10133,7 +10003,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -10179,7 +10049,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -10237,7 +10107,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10298,7 +10168,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10345,7 +10215,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10388,7 +10258,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10456,7 +10326,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -10549,7 +10419,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -10595,7 +10465,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10657,7 +10527,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10718,7 +10588,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -10781,7 +10651,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10841,7 +10711,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10885,7 +10755,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -10933,7 +10803,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11006,7 +10876,7 @@
         "mapbox:group": "a5901d1bd6e864d2105ce3781a2ec322"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "all",
@@ -11052,7 +10922,7 @@
         "mapbox:group": "a5901d1bd6e864d2105ce3781a2ec322"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -11113,7 +10983,7 @@
         "mapbox:group": "a5901d1bd6e864d2105ce3781a2ec322"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -11174,7 +11044,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -11220,7 +11090,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -11278,7 +11148,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11338,7 +11208,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11385,7 +11255,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11428,7 +11298,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11496,7 +11366,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -11589,7 +11459,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -11635,7 +11505,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -11698,7 +11568,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11759,7 +11629,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11804,7 +11674,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11852,7 +11722,7 @@
         "mapbox:group": "c39f0fe260533293008cd280e23098c9"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -11925,7 +11795,7 @@
         "mapbox:group": "3553024f1758abde8a3e03f812d86b67"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "all",
@@ -11971,7 +11841,7 @@
         "mapbox:group": "3553024f1758abde8a3e03f812d86b67"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -12032,7 +11902,7 @@
         "mapbox:group": "3553024f1758abde8a3e03f812d86b67"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -12093,7 +11963,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -12139,7 +12009,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -12197,7 +12067,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12257,7 +12127,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12304,7 +12174,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12347,7 +12217,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12415,7 +12285,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -12508,7 +12378,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -12554,7 +12424,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -12617,7 +12487,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12678,7 +12548,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12723,7 +12593,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12771,7 +12641,7 @@
         "mapbox:group": "597e206361ecc33ea326d8a4aae6e248"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -12844,7 +12714,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "all",
@@ -12890,7 +12760,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -12951,7 +12821,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -13012,7 +12882,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -13058,7 +12928,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -13116,7 +12986,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13176,7 +13046,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13223,7 +13093,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13266,7 +13136,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13334,7 +13204,7 @@
         "mapbox:group": "b275d1ba2ba9f1b9fef3e42285cf5d0c"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -13427,7 +13297,7 @@
         "mapbox:group": "ca7d420dad8e0db0da710b6f2c5474db"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 16,
       "filter": [
         "all",
@@ -13473,7 +13343,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 14,
       "filter": [
         "all",
@@ -13536,7 +13406,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13597,7 +13467,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13642,7 +13512,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13690,7 +13560,7 @@
         "mapbox:group": "836fec899208e8e4dad1da415a756f7e"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13763,7 +13633,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "filter": [
         "all",
@@ -13809,7 +13679,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -13870,7 +13740,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 11,
       "filter": [
         "all",
@@ -13931,7 +13801,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -13969,7 +13839,7 @@
         "mapbox:group": "d15bf937d4f5b9ed481dadaf2950b4aa"
       },
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 13,
       "filter": [
         "all",
@@ -14004,7 +13874,7 @@
       "id": "Grenze",
       "type": "line",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "filter": [
         "all",
         [
@@ -14054,7 +13924,7 @@
       "id": "LABELS Suburb",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "maxzoom": 24,
       "filter": [
@@ -14104,14 +13974,14 @@
       "id": "LABELS Hamlet2",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 16,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORTu20_LBP"
+          "SDL_ORT_HAMLET2_LBP"
         ]
       ],
       "layout": {
@@ -14147,14 +14017,14 @@
       "id": "LABELS Hamlet1",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 15,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT20_LBP"
+          "SDL_ORT_HAMLET1_LBP"
         ]
       ],
       "layout": {
@@ -14190,15 +14060,15 @@
       "id": "LABELS Village M2",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 13,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT50_LBP"
+          "SDL_ORT_VILLAGE4_LBP"
         ]
       ],
       "layout": {
@@ -14235,15 +14105,15 @@
       "id": "LABELS Village M1",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 12,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT100_LBP"
+          "SDL_ORT_VILLAGE3_LBP"
         ]
       ],
       "layout": {
@@ -14280,15 +14150,15 @@
       "id": "LABELS Village L2",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 11,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "in",
           "layerid",
-          "SDL_ORT1T_LBP"
+          "SDL_ORT_VILLAGE2_LBP"
         ]
       ],
       "layout": {
@@ -14325,15 +14195,15 @@
       "id": "LABELS Village L1",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 10,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "all",
         [
           "==",
           "layerid",
-          "SDL_ORT2T_LBP"
+          "SDL_ORT_VILLAGE1_LBP"
         ]
       ],
       "layout": {
@@ -14370,13 +14240,13 @@
       "id": "LABELS Town M",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 8,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT10T_LBP"
+        "SDL_ORT_TOWN2_LBP"
       ],
       "layout": {
         "text-size": {
@@ -14475,13 +14345,13 @@
       "id": "LABELS Town L",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 8,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 20,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT50T_LBP"
+        "SDL_ORT_TOWN1_LBP"
       ],
       "layout": {
         "text-size": {
@@ -14565,13 +14435,13 @@
       "id": "LABELS City SM",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
-      "minzoom": 5.5,
+      "source-layer": "swissbasemap-layer",
+      "minzoom": 0,
       "maxzoom": 19,
       "filter": [
         "==",
         "layerid",
-        "SDL_ORT100T_LBP"
+        "SDL_ORT_CITY_LBP"
       ],
       "layout": {
         "text-size": {
@@ -14650,7 +14520,7 @@
       "id": "LABELS POI Park",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8.5,
       "maxzoom": 24,
       "filter": [
@@ -14709,7 +14579,7 @@
       "id": "LABELS POI Uni",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 8,
       "maxzoom": 24,
       "filter": [
@@ -14770,7 +14640,7 @@
       "id": "LABELS POI",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 9,
       "maxzoom": 24,
       "filter": [
@@ -14831,7 +14701,7 @@
       "id": "LABELS Strassenamen Wege",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "in",
@@ -14880,7 +14750,7 @@
       "id": "LABELS Strassenamen Platz",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "in",
@@ -14930,7 +14800,7 @@
       "id": "LABELS Strassenamen Strasse",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "in",
@@ -14977,7 +14847,7 @@
       "id": "LABELS Strassenamen DS-VS",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "filter": [
         "in",
@@ -15025,7 +14895,7 @@
       "id": "LABELS Island",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 6,
       "maxzoom": 24,
       "filter": [
@@ -15079,7 +14949,7 @@
       "id": "LABELS Water",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 10,
       "maxzoom": 24,
       "filter": [
@@ -15129,7 +14999,7 @@
       "id": "LABELS Airport",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 10,
       "maxzoom": 19,
       "filter": [
@@ -15195,7 +15065,7 @@
       "id": "LABELS HST Luftseilbahn",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 10,
       "maxzoom": 20,
       "filter": [
@@ -15243,7 +15113,7 @@
       "id": "LABELS HST Schiff",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "maxzoom": 20,
       "filter": [
@@ -15309,7 +15179,7 @@
       "id": "LABELS HST Bus",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 18,
       "maxzoom": 20,
       "filter": [
@@ -15366,7 +15236,7 @@
       "id": "LABELS HST Tram",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 15,
       "maxzoom": 20,
       "filter": [
@@ -15434,7 +15304,7 @@
       "id": "LABELS HST Zug",
       "type": "symbol",
       "source": "swissbasemap",
-      "source-layer": "swissbasemapzoom-layer",
+      "source-layer": "swissbasemap-layer",
       "minzoom": 12,
       "maxzoom": 20,
       "filter": [
