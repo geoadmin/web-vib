@@ -22,8 +22,16 @@
     <div id="map" class="map"></div>
     <div id="zoom"></div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://openlayers.org/en/master/build/ol.js"></script>
-    <script src="static/mb2olstyle.js"></script>
+    <script src="https://openlayers.org/en/master/build/ol-debug.js">
+    </script>
+     <!--script src="static/ol-debug.js">
+     </script-->
+    <!-- Management of available fonts is customized in mapbox-to-css-font
+         function -->
+    <script src="static/mb2olstyle.js">
+    </script> <!-- between v3.1.7 and v3.2.0-->
+    <!--script src="https://rawgit.com/boundlessgeo/mapbox-to-ol-style/v3.3.0/dist/mb2olstyle.js">
+    </script-->
     <script src="static/ol-sbm-osm.js"></script>
     <script>
       $(document).ready(function() {

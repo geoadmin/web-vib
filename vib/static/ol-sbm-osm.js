@@ -123,10 +123,12 @@ map.addControl(new ZoomControl());
 var load = function(mbConfig, mbTilesUrl, mbTilesLayer) {
   var vt = new ol.layer.VectorTile({
     visible: true,
+    //renderMode: 'image',
+    declutter: true,
     source: new ol.source.VectorTile({
       format: new ol.format.MVT(),
       url: mbTilesUrl,
-      maxZoom: 16
+      maxZoom: 15
     })
   })
   map.addLayer(vt);
