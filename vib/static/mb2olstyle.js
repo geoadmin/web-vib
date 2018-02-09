@@ -14,7 +14,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 exports.default = function (olLayer, glStyle, source, resolutions, spriteData, spriteImageUrl, fonts) {
   if (!resolutions) {
     resolutions = [];
-    for (var res = 156543.03392804097; resolutions.length < 22; res /= 2) {
+    for (var res = 78271.51696402048; resolutions.length < 21; res /= 2) {
       resolutions.push(res);
     }
   }
@@ -614,7 +614,7 @@ function deg2rad(degrees) {
   return degrees * Math.PI / 180;
 }
 
-var templateRegEx = /^(.*)\{(.*)\}(.*)$/;
+var templateRegEx = /^([^]*)\{(.*)\}([^]*)$/;
 
 function fromTemplate(text, properties) {
   var parts;
