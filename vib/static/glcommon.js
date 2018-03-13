@@ -79,7 +79,7 @@ var glapi = {};
     };
 
     this._getUrl = function() {
-      var baseUrl = 'https://4e89mn6059.execute-api.eu-west-1.amazonaws.com/dev/';
+      var baseUrl = 'https://0x4bqmcjqf.execute-api.eu-west-1.amazonaws.com/dev';
       var path = this.styleId ? 'glstyles/' + this.styleId : 'glstyles';
       console.log(baseUrl + path);
       return baseUrl + path;
