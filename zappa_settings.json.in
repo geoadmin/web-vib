@@ -2,14 +2,14 @@
     "dev": {
         "app_function": "vib.main.app",
         "aws_region": "eu-west-1",
-        "s3_bucket": "dummy-lambda-test",
+        "s3_bucket": "bucketjsonschemalambda",
         "binary_support": false,
         "cors": true,
         "debug": true,
         "timeout_seconds": 30,
         "memory_size": 128,
         "manage_roles": true,
-        "profile_name": "vib",
+        "profile_name": "aws-admin-test1",
         "environment_variables": {
             "ALLOWED_HOSTS": "*",
             "VIB_ACCESS_KEY": "${VIB_ACCESS_KEY}",
